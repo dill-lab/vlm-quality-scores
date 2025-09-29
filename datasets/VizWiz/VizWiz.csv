@@ -1,0 +1,501 @@
+index,question_id,question,correct_answers,majority_answer,category,image_path
+0,VizWiz_val_00000003,Which one is the blue one?,"['right', 'omni sorb', '1 on right', 'on right', 'right 1']",right,other,images/3.jpg
+1,VizWiz_val_00000015,"Which one of these items is the children's dictionary? Is it the one on the right, or the one on the left?","['left', 'right']",left,other,images/15.jpg
+2,VizWiz_val_00000048,What store is this?,"['original pancake house', 'pancake house']",original pancake house,other,images/48.jpg
+3,VizWiz_val_00000054,What's the name of the drink?,"['irnbru', 'irn bru', 'irnbru barr', 'barr irn bru sugar free', 'irn barr bru', 'irn barr bru sugar free']",irn bru,other,images/54.jpg
+4,VizWiz_val_00000057,What is on the pillowcase?,"['texas logo', 'sports team logo', 'texas', 'texas longhorns', 'texas longhorn']",texas,other,images/57.jpg
+5,VizWiz_val_00000064,What is the person doing?,"['looking at computer screen', 'watching computer screen', 'working on computer', 'looking at computer', 'sitting', 'sitting at computer', 'looking at screen', 'computing', 'sitting at desktop computer on desk']",looking at computer,other,images/64.jpg
+6,VizWiz_val_00000069,Can you tell me what this bottle says?,"['warm vanilla sugar', 'sugar', 'warm vanilla sugar body lotion', 'warm vanila sugar']",warm vanilla sugar,other,images/69.jpg
+7,VizWiz_val_00000084,IS there a picture on this tv screen?,"['yes', 'windows icon']",yes,yes/no,images/84.jpg
+8,VizWiz_val_00000090,Is the dialogue more visible in that picture?,"['bored', 'yes', 'no']",no,yes/no,images/90.jpg
+9,VizWiz_val_00000113,What are the letters I need to enter in?,['kej'],kej,other,images/113.jpg
+10,VizWiz_val_00000124,What drink is this?,"['hint', 'bottle flavored water on desk', 'hint blackberry', 'blackberry hint', 'blackberry', 'blackberry flavored water']",hint blackberry,other,images/124.jpg
+11,VizWiz_val_00000127,What does the screen say?,"['windows 7 home premium', 'windows', 'windows home premium']",windows 7 home premium,other,images/127.jpg
+12,VizWiz_val_00000145,Can you see the steak on this menu?,"['yes', 'yes 18$']",yes,yes/no,images/145.jpg
+13,VizWiz_val_00000154,What does this coupon say on it?,"['buy 1 pizza at menu price receive on pizza equal lesser value free expires 12 31 11', 'buy 1 pizza at menu price receive 1 equal lesser value free', 'buy 1 pizza at menu price receive 1 pizza equal lesser value free expires 12 31 11', 'buy 1 pizza', 'buy 1 pizza get 1 free', 'buy 1 get 1 free on pizza', 'buy 1 pizza at menu price']",buy 1 pizza at menu price receive 1 pizza equal lesser value free expires 12 31 11,other,images/154.jpg
+14,VizWiz_val_00000161,What is in this picture?,"['tv', 'tv screen car on clock other furniture', 'car', 'living room', 'clock television tv stand rug electronic equipment', 'clock television below on low table', 'clock tv basket rug', 'television']",tv,other,images/161.jpg
+15,VizWiz_val_00000191,What are the letters to enter in to obtain the prize?,['cjo'],cjo,other,images/191.jpg
+16,VizWiz_val_00000192,What is this?,"['room', 'television', 'shoes', 'tv', 'computer', 'monitor', 'tv screen', 'television screen']",tv,other,images/192.jpg
+17,VizWiz_val_00000196,What is this a picture of?,"['back chair woman in', 'woman', 'back boy', 'person sitting in chair', 'person in chair watching something', 'someone sitting at banquet', 'person sitting in front stage', 'person sitting in chair in auditorium stage', 'woman sitting theater']",woman,other,images/196.jpg
+18,VizWiz_val_00000197,Can you please tell me the 1-800 number on this card?,"['800 735 2929', '1 877 328 9677 1 80 732 2929', '1 800 735 2929', '1 877 328 9677', '8007352929', '18773289677', '18007352929']",1 877 328 9677,other,images/197.jpg
+19,VizWiz_val_00000203,Is the laptop screen open?,"['yes', 'laptop open']",yes,yes/no,images/203.jpg
+20,VizWiz_val_00000208,Do the clouds look like storm clouds?,"['yes', 'no']",yes,yes/no,images/208.jpg
+21,VizWiz_val_00000209,Do you see steak on this menu?,['yes'],yes,yes/no,images/209.jpg
+22,VizWiz_val_00000217,What is the person doing?,"['looking at computer monitor', 'sitting at desktop facing away', 'typing', 'on computer', 'working on computer', 'they on computer', 'watching video', 'looking at computer', 'looking at computer screen']",working on computer,other,images/217.jpg
+23,VizWiz_val_00000234,Can you tell us what the screen says?,"['yes', 'windows 7', 'windows account log in', 'type user name type computer name', 'windows 7 home premium dell', 'yes windows 7', 'windows 7 home premium', 'set up windows 7 login', 'windows 7 home premium input for user name']",windows 7 home premium dell,other,images/234.jpg
+24,VizWiz_val_00000262,"Can you tell me the 1-800 number off this card, and are you able to hear this question?","['1 800 735 2929 cant hear q', '1 877 328 9677', '1 877 328 9677 1 800 735 2929', '18773289677', '1 800 735 2929', '1 877 328 9677 no', '18773289677 no', '8007352929 no']",1 877 328 9677,other,images/262.jpg
+25,VizWiz_val_00000263,What color is this?,"['purple', 'burgundy', 'pink']",purple,other,images/263.jpg
+26,VizWiz_val_00000266,What color is this paper?,"['white', 'white black text']",white,other,images/266.jpg
+27,VizWiz_val_00000291,"Looking for properties to rent in my area, what is the condition of the house shown in the image?","['poor', 'bad', 'extremely poor', 'very poor', 'destroyed', 'demolished', 'horrible', 'condemned', 'condemned house']",bad,other,images/291.jpg
+28,VizWiz_val_00000302,What is this T-shirt please?,"['minnesota twins', 'twins t shirt', 'minnesota twins 91 wins', 'snim', 'baseball']",minnesota twins,other,images/302.jpg
+29,VizWiz_val_00000305,What is it?,"['dell laptop', 'laptop', 'laptop computer being booted up']",laptop,other,images/305.jpg
+30,VizWiz_val_00000315,what is this?,"['milk thistle', 'trader joes milk thistle', 'supplement', 'milk thistle bottle', 'milk thistle dietary supplement', 'trader joes milk thistle capsules']",milk thistle,other,images/315.jpg
+31,VizWiz_val_00000318,Is my computer screen lit up?,['yes'],yes,yes/no,images/318.jpg
+32,VizWiz_val_00000347,What does my computer screen show?,"['youtube', 'youtube browser', 'you tube', 'open you tube window']",youtube,other,images/347.jpg
+33,VizWiz_val_00000356,"Can you tell me what this medicine is, please?","['night time cough syrup', 'store brand nyquil', 'night time', 'night time cough cold', 'yes', 'night time medicine']",night time,other,images/356.jpg
+34,VizWiz_val_00000366,What CD is this?,"['iphone ipad programming: hands on', 'iphone ipad programming', 'course 2761', 'iphone ipad programming:hands on', 'from learning tree iphone ipad programming: hands on', 'programming', 'iphone ipad programming course 2761', 'course 2761 iphone ipad programming']",iphone ipad programming,other,images/366.jpg
+35,VizWiz_val_00000370,Could you tell me if I need to hit enter or can you actually tell if I need to do something else?,"['yes accept terms', 'probably hit enter', 'you must agree license terms', 'click on accept license terms', 'check check box', 'click accept license terms', 'click on clear box', 'click left mouse key then enter', 'accept microsoft terms', 'accept terms']",yes accept terms,other,images/370.jpg
+36,VizWiz_val_00000371,What is this and what color is it?,"['brown teddy bear', 'teddy bear brown', 'brown plush toy', 'brown bear', 'stuffed toy brown']",teddy bear brown,other,images/371.jpg
+37,VizWiz_val_00000380,What is this? What is this?,"['television', 'police officer on television', 'tv', 'television man blue hat on', 'video game']",television,other,images/380.jpg
+38,VizWiz_val_00000381,What does the error message say?,"['invalid product key', 'invalid product', 'invalid product key click ok to proceed', 'invalid product key either remove theproduct key in unattend answer file to proceed']",invalid product key,other,images/381.jpg
+39,VizWiz_val_00000382,My computer won't talk. Can you tell me what's on the screen?,"['restore your computer to earlier point', 'asking if you want to restore system restore', 'pop up asking if you want to do system restore', 'restore your computer using system restore', 'restore', 'option to restore your computer cancel', 'restore cancel']",restore your computer using system restore,other,images/382.jpg
+40,VizWiz_val_00000393,What gift card is this?,"['speedy rewards membership card', 'speedway', 'membership card', 'speedys', 'speedy rewards', 'rewards card']",speedy rewards membership card,other,images/393.jpg
+41,VizWiz_val_00000394,What is this?,"['fire hydrant by sign on grass near woods', 'street sign fire hydrant', 'fire hydrant water valve below sign next to', 'side yard fire hydrant sign railroad tie wishing well', 'fire hydrant']",fire hydrant,other,images/394.jpg
+42,VizWiz_val_00000408,What's on the screen?,"['live security', 'live security update screen', 'live security platinum', 'antivirus program', 'security', 'live security screen', 'firewall']",live security,other,images/408.jpg
+43,VizWiz_val_00000433,What does the text at the top of this screen say?,"['checking file system on c:', 'checking file system', 'checking file system on c']",checking file system on c:,other,images/433.jpg
+44,VizWiz_val_00000448,What does it show on the screen?,"['windows setup', 'edit boot options', 'boot options', 'boot message', 'reflection from light source', 'windows set up', 'options for windows set up', 'black boot up screen']",edit boot options,other,images/448.jpg
+45,VizWiz_val_00000452,What are the words on the piece of paper?,"['ransom down dark hall stranger my face by lois duncan', 'ransom down dark hall *stranger my face by lois duncan', 'ransom down dark hll stranger my', 'ransom down dark hall stranger my fa by lois duncan', 'ransom down dark hall * stranger my fac cut off by lois duncan', 'ransom', 'ransom down dark hall stranger my by lois duncan']",ransom down dark hall stranger my face by lois duncan,other,images/452.jpg
+46,VizWiz_val_00000455,What is this thing?,"['computer message', 'laptop', 'computer screen', 'dialog box', 'computer', 'computer dialog box', 'message to restore computer using system restore']",computer screen,other,images/455.jpg
+47,VizWiz_val_00000457,Can you tell me who this is from?,"['emi health', 'emihealth']",emi health,other,images/457.jpg
+48,VizWiz_val_00000458,Is it a mobile?,"['no', 'yes', 'laptop yes', 'no portable laptop']",no,yes/no,images/458.jpg
+49,VizWiz_val_00000488,What is this and does it have a name on it?,"['dell charger', 'dell computer plug in', 'power supply dell', 'adapter dell', 'dell ac adaptor', 'dell battery charger for electronics', 'dell laptop battery', 'power cord yes dell', 'dell laptop charger']",dell charger,other,images/488.jpg
+50,VizWiz_val_00000500,What letters. What letters do I type in to win the prize?,['wvk'],wvk,other,images/500.jpg
+51,VizWiz_val_00000510,What is this?,"['computer on desk', 'computer', 'computer desk', 'desk', 'desktop computer on small desk', 'workstation computer', 'computer desk desktop computer on']",computer on desk,other,images/510.jpg
+52,VizWiz_val_00000511,What's on the screen?,"['do you want to restore your comp using system restore pop up', 'error message', 'do you want to restore your computer using system restore', 'startup', 'startup repaid diagnostic screen', 'systems restore question: do you want to use to restore your computer', 'startup repair', 'question to restore computer']",do you want to restore your computer using system restore,other,images/511.jpg
+53,VizWiz_val_00000512,"Is there any text on the screen? If so, what does it say?","['mac os x all thats legible', 'yes mac os x', 'mac os x', 'yes mac', 'mac os c', 'max os x', 'yes', 'mac osx']",mac os x,other,images/512.jpg
+54,VizWiz_val_00000518,What is that?,"['computers monitor keyboard', 'monitor', 'computer monitor', 'computer screen', 'computer', 'desktop', 'graph']",computer monitor,other,images/518.jpg
+55,VizWiz_val_00000521,What is my computer screen showing?,"['your computer was unable to restart', 'repairs', 'your computer was unable to start', 'startup repair', 'startup repair screen', 'attempting repairs', 'attempting repair', 'computer unable to restart', 'windows repairs']",startup repair,other,images/521.jpg
+56,VizWiz_val_00000523,What is the app on the top left?,"['message', 'messages app', 'apple messages', 'messages']",messages,other,images/523.jpg
+57,VizWiz_val_00000533,"Is Windows all the way up, or is something loading?","['something loading', 'notifying that current repair cant be cancelled', 'startup repair pop up box', 'startup repair', 'startup repair loading', 'something cannot be cancelled', 'startup repair needs xed oked', 'startup repair box']",something loading,other,images/533.jpg
+58,VizWiz_val_00000541,What color is this band?,['gold'],gold,other,images/541.jpg
+59,VizWiz_val_00000545,Could you tell me what this screen is saying approximately?,"['66.4 gb primary 464 gb system', 'drive options', 'primary', '620.0 mb 66.4 gb primary 46.4 gb system', 'computerscreen', '620 mg 66.4gb 46.4 gb', '46.4gb', '620.0 mb 620.0 mb 66.4 gb 66.4 gb primary 46.6 gb 46.4 gb system']",drive options,other,images/545.jpg
+60,VizWiz_val_00000547,What kind of phone is this?,"['blackberry', 'blackberry curve 3g']",blackberry,other,images/547.jpg
+61,VizWiz_val_00000553,What's on the screen?,"['startup screen', 'startup repair window', 'system restore', 'prompt to restore computer using startup repair', 'startup repair', 'computer unable start', 'startup repair screen', 'repair message']",startup repair window,other,images/553.jpg
+62,VizWiz_val_00000566,What is my computer screen showing?,"['do you want to restore your computer using system restore', 'system restore pop up', 'system restore message', 'asking if you want to restore your computer using system restore', 'box', 'system restore', 'computer did not start use system restore', 'restore set up']",do you want to restore your computer using system restore,other,images/566.jpg
+63,VizWiz_val_00000567,What does it say on the screen?,"['do you want to restore your computer using system cd', 'restore', 'do you want to restore your computer using system', 'your computer was unable to start start repair checking your system for problems', 'startup repair', 'your computer unable to start', 'your computer was unable to start start up repair checking your system for problems', 'computer unable to start']",restore,other,images/567.jpg
+64,VizWiz_val_00000570,What was on the table?,"['notebook', 'notebook pen other papers', 'spiral ringed notebook', 'paper pen', 'notebook pen']",notebook,other,images/570.jpg
+65,VizWiz_val_00000573,What is written on this computer screen please?,"['install mac os x', 'nothing', 'install mac', 'install mac osx']",install mac os x,other,images/573.jpg
+66,VizWiz_val_00000585,What picture is this?,"['laptop', 'computer', 'laptop computer', 'laptop screen']",laptop,other,images/585.jpg
+67,VizWiz_val_00000590,What is this?,"['movie on hulu on laptop', 'laptop', 'laptop computer screen showing 2 men', 'computer', 'video man on laptop', 'laptop video playing', 'hulu']",laptop,other,images/590.jpg
+68,VizWiz_val_00000591,Can you tell me when this bus pass expires?,"['april 1 2013', '10 apr 13', '10 april 2013', 'april 10 2013', '10apr13', '10 april 13', '10th april 2013']",10-Apr-13,other,images/591.jpg
+69,VizWiz_val_00000593,What does the sky look like in this photograph?,"['cloudy sun shining through', 'cloudy', 'bird', 'dark clouds slight crack sun', 'dusk', 'grey cloudy', 'grey cloudy some sun coming through']",cloudy,other,images/593.jpg
+70,VizWiz_val_00000595,What is this?,"['plug', 'cord', 'unknown', 'electrical plug', 'charger', 'camera', 'phone', 'plug for outlet']",plug,other,images/595.jpg
+71,VizWiz_val_00000596,Does this shoe have a stiletto heel?,"['yes', 'no']",yes,yes/no,images/596.jpg
+72,VizWiz_val_00000597,What is this?,"['braille system', 'braille translated', 'braille', 'braile', 'brail writing', 'words']",braille,other,images/597.jpg
+73,VizWiz_val_00000599,what does the sky look like in this photo?,"['cloudy day', 'partly cloudy', 'cloudy', 'rain']",cloudy,other,images/599.jpg
+74,VizWiz_val_00000601,What does this say?,"['bar b que restaurant', 'bar b que restaurant open', 'bar b que restaurant open 10', 'bar b que restaurant open to', 'barbeque restaurant', 'barbque']",bar b que restaurant,other,images/601.jpg
+75,VizWiz_val_00000605,what is this?,"['laptop screen', 'laptop computer', 'computer', 'screen', 'computer screen']",computer screen,other,images/605.jpg
+76,VizWiz_val_00000614,What is this?,"['arabic writing', 'book', 'quran', 'book in foreign language', 'glasses laying on book', 'sheet paper writing', 'sheet music', 'arabic text']",book,other,images/614.jpg
+77,VizWiz_val_00000618,What kind of food is in this can?,"['garden vegetable soup', 'garden vegetable', 'vegetable soup', 'soup', 'progresso vegetable classics garden vegetable']",garden vegetable soup,other,images/618.jpg
+78,VizWiz_val_00000624,What is in this picture?,"['woman sitting hands crossed', '2 people cropped', 'person', 'people', 'woman', 'person sitting on chair', 'person sitting in chair']",woman,other,images/624.jpg
+79,VizWiz_val_00000625,Can you tell me what sort of card this is?,"['harveys hometown rewards', 'rewards', 'hareys hometown rewards', 'harveys hometown rewards card']",harveys hometown rewards,other,images/625.jpg
+80,VizWiz_val_00000627,Do you see any text on the screen?,['yes'],yes,yes/no,images/627.jpg
+81,VizWiz_val_00000635,What is this?,"['computer keyboard', 'keyboard dell monitor', 'keyboard']",keyboard,other,images/635.jpg
+82,VizWiz_val_00000639,What is that a picture of?,"['side open mouth', 'face mouth', 'mouth']",mouth,other,images/639.jpg
+83,VizWiz_val_00000640,What is it?,"['street', 'road way', 'sidewalk street', 'wet street through window', 'roadway', 'parking lot', 'street outside', 'road']",street,other,images/640.jpg
+84,VizWiz_val_00000642,what is in this picture?,"['laptop', 'keyboard', 'laptop computer', 'computer']",laptop,other,images/642.jpg
+85,VizWiz_val_00000644,Do the clouds look like storm clouds? What I'm saying is does it look like it's going to rain here or storm?,"['yes', 'no']",yes,yes/no,images/644.jpg
+86,VizWiz_val_00000660,Do I have all my toes still?,['yes'],yes,yes/no,images/660.jpg
+87,VizWiz_val_00000673,Is the TV on right now?,['yes'],yes,yes/no,images/673.jpg
+88,VizWiz_val_00000680,What is this?,"['pill bottle', 'lorazepam', 'medication bottle', 'medicine bottle', 'prescription bottle']",lorazepam,other,images/680.jpg
+89,VizWiz_val_00000683,Is this a keyboard?,['no'],no,yes/no,images/683.jpg
+90,VizWiz_val_00000686,What is in this bottle?,"['bacon bits', 'hormel bacon bits', 'bacon']",bacon bits,other,images/686.jpg
+91,VizWiz_val_00000687,What's this?,"['room', 'half computer screen', 'monitor', 'laptop', 'computer screen', 'computer monitor', 'tv']",laptop,other,images/687.jpg
+92,VizWiz_val_00000688,It monitor light on the laptop?,"['yes', 'no']",yes,yes/no,images/688.jpg
+93,VizWiz_val_00000695,What is the letter on the wall?,['t'],t,other,images/695.jpg
+94,VizWiz_val_00000699,What is this?,"['dirty plate on computer desk', 'plate', 'empty plate']",plate,other,images/699.jpg
+95,VizWiz_val_00000701,What is it?,"['laptop', 'macbook pro', 'search page', 'search results on screen laptop computer', 'laptop screen showing google results', 'macbook air', 'search results about google goggles apps', 'macbook air laptop keyboard screen', 'keyboard']",laptop,other,images/701.jpg
+96,VizWiz_val_00000708,What is this?,"['coupons', 'pens ads some sort food packaging', 'food flyer', 'newspaper', 'produce tray pen ad papers unknown object', 'kitchen countertop', 'sharpie newspaper ads seran wrapped styrofoam', 'pens ads plastic container', 'sales ads', 'countertop grocery package newspaper fliers writing utensils']",coupons,other,images/708.jpg
+97,VizWiz_val_00000713,What is this?,"['square head man drawing', 'cork bulletin board paper', 'bulletin board', 'kids drawing on clipboard', 'board', 'coloring note', 'drawing on board', 'picture person red square face on bulletin board', 'childs drawing']",bulletin board,other,images/713.jpg
+98,VizWiz_val_00000718,What did i just read on my pc?,"['vizwiz', 'offer for computer application', 'vizwiz article', 'app description', 'viz wiz']",vizwiz,other,images/718.jpg
+99,VizWiz_val_00000725,What is this?,"['belly', 'stomach', 'abdomen', 'that stomach', 'back', 'abs']",stomach,other,images/725.jpg
+100,VizWiz_val_00000726,What is that?,"['laptop', 'open laptop', 'computer']",laptop,other,images/726.jpg
+101,VizWiz_val_00000730,"What, what is this?","['system restore disk check on desktop', 'computer keyboard', 'computer', 'computer screen keyboard', 'keyboard monitor', 'computer system menu', 'desktop monitor keyboard']",computer,other,images/730.jpg
+102,VizWiz_val_00000740,What is the computer screen showing?,"['error message', 'text', 'advanced boot options', 'script', 'startup screen', 'advanced boot options screen', 'advanced boot options shows middle screen not left right', 'code']",advanced boot options,other,images/740.jpg
+103,VizWiz_val_00000747,What is it?,"['laptop', 'computer', 'lap top', 'web page']",laptop,other,images/747.jpg
+104,VizWiz_val_00000750,What is this?,"['tall buildings', 'buildings', 'city landscape', 'downtown city', 'city buildings', 'skyscrapers', 'city']",buildings,other,images/750.jpg
+105,VizWiz_val_00000751,What does this CAPTCHA say?,"['ionsuo', 'practical yonsuo', 'practical lonsuo', 'practical ionsuo', 'practical 1onsuo', 'practical lonsup']",ionsuo,other,images/751.jpg
+106,VizWiz_val_00000752,Could you please tell me if this is a good picture of the tv stand?,"['yes', 'tv', 'no', 'alright but needs to be centered focused']",yes,yes/no,images/752.jpg
+107,VizWiz_val_00000756,What room number is that?,"['1503c', 'door sign']",1503c,other,images/756.jpg
+108,VizWiz_val_00000758,What three letter do I type to win the prize?,"['mvg', 'search engine']",mvg,other,images/758.jpg
+109,VizWiz_val_00000761,Does this picture show an open fire?,['no'],no,yes/no,images/761.jpg
+110,VizWiz_val_00000768,what is this cup?,"['saint louis bread co', 'saint louis', 'coffee cup', 'coffee', 'sant louis bread co']",saint louis bread co,other,images/768.jpg
+111,VizWiz_val_00000769,What's in that bottle?,['water'],water,other,images/769.jpg
+112,VizWiz_val_00000771,What is on the screen?,"['home page', 'field grass screensaver', 'window icons', 'desktop', 'desktop screen', 'windows menu', 'windows desktop', 'icons']",desktop,other,images/771.jpg
+113,VizWiz_val_00000772,What title is this?,"['every now then', 'every no then']",every now then,other,images/772.jpg
+114,VizWiz_val_00000773,What kind of computer is this?,['dell'],dell,other,images/773.jpg
+115,VizWiz_val_00000779,What's this?,"['laptop', 'macbook', 'keyboard', 'laptop computer', 'keyboard laptop computer', 'mac app store', 'lap top']",laptop,other,images/779.jpg
+116,VizWiz_val_00000781,What is the price of the french fries?,"['small 1.29 large 1.99', '1.29 1.99', '$1.29 $1.99', 'small $1.29 large $1.99', 'small 1.29 lg 1.99']",1.29 1.99,other,images/781.jpg
+117,VizWiz_val_00000786,what's this?,"['start screen on computer', 'home screen', 'tablet home screen', 'computer screen', 'app screen', 'desktop', 'ipad pulled up to main menu applications', 'desktop screen computer']",computer screen,other,images/786.jpg
+118,VizWiz_val_00000792,What does the text over the OK button say on this screen?,['octavarium test guitar saved'],octavarium test guitar saved,other,images/792.jpg
+119,VizWiz_val_00000797,What is the computer screen showing?,"['progress bar', 'progress bar working', 'computer connecting to internet', 'aline', 'loading bar', 'loading', 'microsoft corporation logo', 'microsoft corporation graphic to show that working thinking loading', 'microsoft loading screen']",microsoft corporation logo,other,images/797.jpg
+120,VizWiz_val_00000799,What is this screen?,"['windows update install', 'login screen mostly blue green background', 'windows 7 computer screen', 'computer screen', 'update progress for windows 8', 'logon', 'please do not power off installing updates', 'please do not power off unplug installing update 8', 'windows 7 installing', 'laptop']",windows update install,other,images/799.jpg
+121,VizWiz_val_00000802,Does it have any writing on it?,"['yes', 'no']",yes,yes/no,images/802.jpg
+122,VizWiz_val_00000803,What colors are in this shirt?,"['red white', 'maroon', 'red white stripes']",red white,other,images/803.jpg
+123,VizWiz_val_00000805,What color is this?,"['blue purple white', 'blue', 'purple turquoise blue', 'turquoise purple phone on white paper on brown table', 'black teal', 'purple teal', 'blue aqua']",blue,other,images/805.jpg
+124,VizWiz_val_00000807,What this?,"['pc screen', 'you cam window on screen', 'computer screen', 'laptop webcam on', 'you can settings window', 'you cam', 'youcam', 'web cam']",computer screen,other,images/807.jpg
+125,VizWiz_val_00000814,What is it?,"['laptop', 'computer screen', 'computer', 'image too far away to read']",laptop,other,images/814.jpg
+126,VizWiz_val_00000815,Whats that?,"['laptop', 'computer', 'image too far away to read text']",laptop,other,images/815.jpg
+127,VizWiz_val_00000817,How fast is my up and download?,"['31.45 34.52', 'up 31.45 download 34.52', '34.52 mbit s download 31.45 mbit s upload', '35.52 31.45', 'download: 34.52 mbit s upload 31.45 mbit s', 'upload 31.45 download 34.52 mbites', 'medium', 'download 34.52 mbit s upload 31.45 mbit s', '34 31']",31.45 34.52,other,images/817.jpg
+128,VizWiz_val_00000828,What is this?,"['tablet', 'ipad']",tablet,other,images/828.jpg
+129,VizWiz_val_00000833,What kind of card is this?,"['i tunes', 'itunes', 'itunes gift card']",itunes,other,images/833.jpg
+130,VizWiz_val_00000835,What are these?,['keys'],keys,other,images/835.jpg
+131,VizWiz_val_00000846,What's on screen?,"['icons', 'application icons', 'computer menu', 'windows desktop', 'desktop icons', 'windows icons', 'shortcuts', 'computer desktop icons']",icons,other,images/846.jpg
+132,VizWiz_val_00000848,what is this?,"['laptop', 'laptop computer', 'laptop screen', 'dell laptop']",laptop,other,images/848.jpg
+133,VizWiz_val_00000850,what do you see?,"['laptop screen', 'computer screen', 'screen', 'monitor', 'computer monitor', 'computer desktop', 'desktop icons hp screen']",computer screen,other,images/850.jpg
+134,VizWiz_val_00000852,What is this?,"['customer appreciation gift card', 'guest card', '$50 preferred guest card', 'gift card', 'jareds preferred guest card', '$50 gift card', '$50 preferred guest card to jared', 'customer appreciation event $50 preferred guest card']",$50 preferred guest card,other,images/852.jpg
+135,VizWiz_val_00000853,What is this?,"['persons tongue', 'tongue', 'human tongue']",tongue,other,images/853.jpg
+136,VizWiz_val_00000860,What kind of coffee is this?,"['tassimo', 'tassimo gevalia mocha', 'gevalia', 'gevalia mocha']",tassimo,other,images/860.jpg
+137,VizWiz_val_00000865,What color is this band?,"['gold', 'cream whitish']",gold,other,images/865.jpg
+138,VizWiz_val_00000867,What is this product?,"['dell', 'dell laptop', 'laptop computer monitor', 'laptop', 'computer', 'laptop computer', 'desktop laptop', 'lap top']",dell laptop,other,images/867.jpg
+139,VizWiz_val_00000875,What is this?,"['printer pop up on top survey something', 'monitor', 'computer', 'prompt screen', 'computer screen', 'screen']",monitor,other,images/875.jpg
+140,VizWiz_val_00000878,What does it say on this coupon?,"['$5 avocado bacon tostada combo', '5 combo', '5$ avocado bacon tostada combo', '$ avocado bacon tostada combo', '$5', 'avocado bacon tostada combo']",$5 avocado bacon tostada combo,other,images/878.jpg
+141,VizWiz_val_00000881,Which sieve is healthy choice?,"['right', 'green can', '1 on right', 'chicken noodle', 'on right', 'chicken noodles']",right,other,images/881.jpg
+142,VizWiz_val_00000882,What does it say on the screen?,"['800 643 2112 siriusxmcom', 'website', '800 643 2112', '800 643 2112 airlusxmcom', '800 643 2112 airluexmcom', 'phone number', 'exmcom']",800 643 2112 siriusxmcom,other,images/882.jpg
+143,VizWiz_val_00000889,What is this?,"['apple computer', 'water bottle in front apple desktop', 'desktop computer', 'imac', 'desktop', 'desktop computer keyboard water bottle', 'computer', 'water bottle', 'imac waterbottle', 'computer bottle water']",apple computer,other,images/889.jpg
+144,VizWiz_val_00000893,Is this person a boy or a girl?,['boy'],boy,other,images/893.jpg
+145,VizWiz_val_00000894,What does this caption say?,['97zh'],97zh,other,images/894.jpg
+146,VizWiz_val_00000899,What is this?,"['laptop', 'laptop computer']",laptop,other,images/899.jpg
+147,VizWiz_val_00000903,Can you tell me the price of this computer please?,"['12999.91', '12999.01', '$12999.01', '1299.01']",12999.01,other,images/903.jpg
+148,VizWiz_val_00000905,Can you tell me what this is?,"['articles for blind', 'cd', 'reverse cd', 'articles for blind disk', 'disk', 'book on cd', 'cd articles for blind', 'spear by james herbert dvd']",cd,other,images/905.jpg
+149,VizWiz_val_00000913,What is this item?,['pear'],pear,other,images/913.jpg
+150,VizWiz_val_00000916,What is on my screen?,"['windows 7', 'windows 7 installation screen', 'windows 7 installation', 'login screen', 'windows 7 logo', 'windows 7 login']",windows 7,other,images/916.jpg
+151,VizWiz_val_00000922,What is this?,"['computer monitor', 'computer screen', 'television', 'tv screen', 'desk computer phones', 'computer', 'monitor', 'tv', 'computer monitor showing desktop screen']",computer screen,other,images/922.jpg
+152,VizWiz_val_00000925,What does this computer screen say?,['nib'],nib,other,images/925.jpg
+153,VizWiz_val_00000932,"Can you please tell me if this has, this computer screen has an error message on it?","['yes', 'do you want to restore', 'no', 'startup repair']",yes,yes/no,images/932.jpg
+154,VizWiz_val_00000935,Type of ticket is this. Is this a pick four or Carolina pick five?,"['carolina pick 5', 'carolina cash 5', 'pick 5', 'lottery ticket yes', 'cash 5', 'lottery pick 5']",carolina cash 5,other,images/935.jpg
+155,VizWiz_val_00000938,Is is a box? Is it a box?,['no'],no,yes/no,images/938.jpg
+156,VizWiz_val_00000944,Do I have icons on my desktop on the screen?,['yes'],yes,yes/no,images/944.jpg
+157,VizWiz_val_00000945,what company is this my hotspot from?,['verizon'],verizon,other,images/945.jpg
+158,VizWiz_val_00000948,Is it still checking for problems?,['yes'],yes,yes/no,images/948.jpg
+159,VizWiz_val_00000949,Does this outfit match?,['yes'],yes,yes/no,images/949.jpg
+160,VizWiz_val_00000950,Can you read some of the text on the green?,"['computer organization design', 'yes', 'no']",computer organization design,other,images/950.jpg
+161,VizWiz_val_00000964,What is this capture?,"['was uctoft', 'was uctopt']",was uctoft,other,images/964.jpg
+162,VizWiz_val_00000974,What letters do I type to win the prize?,['mvg'],mvg,other,images/974.jpg
+163,VizWiz_val_00000976,What is this?,"['euphonious', 'acoustic music called euphonious', 'collection music', 'laptop screen', 'collection acoustic music', 'computer screen', 'euphonious on computer screen', 'collection acoustic music euphonious', 'acoustic music euphonious']",computer screen,other,images/976.jpg
+164,VizWiz_val_00000989,Which button is selected?,"['no button', 'no', 'yes']",no,yes/no,images/989.jpg
+165,VizWiz_val_00000992,"What is written on that computer screen, please?","['install mac os x progress bar 1 3 full', 'install mac os x']",install mac os x,other,images/992.jpg
+166,VizWiz_val_00000995,What is this?,"['post office box drop', 'mail dropbox', 'mail drop box', 'blue mailbox', 'mailbox', 'post office mailbox']",mailbox,other,images/995.jpg
+167,VizWiz_val_00001006,What color are those pants?,"['pink', 'pink white checkered']",pink,other,images/1006.jpg
+168,VizWiz_val_00001008,whats this?,"['tv', 'television', 'old tv monitor', 'monitor', 'television screen']",tv,other,images/1008.jpg
+169,VizWiz_val_00001010,What are the letter's I type in to win the prize?,['dbk'],dbk,other,images/1010.jpg
+170,VizWiz_val_00001011,What does this say?,"['total was 15$ paid by visa', 'total price', 'total 15.00', 'receipt total amount $15.00', 'apple receipt', 'amount paid1500', 'amount to be paid', 'receipt that shows total $15.00', 'sub total amount paid visa', 'amount paid']",total was 15$ paid by visa,other,images/1011.jpg
+171,VizWiz_val_00001013,What letters do I type in to win the prize?,['tlz'],tlz,other,images/1013.jpg
+172,VizWiz_val_00001019,What is this?,"['laptop', 'computer', 'laptop computer', 'text document on laptop']",laptop,other,images/1019.jpg
+173,VizWiz_val_00001039,What is this?,"['2 water bottles', 'bottle water', '2 water bottles on desk in front computer', 'water', 'waterbottle', 'bottles drinking water', 'water bottles', 'water bottle']",2 water bottles,other,images/1039.jpg
+174,VizWiz_val_00001042,Which one of these cards is my slate card?,"['1 at bottom', 'top', '1 on bottom 3', 'on bottom', '1 in very back', 'bottom card', 'top one', 'bottom', 'card on bottom']",bottom card,other,images/1042.jpg
+175,VizWiz_val_00001048,Is it chocolate?,['no'],no,yes/no,images/1048.jpg
+176,VizWiz_val_00001054,What does the screen say?,"['installing windows', 'installing windows plus more unreadable', 'this screen states that windows installing lists steps installation']",installing windows,other,images/1054.jpg
+177,VizWiz_val_00001057,What is the picture?,"['app update screen', 'phone updates', 'app updates', 'update screen', 'list all apps you can update', 'updates', 'list apps to update', 'pending app updates on ipad']",app updates,other,images/1057.jpg
+178,VizWiz_val_00001058,How much are the french fries?,"['small $1.29 large $1.99', '$1.29 $1.99', '1.29 1.99', 'small 1.29 large 1.99', '$1.29 small $1.99 large', 'small for $1.29 large for $1.99']",small $1.29 large $1.99,other,images/1058.jpg
+179,VizWiz_val_00001079,What does this say on my screen?,"['computer screen showing memory diagnostics', 'windows memory diagnostics', 'checking', 'windows checking for memory problems', 'running memory check', 'checking memory problems', 'windows checking for memory problemsthis might take several minutes', 'windows checking computer', 'windows check for memory issues']",windows memory diagnostics,other,images/1079.jpg
+180,VizWiz_val_00001082,What picture did I take? And of what?,"['ipad', 'pic ipad coffee purse next to', 'tablet', 'hulu log in screen', 'huluplus', 'tablet showing hulu plus', 'tablet hulu plus login', 'huluplus screen', 'login screen for hulu plus on tablet']",ipad,other,images/1082.jpg
+181,VizWiz_val_00001087,What is the computer screen showing?,"['startup repair message', 'do you want to restore your computer', 'startup repair screen', 'restore', 'startup repair', 'start up repair', 'restart dialog box', 'wants to restart computer using startup repair']",restore,other,images/1087.jpg
+182,VizWiz_val_00001090,What's on the screen?,"['blue screen', 'sad face white words', 'problem', ': your computer ran into problem needs to reboot', 'error message', 'your computer ran into problem needs to restart', 'your computer ran into problem', 'computer crashed restarting', 'crash screen', 'computer restarting']",blue screen,other,images/1090.jpg
+183,VizWiz_val_00001092,What is this?,"['macbook', 'keyboard', 'computer', 'laptop', 'computer screen keyboard']",keyboard,other,images/1092.jpg
+184,VizWiz_val_00001105,Is this a passport?,['yes'],yes,yes/no,images/1105.jpg
+185,VizWiz_val_00001112,Which computer is that one?,"['macbook', 'macbook air', 'mac laptop']",macbook,other,images/1112.jpg
+186,VizWiz_val_00001126,Whats displayed on the screen?,"['windows loading files', 'computer monitor', 'loading files']",windows loading files,other,images/1126.jpg
+187,VizWiz_val_00001129,What letters do I type in to win?,['hko'],hko,other,images/1129.jpg
+188,VizWiz_val_00001143,what does the sky look like?,"['overcast', 'cloudy', 'blue', 'mostly cloudy', 'clear', 'grey']",cloudy,other,images/1143.jpg
+189,VizWiz_val_00001145,Is this monitor on or off?,['on'],on,other,images/1145.jpg
+190,VizWiz_val_00001148,What menu is being displayed on the screen?,"['language screen', 'language', 'language menu', 'tv setup', 'language selection', 'language select']",language,other,images/1148.jpg
+191,VizWiz_val_00001154,"What is the captcha, please?","['pabw24nd', 'pavw24nd', 'pabm24nd', 'pabw24nbd']",pabw24nd,other,images/1154.jpg
+192,VizWiz_val_00001158,What's written here?,"['wed 03 10 12 10:05 am back in 10 min', 'wed 3 10 12 10:05 am back in 10 mins', 'wed 3 10 12 1005am back in 10 mins', 'back in 10', 'wed 3 10 12 1005 am back in 10 mins', 'wed 3 10 12']",wed 3 10 12 10:05 am back in 10 mins,other,images/1158.jpg
+193,VizWiz_val_00001161,Whats in this photo?,"['announcements', 'student announcement dates', 'trinity university asia flyer', 'trinity university online student enrollment schedule', 'card', 'university information', 'university students schedule', 'university announcement', 'online enrollment schedule']",announcements,other,images/1161.jpg
+194,VizWiz_val_00001162,Can you please state what's in the photo?,"['announcements', 'announcements for students', 'trinity university asia flyer', 'university enrollment schedule', 'card', 'university information', 'announcement dates for university students', 'university announcement', 'online enrollment december 1 2014']",announcements,other,images/1162.jpg
+195,VizWiz_val_00001168,What is this?,"['coke bottle cap', 'shirt pin', 'coca cola coin', 'bottle cap', 'coca cola pin', 'coca cola 1940s metal disk', 'cocoa cola 1940 coin', 'coca cola metal cap', 'not clare']",bottle cap,other,images/1168.jpg
+196,VizWiz_val_00001170,What kind of pastries are these?,"['dusted powdered sugar', 'turn overs', 'stuffed', 'puffs', 'croissant', 'cream puffs', 'puff pastry', 'cookies', 'scones']",cookies,other,images/1170.jpg
+197,VizWiz_val_00001171,What is this?,"['house plant', 'plant', 'potted plant', 'houseplant']",plant,other,images/1171.jpg
+198,VizWiz_val_00001172,What is this?,"['frozen dinner', 'stouffer fettuccini alfredo', 'stouffer', 'this stouffer signature classics fettuccini alfredo', 'fettuccini alfredo', 'fettucine alfredo', 'food', '1 package stouffer signature classics fettuccini alfredo', 'stouffers fettuccini alfredo']",stouffer fettuccini alfredo,other,images/1172.jpg
+199,VizWiz_val_00001179,What is it?,"['keyboard', 'laptop']",keyboard,other,images/1179.jpg
+200,VizWiz_val_00001181,What is this?,"['nestle pure life water', 'nestle water', 'bottle', 'water', 'water bottle']",water,other,images/1181.jpg
+201,VizWiz_val_00001183,What is this?,"['beer bottles', 'beer', 'budweiser beer', '2 bottles budweiser beer', 'budweiser', 'bottle budweiser', '2 beer bottles']",beer,other,images/1183.jpg
+202,VizWiz_val_00001184,What is this?,"['herbacil', 'artichoke capsules', 'capsules']",artichoke capsules,other,images/1184.jpg
+203,VizWiz_val_00001195,What is this can?,"['pepsi can', 'pepsi', 'pepsi water', 'soda']",pepsi,other,images/1195.jpg
+204,VizWiz_val_00001196,What is this?,"['dresser television on top', 'dresser tv on top', 'tv room', 'tv', 'dresser tv on', 'dresser tv', 'table tv', 'living room', 'living room furniture objects', 'room']",dresser television on top,other,images/1196.jpg
+205,VizWiz_val_00001197,What is in this box?,"['good sense pain relief pm', 'pain relief medicine', 'medicine', 'pain relief pm caplets', 'pain reliever', 'acetaminophen', 'pain relief pm', 'err']",pain relief pm,other,images/1197.jpg
+206,VizWiz_val_00001199,What temperature is the thermostat set to?,"['72', '72 degrees']",72,number,images/1199.jpg
+207,VizWiz_val_00001203,What color is this?,['blue'],blue,other,images/1203.jpg
+208,VizWiz_val_00001207,What is this?,"['flashlight', 'flash light', '1 watt led aluminum flashlight']",flashlight,other,images/1207.jpg
+209,VizWiz_val_00001208,What video game is this?,"['espn nfl 2k', 'football', 'nfl 2k', 'espn nfl 2k5', 'espn 2k5', 'espn 2k football']",football,other,images/1208.jpg
+210,VizWiz_val_00001213,What is this?,"['notebook', 'planner', 'book', 'card', 'lilly pulitzer agenda spiral']",notebook,other,images/1213.jpg
+211,VizWiz_val_00001214,What are these two packages please?,"['scrambled egg patties', 'cheese', 'scrambled egg patties cheese']",scrambled egg patties,other,images/1214.jpg
+212,VizWiz_val_00001215,What is this?,"['barbeque sauce', 'barbecue sauce', 'kc masterpiece hickory', 'bbq sauce', 'hickory brown sugar', 'hickory barbecue sauce']",barbecue sauce,other,images/1215.jpg
+213,VizWiz_val_00001216,Which book is that?,"['help', 'book']",help,other,images/1216.jpg
+214,VizWiz_val_00001222,What do you see?,"['back car seat', 'headrest', 'car seat', 'back van seat', 'back seat', 'white suitcase']",back car seat,other,images/1222.jpg
+215,VizWiz_val_00001226,What is this?,"['painting', 'drawing family', 'drawing', 'pencil drawing', 'sketch', 'sketch woman girl', 'mother child', 'drawing woman child']",drawing,other,images/1226.jpg
+216,VizWiz_val_00001228,can you tell where the blackberry bushes in relation to the front door?,"['left', 'no', 'yes', 'near front porch', 'to left', 'just to left front door', 'left side']",to left,other,images/1228.jpg
+217,VizWiz_val_00001229,What do you see?,"['forest', 'dirt leaves', 'outside leaves allover ground space trees', 'trees in woods', 'ground', 'leaves', 'dead leaves']",ground,other,images/1229.jpg
+218,VizWiz_val_00001240,Is this soap?,"['no', 'hand sanitizer', 'yes']",no,yes/no,images/1240.jpg
+219,VizWiz_val_00001242,What is in this box?,"['lasagne', 'special lasagne', 'pecial lasagna', 'lasgne', 'lasagna']",lasagne,other,images/1242.jpg
+220,VizWiz_val_00001243,What is this?,"['mouse', 'computer mouse', 'hp wired mouse', 'pc mouse', 'hp mouse']",computer mouse,other,images/1243.jpg
+221,VizWiz_val_00001244,What is this?,"['remote', 'remote control', 'tv controller', 'tv remote']",remote,other,images/1244.jpg
+222,VizWiz_val_00001247,When does this expire?,"['12 28 2013', 'december 29th 2013', 'dec 28 2013', 'december 28 2013']",dec 28 2013,other,images/1247.jpg
+223,VizWiz_val_00001256,What color is my hair?,"['brown', 'light brown', 'dark blonde', 'blonde brunette']",brown,other,images/1256.jpg
+224,VizWiz_val_00001257,What is this color?,"['red', 'orange', 'peach', 'pink']",red,other,images/1257.jpg
+225,VizWiz_val_00001266,What color is this?,"['blue white grey stripes', 'blue tan white', 'blue white stripe', 'blue tan white stripes', 'grey tan', 'blue', 'grey white', 'navy blue white green light blue stripes', 'blue white stripes', 'grey']",blue white grey stripes,other,images/1266.jpg
+226,VizWiz_val_00001268,What is this?,"['wine', 'wine bottle', 'bottle red wine', 'mostly empty wine bottle', 'bottle']",wine,other,images/1268.jpg
+227,VizWiz_val_00001270,What color is it?,"['white', 'silver', 'silver white buttons', 'dark grey', 'grey']",silver,other,images/1270.jpg
+228,VizWiz_val_00001277,What is this and which color is it?,"['purple jacket', 'purple', 'purple hoodie sweatshirt', 'hoodie purple white green lettering', 'hoodie purple', 'i don»t know purple color', 't shirt', 'not sure what but purple green white']",purple jacket,other,images/1277.jpg
+229,VizWiz_val_00001279,What is this?,"['telephone', 'phone', 'phone answering machine', 'cordless phone', 'cordless telephone', 'uniden digital dect 6.0 cordless phone main base']",phone,other,images/1279.jpg
+230,VizWiz_val_00001281,what does this say here what is this?,"['reminder to bring medication', 'reminder to patients frame', 'reminder to patients please bring all your medication', 'bring all medicine to doctor visit sign', 'reminder to patients please bring all your medications including non prescriptions', 'bring all your medications including non prescriptions supplements to your office visit', 'thank you', 'reminder to patients to bring all meds prescriptions to visit', 'reminder to patients please bring all your medications to your next office visit', 'medications']",reminder to bring medication,other,images/1281.jpg
+231,VizWiz_val_00001286,What are these?,"['black vans', 'shoes', 'vans shoes', 'black vans shoes']",shoes,other,images/1286.jpg
+232,VizWiz_val_00001287,what is in this box?,"['frozen dinner', 'traditional baked turkey', 'turkey', 'turkey dinner', 'baked turkey']",traditional baked turkey,other,images/1287.jpg
+233,VizWiz_val_00001291,What is it?,"['bottled water', 'water bottle', 'water']",water bottle,other,images/1291.jpg
+234,VizWiz_val_00001298,What is this?,"['processed cream cheese spread', 'cream cheese spread', 'puck processed cream cheese spread']",processed cream cheese spread,other,images/1298.jpg
+235,VizWiz_val_00001299,What color is the shirt I'm wearing?,"['blackbluelight blue brown flannel', 'green brown plaid', 'blue orange white plaid', 'plaid brown navy white', 'plaid green brown', 'black brown', 'plaid', 'black white', 'black blue plaid', 'white brown blue']",blackbluelight blue brown flannel,other,images/1299.jpg
+236,VizWiz_val_00001302,What is this item?,"['automatic door stop', 'door stop', 'doorstop']",automatic door stop,other,images/1302.jpg
+237,VizWiz_val_00001306,What color is this?,"['grey', 'black', 'white grey', 'white']",grey,other,images/1306.jpg
+238,VizWiz_val_00001311,What color is this?,"['multicolored', 'white pure flowers', 'white purple flowers', 'white background purple flowers green leaves', 'white', 'green purple', 'white purple green', 'white black purple green']",white purple flowers,other,images/1311.jpg
+239,VizWiz_val_00001314,Where is the printer?,"['on table', 'on small table under white board', 'on top folding table', 'table', 'to left door frame', 'against wall', 'gffdg']",on table,other,images/1314.jpg
+240,VizWiz_val_00001315,What kind of cough drops are these?,"['honey lemon', 'premier value honey lemon', 'premier value', 'honey lemon premier value brand', 'cough']",honey lemon,other,images/1315.jpg
+241,VizWiz_val_00001316,what is this? what it is this?,"['remote', 'remote control', 'tv remote', 'we']",remote,other,images/1316.jpg
+242,VizWiz_val_00001324,What does this look like?,"['flower patterned fabric', 'bedsheet flowers', 'sheets', 'flower pattern blue purple green', 'blue flower paisley', 'floral pattern', 'bright floral print', 'flowers', 'blanket', 'colorful']",flower patterned fabric,other,images/1324.jpg
+243,VizWiz_val_00001331,"Is there anything on this tin that could help me identify the name of it, the brand or anything?","['no', 'nothing also found nothing on google image search', 'this scent bottle', 'i do not see anything on this side tin perhaps something on bottom']",no,yes/no,images/1331.jpg
+244,VizWiz_val_00001332,What does this bag say?,"['croutons', 'premium croutons']",premium croutons,other,images/1332.jpg
+245,VizWiz_val_00001343,What is this?,"['dollar bill', '1 dollar bill', 'dollar', '1', '$1 bill', '1 us dollar bill']",1 dollar bill,other,images/1343.jpg
+246,VizWiz_val_00001345,"What box am I looking at, as in what does the box contain?","['granola bar box', 'nature valley roasted almond granola bars', 'granola bars', 'nature valley', 'roasted almond granola bars', 'nature valley crunchy granola bars roasted almond flavor', 'roasted almond crunchy granola bars']",granola bars,other,images/1345.jpg
+247,VizWiz_val_00001346,What is this product?,"['netgear', 'netgear wifi adapter', 'wi fi adapter', 'software', 'netgear universal wifi adapter for smart tv bluray', 'wifi adaptor', 'universal adapter for smart tv blu ray', 'universal wi fi']",netgear,other,images/1346.jpg
+248,VizWiz_val_00001348,what is this?,"['ink pen', 'pen']",pen,other,images/1348.jpg
+249,VizWiz_val_00001349,What is this?,"['dog', 'weiner dog', 'dachshund']",dog,other,images/1349.jpg
+250,VizWiz_val_00001351,What is this?,"['candy', 'strawberry hard candy', 'piece candy', 'strawberry candy', 'sdgaegr']",candy,other,images/1351.jpg
+251,VizWiz_val_00001354,What color is this?,"['white', 'cloth']",white,other,images/1354.jpg
+252,VizWiz_val_00001356,What is in this can?,"['sliced carrots', 'carrots', 'can', 'slice carrots']",carrots,other,images/1356.jpg
+253,VizWiz_val_00001362,How much fat does it contain?,"['8 g', 'g', 'g per serving 3 servings per container', '12%', '8 grams']",g,other,images/1362.jpg
+254,VizWiz_val_00001363,Can you read anything on this label?,"['yes', 'anti gravity slippers easyspirit', 'anti gravity slippers easy spirit', 'tag to anti gravity slippers']",yes,yes/no,images/1363.jpg
+255,VizWiz_val_00001368,Can you see the fragrance on this bottle of Freebeze?,"['no', 'cant see lable']",no,yes/no,images/1368.jpg
+256,VizWiz_val_00001370,What is this?,"['tablet', 'phone', 'ipad', 'tablet computer', 'cell phone']",tablet,other,images/1370.jpg
+257,VizWiz_val_00001374,What is this item?,"['notebook', 'paid', 'tablet', 'notepad', 'book', 'spiral bound notebook']",notebook,other,images/1374.jpg
+258,VizWiz_val_00001377,Does it look sunny outside?,"['yes', 'yes does']",yes,yes/no,images/1377.jpg
+259,VizWiz_val_00001381,"Is there a chest piece in this picture? If so, where?",['no'],no,yes/no,images/1381.jpg
+260,VizWiz_val_00001385,"Do you see the river from there, from this perspective?",['yes'],yes,yes/no,images/1385.jpg
+261,VizWiz_val_00001386,What is this?,"['remote control', 'remote', 'dvd player tv remote', 'tv remote']",remote control,other,images/1386.jpg
+262,VizWiz_val_00001387,What does this card say?,"['$150 reward when you sign up for chase card', '$150 gift card', '$150 gift card when you open chase account', 'chase $150 gift card', '$150 yours when you open qualifying chase checking account', 'chase gift card', '$150 yours', 'chase $150 gift card when you open checking account', '150']",$150 gift card,other,images/1387.jpg
+263,VizWiz_val_00001389,What is this?,"['guava ginseng', 'tea']",tea,other,images/1389.jpg
+264,VizWiz_val_00001396,What soda is this?,"['diet pepsi max', 'pepsi max', 'diet pepsi']",diet pepsi max,other,images/1396.jpg
+265,VizWiz_val_00001397,What is this object?,"['tv remote', 'remote control', 'remote']",tv remote,other,images/1397.jpg
+266,VizWiz_val_00001400,What type of soda is this?,"['moutain dew code red', 'mountain dew code red', 'mountain dew', 'mountain dew: code red', 'code red']",mountain dew code red,other,images/1400.jpg
+267,VizWiz_val_00001401,What is this?,"['telephone', 'cordless phone', 'phone', 'cell phone', 'missed call message phone']",phone,other,images/1401.jpg
+268,VizWiz_val_00001402,What color is this shirt?,['grey'],grey,other,images/1402.jpg
+269,VizWiz_val_00001403,What color is this sweater?,['black'],black,other,images/1403.jpg
+270,VizWiz_val_00001406,What is this picture of?,"['this mouse picture', 'computer mouse', 'mouse']",computer mouse,other,images/1406.jpg
+271,VizWiz_val_00001407,What does this say?,"['macbook pro', 'mac book pro', 'air book pro', 'macbookpro']",macbook pro,other,images/1407.jpg
+272,VizWiz_val_00001412,What is that?,"['robe hanging on door', 'plaid shirt hanging on door', 'door', 'wefwef', 'robe', 'plaid shirt', 'shirt', 'shirt hanging on door']",robe,other,images/1412.jpg
+273,VizWiz_val_00001413,What kind of cookies are these?,"['oreos', 'double stuff oreo', 'double stuffed oreos', 'double stuf oreos', 'double stuff oreos']",double stuff oreo,other,images/1413.jpg
+274,VizWiz_val_00001415,Is this a can of beans?,['yes'],yes,yes/no,images/1415.jpg
+275,VizWiz_val_00001418,What is on this Captcha please?,"['d8kk', 'd 8 k k']",d8kk,other,images/1418.jpg
+276,VizWiz_val_00001420,What color is my shirt?,"['dark brown', 'black', 'brown', 'black white']",black,other,images/1420.jpg
+277,VizWiz_val_00001426,What is this bottle?,"['stain odor eliminator', 'spot shot carpet', 'bottle disinfectant', 'spot shot', 'carpet stain remover', 'cleaner', 'spot shout']",spot shot,other,images/1426.jpg
+278,VizWiz_val_00001428,What flavor is this?,"['dark chocolate peanut almond', 'chocolate', 'dark chocolate peanut almonds']",dark chocolate peanut almond,other,images/1428.jpg
+279,VizWiz_val_00001429,What kind is this?,"['cake frosting', 'vanilla', 'whipped vanilla frosting', 'betty crocker', 'vanilla frosting', 'whipped vanilla']",vanilla,other,images/1429.jpg
+280,VizWiz_val_00001434,Can you see the model of this tablet device?,"['cyberpad', 'no', 'cyberpad 4th generation', 'cyber pad', 'yes', '4.3 tablet pc']",cyberpad,other,images/1434.jpg
+281,VizWiz_val_00001437,What is this?,"['football', 'purple orange plush football gator on', 'gators football', 'gators soft football', 'stuffed football', 'stuffed orange blue football', 'purple football', 'fl gators']",football,other,images/1437.jpg
+282,VizWiz_val_00001440,What color are the three wires from left to right?,"['red black white', 'red black yell', 'ergerg']",red black white,other,images/1440.jpg
+283,VizWiz_val_00001443,what's in the picture?,"['coffee table', 'table', 'coffe table', 'coffee table tile floor 3 people glass pitcher serving bowl bank throw rugs tin foil', 'brown coffee table']",coffee table,other,images/1443.jpg
+284,VizWiz_val_00001447,What title is this?,"['seventies', 'cd', 'framed picture']",seventies,other,images/1447.jpg
+285,VizWiz_val_00001448,What kind of soda is this?,"['cherry coke', 'cherry coca cola', 'coca cola cherry', 'coke']",cherry coca cola,other,images/1448.jpg
+286,VizWiz_val_00001453,Can you see what the saying is?,"['yes', 'no', 'oh great spirit homily']",yes,yes/no,images/1453.jpg
+287,VizWiz_val_00001455,What is this? What is this?,"['office', 'chairs', 'office chair', 'chair', 'desk chair', 'home office', '2 desk chairs']",office,other,images/1455.jpg
+288,VizWiz_val_00001457,What is this?,"['over door hook wreath hanger', 'hook', 'hook over door', 'board', 'coat hook', 'heavy duty hook placed over cubicle divider']",hook,other,images/1457.jpg
+289,VizWiz_val_00001459,What color jewelry should I wear with this outfit?,"['silver', 'white', 'gold', 'black']",silver,other,images/1459.jpg
+290,VizWiz_val_00001460,What kind of coffee is this?,"['hazelnut', 'hazelnut noisette']",hazelnut,other,images/1460.jpg
+291,VizWiz_val_00001461,What color is this yarn?,"['purple', 'light pink', 'pink', 'lavender', 'rose pink']",purple,other,images/1461.jpg
+292,VizWiz_val_00001462,What color is the car in this photograph?,['white'],white,other,images/1462.jpg
+293,VizWiz_val_00001467,What is the picture of?,"['foot', 'foot scratch on']",foot,other,images/1467.jpg
+294,VizWiz_val_00001469,What is this?,"['mini chips ahoy cookies', 'mini chips ahoy', 'chips ahoy mini', 'chips ahoy', 'cookies']",mini chips ahoy,other,images/1469.jpg
+295,VizWiz_val_00001470,What is this?,"['smart water', 'water bottle', 'water', 'smartwater']",smart water,other,images/1470.jpg
+296,VizWiz_val_00001471,What does this knob say?,"['whites colors high heat cool down', 'white colors', 'whites colors', 'whites colors study permanent delicate permanent press', 'whites']",white colors,other,images/1471.jpg
+297,VizWiz_val_00001472,what color is my shirt?,"['black white', 'blue white black', 'black', 'blue', 'navy', 'black white emblem']",black white,other,images/1472.jpg
+298,VizWiz_val_00001474,What is this?,"['keys', 'keyboard', 'laptop keyboard']",keyboard,other,images/1474.jpg
+299,VizWiz_val_00001475,Is it a sofa or a table?,"['table', 'this table']",table,other,images/1475.jpg
+300,VizWiz_val_00001476,What is it?,"['tonic water', 'indian tonic water by sainsburys', 'indian tonic water', 'indian tonic water sainsburys']",tonic water,other,images/1476.jpg
+301,VizWiz_val_00001479,Can you tell me the content of this notice?,['no smoking'],no smoking,other,images/1479.jpg
+302,VizWiz_val_00001481,what's this? what's this?,"['thomas train', 'i see thomas train', 'thomas tank engine', 'train', 'fdgdfg']",thomas train,other,images/1481.jpg
+303,VizWiz_val_00001482,What is this?,"['phone box', 'iphone', 'iphone box', 'phone', 'cellphone', 'cell phone box', 'smartphone', 'smart phone']",iphone,other,images/1482.jpg
+304,VizWiz_val_00001484,Can you please tell me what each brand is--left and right?,"['dove lady speed stick', 'dove speedstick', 'left dove right lady speed stick', 'both deodorant', '1 on left dove 1 on right lady speed stick by mennen', 'dove on left lady speed stick on right']",dove lady speed stick,other,images/1484.jpg
+305,VizWiz_val_00001485,What is this?,"['coffee cup', 'mug', 'teacup', 'white red cup', 'coffee mug']",mug,other,images/1485.jpg
+306,VizWiz_val_00001486,Can you tell me what kind of phone this is?,"['l g', 'lg', 'android', 'yes']",lg,other,images/1486.jpg
+307,VizWiz_val_00001487,What does the coffee cup say?,"['gt', 'mug', 'ct']",gt,other,images/1487.jpg
+308,VizWiz_val_00001490,What movie is this?,"['sdfds', 'musical', 'abba', 'bridesmaids', 'abba movie']",abba,other,images/1490.jpg
+309,VizWiz_val_00001491,What is in this package please?  Pudding or apple sauce?,"['chocolate pudding', 'pudding', 'kraft chocolate pudding', 'chocolate']",pudding,other,images/1491.jpg
+310,VizWiz_val_00001494,What is this?,"['house', 'house at night']",house,other,images/1494.jpg
+311,VizWiz_val_00001496,What color is this?,"['white', 'grey']",grey,other,images/1496.jpg
+312,VizWiz_val_00001497,What is this?,"['kitchen knife', 'knife', 'butter knife', 'table knife']",butter knife,other,images/1497.jpg
+313,VizWiz_val_00001498,What is this?,"['blackberry cell phone', 'blackberry', 'phone', 'cell phone', 'cellphone']",blackberry cell phone,other,images/1498.jpg
+314,VizWiz_val_00001503,"Hi, can you tell me what color this t-shirt is, please?","['white', 'green', 'light green', 'very light green']",white,other,images/1503.jpg
+315,VizWiz_val_00001507,What color is this shirt please?,"['grey', 'shirt', 'blue', 'black']",grey,other,images/1507.jpg
+316,VizWiz_val_00001512,What type of Doritos are these?,"['ranch', 'cool ranch']",cool ranch,other,images/1512.jpg
+317,VizWiz_val_00001513,What flavor is this?,"['beef', 'beef flavored', 'beef flavored broth', 'beef flavor', 'this beef flavor']",beef,other,images/1513.jpg
+318,VizWiz_val_00001516,What kind of soda is this?,"['stars stripes lemon lime', 'lemon lime', 'loopy lime', 'stars stripes', 'lime', 'sprite', 'green']",lemon lime,other,images/1516.jpg
+319,VizWiz_val_00001519,What kind of soup is this?,"['pot roast', 'campbells chunky', 'office', 'campbells', 'chunky beef stew', 'chunky', 'chunky pot pie', 'chunky pot roast']",pot roast,other,images/1519.jpg
+320,VizWiz_val_00001522,Is there anybody in the hallway?,"['no person in hallway', 'no']",no,yes/no,images/1522.jpg
+321,VizWiz_val_00001523,What's this?,"['cellphone', 'phone', 'cell phone', 'apple iphone', 'smart phone', 'mobile phone']",phone,other,images/1523.jpg
+322,VizWiz_val_00001524,What is the product?,"['blue mouse boulder', 'blue moose', 'cheese', 'dip', 'blue moose boulder', 'blue moose boulder all natural dip']",blue moose,other,images/1524.jpg
+323,VizWiz_val_00001527,What is this?,"['couch', 'black couch', 'couch throw pillows blanket', 'sofa']",couch,other,images/1527.jpg
+324,VizWiz_val_00001533,What does it say?,"['perry ellis portfolio 2 pairs mens hosiery', 'kk', '2 pairs', 'perry ellis portfolio mens hosiery', 'perry ellis portfolio', 'perry ellis portfolio mens hosiery 2 pairs', '2 pair mens hosiery socks']",perry ellis portfolio,other,images/1533.jpg
+325,VizWiz_val_00001537,What is on my screen?,"['letter symbols', 'appears to be glyphs fonts', 'greek alphabet', 'periodic table', 'alphabet letters', 'letters', 'letters symbols', 'symbols', 'letter']",greek alphabet,other,images/1537.jpg
+326,VizWiz_val_00001539,What is this?,['vase'],vase,other,images/1539.jpg
+327,VizWiz_val_00001540,What is this?,"['diet coke soda', 'diet coke can', 'diet coke', 'can diet coke', 'coke', 'soda']",diet coke,other,images/1540.jpg
+328,VizWiz_val_00001541,what color is this?,"['blue grey', 'grey', 'charcoal', 'unusable image', 'black']",grey,other,images/1541.jpg
+329,VizWiz_val_00001546,What is this photo?,"['concrete crack in', 'floor', 'crack in sidewalk', 'ground', 'cracked pavement', 'outside', 'concrete', 'cement']",concrete,other,images/1546.jpg
+330,VizWiz_val_00001552,What is this?,"['telephone', 'phone', 'digital phone', 'office phone']",telephone,other,images/1552.jpg
+331,VizWiz_val_00001555,Is this Life is Beautiful?,"['no', 'no does not look like']",no,yes/no,images/1555.jpg
+332,VizWiz_val_00001556,What color is this shirt?,"['tan', 'brown', 'beige', 'pinkish', 'gold', 'grey color']",tan,other,images/1556.jpg
+333,VizWiz_val_00001562,What color are these wine glasses?,"['green', 'clear green', 'clear green on bottom', 'light green', 'green clear']",clear green,other,images/1562.jpg
+334,VizWiz_val_00001564,what kinda soda is this?,"['mountain dew', 'mtn dew']",mtn dew,other,images/1564.jpg
+335,VizWiz_val_00001571,What color is it?,"['grey', 'white', 'faded black']",grey,other,images/1571.jpg
+336,VizWiz_val_00001572,Which chocolate bar is it? Snickers or Mars?,['mars'],mars,other,images/1572.jpg
+337,VizWiz_val_00001573,What is this?,"['coffee mug straw', 'superbowl 28 coffee cup blue straw', 'mug', 'cup milk', 'coffe cup pen in', 'coffee cup coffee spoon in', 'cup', 'coffee cup']",cup milk,other,images/1573.jpg
+338,VizWiz_val_00001575,"Whats this shirt look like, thanks?","['tie dye', 'flowers', 'like tye dye', 'colorful', 'white color stains', 'multi color white background', 'tie dyed', 'white multi colored forms', 'white green pink']",tie dye,other,images/1575.jpg
+339,VizWiz_val_00001579,Can you tell me what this is?,"['display for girls toy', 'bulletin board', 'barbie accessories', 'pictures dolls', 'photos doll furniture accessories', 'artwork on wall', 'book', 'cartoons', 'childs play toy']",book,other,images/1579.jpg
+340,VizWiz_val_00001580,What is this?,"['massage bar', 'soap', 'lotion', 'massaging bar', 'massage bar soap', 'pillow']",massage bar,other,images/1580.jpg
+341,VizWiz_val_00001582,What are these?,"['fritos chili cheese chips', 'fritos', 'chili cheese fritos', 'fritos chili cheese', 'fritos chips', 'fritos chili cheese flavor']",fritos,other,images/1582.jpg
+342,VizWiz_val_00001583,What is this?,"['laundry detergent', 'all might pacs laundry detergent', 'all mighty pacs concentrated laundry detergent', 'all laundry detergent', 'all mighty pacs laundry detergent', 'laundry soap pods', 'laundry detergent packets', 'detorgent']",laundry detergent,other,images/1583.jpg
+343,VizWiz_val_00001585,What does it say exactly on this coupon?,"['free baja shrimp taco', 'free baja shrimp tostada baja shrimp quesadilla $10 minimum purchase', 'free baja shrimps', 'free baja shrimp taco baja shrimp tostda baja shrimp quesadilla purchase', 'free baja shrimp taco bajo shrimp tostado baja shrimp quesadilla', 'free']",free baja shrimp taco,other,images/1585.jpg
+344,VizWiz_val_00001589,Can you tell me if there are any photos on the CD cover and if so can you give me a description of them?,"['photo billy joel on stage piano', 'yes man at piano', 'billy joel on stage singing sitting at piano', 'billy joel playing piano live at shea stadium', 'billy joel at piano in concert', 'yes piano man', 'yes man playing piano', 'billy joel dressed in all black playing piano onstage for crowd', 'man playing piano', 'billy joel playing piano for audience']",photo billy joel on stage piano,other,images/1589.jpg
+345,VizWiz_val_00001592,What beer is that?,"['corona extra', 'corona']",corona extra,other,images/1592.jpg
+346,VizWiz_val_00001598,what is the name of the product in the can in the picture?,['lysol'],lysol,other,images/1598.jpg
+347,VizWiz_val_00001599,What kind of pasta-roni is this? Guess what?,"['fettuccine alfredo', 'fettuccine']",fettuccine alfredo,other,images/1599.jpg
+348,VizWiz_val_00001600,What sent?,"['sage sweet grass', 'sae sweet grass', 'sage']",sage sweet grass,other,images/1600.jpg
+349,VizWiz_val_00001603,what kind of pee is this?,"['celestial', 'sleepytime herbal tea', 'sleepytime', 'tea', 'sleepy time', 'sleepy time herbal tea', 'celestial seasonings sleepy time herbal time']",sleepytime herbal tea,other,images/1603.jpg
+350,VizWiz_val_00001607,Can you tell me if this looks like hamburger?,"['yes', 'looks like hamburger meat', 'yes does']",yes,yes/no,images/1607.jpg
+351,VizWiz_val_00001610,What is this?,"['soap', 'dove rich nourishment lotion', 'cream', 'dove cream', 'dove rich nourishment cream', 'dove face cream']",dove rich nourishment cream,other,images/1610.jpg
+352,VizWiz_val_00001613,What is this?,"['vegetable blend', 'veggies', 'mediterranean vegetable blend in olive oil', 'mediterranean vegetable blend', 'frozen veggies', 'bag vegetables', 'frozen mediterranean vegetable blend']",mediterranean vegetable blend,other,images/1613.jpg
+353,VizWiz_val_00001617,What is in the tin?,"['organic baked beans', 'baked beans']",baked beans,other,images/1617.jpg
+354,VizWiz_val_00001620,Can you please tell me what that packet is?,"['package ground beef', 'lean steak mince', 'burger', 'beef', 'minced meat', 'hamburger', 'ground beef']",lean steak mince,other,images/1620.jpg
+355,VizWiz_val_00001623,What do you say?,"['yuck', 'good morning', 'beer', 'drink', 'cup', 'tea', 'coffee', 'thank you']",yuck,other,images/1623.jpg
+356,VizWiz_val_00001626,Is this a regular coke or a diet coke?,"['diet coke', 'diet']",diet,other,images/1626.jpg
+357,VizWiz_val_00001627,What is this?,"['mouse', 'wireless mouse', 'computer mouse', 'logitech mouse']",mouse,other,images/1627.jpg
+358,VizWiz_val_00001628,What color is this and what is it?,"['grey black michael kors handbag', 'white black handbag', 'brown handbag', 'grey black michael kors hand bag', 'tan purse', 'white gold print purse', 'beige pocketbook', 'white black purse', 'tan brown purse', 'tan brown mk purse']",grey black michael kors handbag,other,images/1628.jpg
+359,VizWiz_val_00001634,What is this?,"['upc symbol', 'bar code', 'dvd', 'movie', 'dcd', 'dvd bar codes', 'err']",dvd,other,images/1634.jpg
+360,VizWiz_val_00001640,What is my computer screen showing?,"['system error', 'computer unable to restart asking if you want to restore', 'directions for restoring computer', 'window', 'computer unable to start', 'system restore', 'computer was unable to start checking for problems', 'want to restore your computer usin', 'computer was unable to start', 'restore computer screen']",system error,other,images/1640.jpg
+361,VizWiz_val_00001642,What brand is this popcorn?,"['act ii', 'butters lovers', 'act 2']",act ii,other,images/1642.jpg
+362,VizWiz_val_00001645,What is this?,"['arrowhead spring water', 'water', 'water bottle', 'bottle water', 'arrowhead water']",water bottle,other,images/1645.jpg
+363,VizWiz_val_00001647,What is that?,"['couch', 'blue couch cushions pillows', 'blue couch']",couch,other,images/1647.jpg
+364,VizWiz_val_00001651,I know but what color?,"['white', 'dark blue']",white,other,images/1651.jpg
+365,VizWiz_val_00001653,What color is my hand?,"['light', 'tan', 'white', 'flesh', 'light brown', 'peach']",white,other,images/1653.jpg
+366,VizWiz_val_00001654,What's in this basket?,"['candy', 'assortment candy', 'chocolate']",candy,other,images/1654.jpg
+367,VizWiz_val_00001657,What is this?,"['jell o', 'jello', 'vanilla pudding mix', 'jello pudding', 'instant pudding', 'box jello', 'jell o instant pudding']",jello,other,images/1657.jpg
+368,VizWiz_val_00001659,What color is that please?,"['white', 'grey']",white,other,images/1659.jpg
+369,VizWiz_val_00001663,What is the title of this cd?,['jazz collection'],jazz collection,other,images/1663.jpg
+370,VizWiz_val_00001667,What is this?,"['glass', 'wine', 'wine tumbler', 'wine glass', 'drinking glass']",glass,other,images/1667.jpg
+371,VizWiz_val_00001668,Does Buddy's face look cute or not?,"['yes', 'cute', 'no']",yes,yes/no,images/1668.jpg
+372,VizWiz_val_00001674,I believe this is silver oak.  What year is it?,['2000'],2000,number,images/1674.jpg
+373,VizWiz_val_00001678,What is this?,"['fiber n mor', 'dietary supplement', 'fiber n mor dietary supplement', 'fiber dietary supplement', 'fiber', 'fiber pills', 'fiber n mor supplements']",fiber n mor,other,images/1678.jpg
+374,VizWiz_val_00001679,What is this item?,"['domino confectioners sugar', 'confectioners sugar', 'dominic confectioners sugar', 'domino powdered sugar', 'sugar']",confectioners sugar,other,images/1679.jpg
+375,VizWiz_val_00001681,What kind of dog is this?,"['bulldog', 'english bull dog', 'bull', 'pug', 'bull dog']",bulldog,other,images/1681.jpg
+376,VizWiz_val_00001690,What is this?,"['blistex', 'blistex lip balm', 'blistex chapstick', 'blistex medicated lip balm', 'lipbalm', 'chapstick', 'blistex medicated chapstick']",blistex,other,images/1690.jpg
+377,VizWiz_val_00001691,What is this item?,"['hot pepper sauce', 'jamaican wildfire hot pepper sauce', 'spice', 'hak has jamaican wildfire hot pepper sauce hot as hell', 'jamaican hot sauce', 'pepper sauce']",hot pepper sauce,other,images/1691.jpg
+378,VizWiz_val_00001694,What can is this?,"['beans item', 'beans']",beans,other,images/1694.jpg
+379,VizWiz_val_00001697,What is this thing?,"['label maker', 'p touch label maker', 'keyboard', 'phone']",label maker,other,images/1697.jpg
+380,VizWiz_val_00001699,What do I use this for?,"['hammer', 'hammer nails', 'hammering nails', 'hammering', 'repairments', 'building things', 'for putting nut']",hammer,other,images/1699.jpg
+381,VizWiz_val_00001701,What kind of spice is this?,['thyme'],thyme,other,images/1701.jpg
+382,VizWiz_val_00001704,What kind of cookies are these?,"['halloween', 'insufficient image', 'pumpkin', 'haloween', 'lofthouse', 'halloween sugar', 'cookies']",halloween,other,images/1704.jpg
+383,VizWiz_val_00001709,What is this and what does it look like?,"['bowl', 'light baseball', 'round baseball light', 'baseball tap light', 'baseball light', 'looks like baseball', 'baseball weight', 'looks like baseball unsure contents inside', 'baseball']",baseball,other,images/1709.jpg
+384,VizWiz_val_00001711,What is in this bottle?,"['cinnamon', 'ground cinnamon']",cinnamon,other,images/1711.jpg
+385,VizWiz_val_00001720,Which coffee is this?,"['express perugia', 'perugia']",express perugia,other,images/1720.jpg
+386,VizWiz_val_00001721,What's this?,"['computer', 'computer on desk', 'dell desk top computer']",computer,other,images/1721.jpg
+387,VizWiz_val_00001722,What flavor are these pringles?,"['thai sweet chili', 'chai sweet chilu', 'chili', 'prngles flavor', 'thai sweet chilli']",thai sweet chili,other,images/1722.jpg
+388,VizWiz_val_00001723,What color is this?,"['white', 'off white']",white,other,images/1723.jpg
+389,VizWiz_val_00001724,What is this color please?,"['silver', 'grey', 'this grey color', 'grey silver']",silver,other,images/1724.jpg
+390,VizWiz_val_00001725,What color is this hair?,"['auburn', 'brown', 'light brown', 'red', 'reddish brown']",brown,other,images/1725.jpg
+391,VizWiz_val_00001730,What is the title of this book?,['fishing in air'],fishing in air,other,images/1730.jpg
+392,VizWiz_val_00001731,What is this?,"['baby chair', 'baby bouncer', 'baby walker', 'baby seat buttons', 'bouncy seat for baby']",baby walker,other,images/1731.jpg
+393,VizWiz_val_00001734,What is this?,"['sauce', 'sauteed potato bacon', 'sauateed potato bacon', 'sauted potato bacon', 'dressing', 'yogurt']",sauted potato bacon,other,images/1734.jpg
+394,VizWiz_val_00001737,What is that a coupon for?,"['yogurt', 'yoplait yogurt', 'yoplait yogurt 10 $5', 'yoplait', 'discount']",yogurt,other,images/1737.jpg
+395,VizWiz_val_00001742,What is this drink?,"['pepsi', 'diet pepsi', 'coffee']",pepsi,other,images/1742.jpg
+396,VizWiz_val_00001751,What is this image?,"['dartboard', 'dart board', 'darts board', 'bulls eye']",dart board,other,images/1751.jpg
+397,VizWiz_val_00001753,What is the label on this bottle?,"['mexican oregano', 'world spice mexican oregano', 'world spice mexicano oregano']",mexican oregano,other,images/1753.jpg
+398,VizWiz_val_00001756,What dvd is this?,"['movie', 'doctor who']",doctor who,other,images/1756.jpg
+399,VizWiz_val_00001757,What is this?,"['sony laptop', 'laptop', 'computer', 'sony vaio laptop', 'sony vaio']",laptop,other,images/1757.jpg
+400,VizWiz_val_00001758,What is this product?,"['parmesan roasted garlic', 'dressing', 'this newmans own parmesan roasted garlic salad dressing', 'roasted garlic', 'parmesan', 'salad dressing', 'parmesan roasted garlic alfredo', 'newmans own parmesan roasted garlic salad dressing', 'parmesan roasted garlic dressing']",parmesan roasted garlic dressing,other,images/1758.jpg
+401,VizWiz_val_00001761,What is this?,"['calculator', 'part microwave', 'microwave', 'control panel', 'microwave panel']",microwave,other,images/1761.jpg
+402,VizWiz_val_00001763,What color is this dog ornament?,"['black', 'red', 'black red white', 'black dog red white christmas stocking', 'black dog holding red stocking']",black,other,images/1763.jpg
+403,VizWiz_val_00001764,What is this package?,"['veggie lasagna', 'farmers harvest microwavable meal', 'vegetable lasagna', 'microwave dinner', 'frozen dinner', 'food', 'microwavable food', 'frozen vegetable lasagna', 'farmers harvest veggie lasagne']",vegetable lasagna,other,images/1764.jpg
+404,VizWiz_val_00001765,What is the name of this product?,"['sun', 'sun plus oxi', 'sun ox', 'sun laundry soap']",sun,other,images/1765.jpg
+405,VizWiz_val_00001774,What flavor is this?,"['apple strudel', 'apple']",apple strudel,other,images/1774.jpg
+406,VizWiz_val_00001775,What is in this box?,"['roast beef meal', 'roast beef', 'traditional roast beef']",roast beef,other,images/1775.jpg
+407,VizWiz_val_00001777,What color is my dog?,"['mostly white light brown spots', 'blonde', 'cream', 'white', 'yellow', 'dog very light tan blond color', 'golden', 'beige', 'tan']",yellow,other,images/1777.jpg
+408,VizWiz_val_00001778,What is it?,"['snow', 'sidewalk', 'snowy street', 'snow covered path', 'snow covered sidewalk', 'sidewalk snow trees', 'snowy walkway', 'tree']",snow,other,images/1778.jpg
+409,VizWiz_val_00001782,What is this object?,"['ashtray', 'decorative bronze sculpture lioness', 'statue', 'no', 'ash tray', 'dog bowl', 'plague tiger on top']",ashtray,other,images/1782.jpg
+410,VizWiz_val_00001783,"I know this is healthy choice, but what dinner is it?","['salisbury steak', 'steak', 'homestyle salisbury steak']",salisbury steak,other,images/1783.jpg
+411,VizWiz_val_00001785,What color is this shirt?,"['red', 'pink']",red,other,images/1785.jpg
+412,VizWiz_val_00001786,What is this?,"['large cup', 'cup', 'loves togo cup', 'pop cup some other stuff', 'styrofoam cup', 'this cup']",cup,other,images/1786.jpg
+413,VizWiz_val_00001788,What kind of pizza is this?,"['thin crust', 'mama cozzis', 'sausage', 'thin crust sausage', 'cheese']",thin crust,other,images/1788.jpg
+414,VizWiz_val_00001790,What kind of dinner is this?,"['microwave sesame chicken', 'sesame chicken', 'marie callenders sesame chicken dinner']",sesame chicken,other,images/1790.jpg
+415,VizWiz_val_00001797,What color is this chair?,"['black', 'brown', 'office', 'grey', 'blue']",black,other,images/1797.jpg
+416,VizWiz_val_00001801,Alright what is the expiration on this carton of milk?,"['march 21 2012', 'march 21 12', 'mar 21 12', 'march 21st 2012', '03 21 2012']",march 21 2012,other,images/1801.jpg
+417,VizWiz_val_00001804,What's in the picture?,"['table cups in kitchen', 'cookie tin', 'scotch gift', 'kitchen table top', 'tall green metal tin coffee cups', 'cup&juice', 'container bow', 'gift tin', 'gift can', 'green tin bow on top about size shape pringles can']",table cups in kitchen,other,images/1804.jpg
+418,VizWiz_val_00001805,Is this item?,"['poultry seasoning', 'yes', 'seasoning']",poultry seasoning,other,images/1805.jpg
+419,VizWiz_val_00001810,What is this?,"['sony playstation controller', 'controller', 'sony game', 'playstation game controller', 'playstation controller', 'red playstation controller', 'video game controller', 'joystick']",sony playstation controller,other,images/1810.jpg
+420,VizWiz_val_00001816,What is this?,"['coffee creamer', 'coffee mate', 'coffe mate french vanilla', 'french vanilla coffee creamer']",coffee creamer,other,images/1816.jpg
+421,VizWiz_val_00001818,Coffee is this?,"['gevalia', 'gevalia swiss hazelnut']",gevalia,other,images/1818.jpg
+422,VizWiz_val_00001823,What's this?,"['water bottle', 'pink sports bottle', 'cup', 'pink water bottle', 'unsure']",water bottle,other,images/1823.jpg
+423,VizWiz_val_00001824,What catalogue is this?,"['bed bath beyond', 'arewf']",bed bath beyond,other,images/1824.jpg
+424,VizWiz_val_00001826,What color is the curtains?,"['white', 'gold', 'beige', 'off white']",white,other,images/1826.jpg
+425,VizWiz_val_00001827,"Hello, tell me please, what color is this t-shirt?",['white'],white,other,images/1827.jpg
+426,VizWiz_val_00001831,Which DVD is this?,"['fresh prince', 'fresh prince bel air', 'fresh prince bel air season 1', 'fresh prince belair season 1', 'fresh prince bell air', 'fresh prince bel airseason 1']",fresh prince bel air,other,images/1831.jpg
+427,VizWiz_val_00001835,What's the title of this CD?,['quiet 1'],quiet 1,other,images/1835.jpg
+428,VizWiz_val_00001836,What is this?,"['cabernet 2009', 'wine', 'cabernet sauvignon', 'bottle wine', 'horse heaven columbia cabernet 2007 wine']",wine,other,images/1836.jpg
+429,VizWiz_val_00001838,Are these blueberry or cheese?,['cheese'],cheese,other,images/1838.jpg
+430,VizWiz_val_00001840,What flavor of coffee is this?,"['spicy eggnog', 'spicy egg nog']",spicy eggnog,other,images/1840.jpg
+431,VizWiz_val_00001842,What is this?,"['aquafina water', 'bottle aquafina water', 'water', 'plastic bottle aquafina brand water', 'bottle water', 'water bottle', 'plastic bottle water']",water,other,images/1842.jpg
+432,VizWiz_val_00001846,What is in this image?,"['dog', 'black white dog laying on rug', 'cute dog']",dog,other,images/1846.jpg
+433,VizWiz_val_00001848,What is this?,"['bowl', 'green bowl on blankets', 'green bowl', 'bowl spoon on blanket']",bowl,other,images/1848.jpg
+434,VizWiz_val_00001857,What is in this box?,"['rigatoni', 'rigatoni meal 7 minutes', 'frozen rigatoni']",rigatoni,other,images/1857.jpg
+435,VizWiz_val_00001858,What is the setting on this dryer?,"['counter clockwise regular wrinkle control time dry delicates wrinkle release air fluff', 'regular', 'off', 'not on setting', 'nothing']",off,other,images/1858.jpg
+436,VizWiz_val_00001860,this can?,"['split pea soup', 'split pea', 'yes', 'campbells select soup', 'soup', 'select harvest split pea roasted']",split pea soup,other,images/1860.jpg
+437,VizWiz_val_00001861,What color is this shirt?,"['white gold', 'white', 'white pinstripes', 'white stripes', 'white red', 'grey']",white,other,images/1861.jpg
+438,VizWiz_val_00001870,What color is this marker?,"['white', 'purple', 'blue']",purple,other,images/1870.jpg
+439,VizWiz_val_00001873,What color is this?,['grey'],grey,other,images/1873.jpg
+440,VizWiz_val_00001875,What bill is this?,"['1 dollar', '1', 'this 1 dollar bill', '$1']",1 dollar,other,images/1875.jpg
+441,VizWiz_val_00001877,What is this stuffed animal?,['snail'],snail,other,images/1877.jpg
+442,VizWiz_val_00001878,what is this?,"['vending machine', 'soda machine', 'soda vending machine', 'pepsi soda machine', 'pepsi vending machine', 'pepsi']",vending machine,other,images/1878.jpg
+443,VizWiz_val_00001881,What is the color of this fabric?,"['blue white', 'white teal', 'white turquoise', 'blu white', 'grey black purple teal', 'teal', 'white black skyblue grey violet']",blue white,other,images/1881.jpg
+444,VizWiz_val_00001891,What's inside this image?,"['leg foot', 'toes', 'leg foot floor rug', 'leg', 'foot', 'feet person rug', '2 feet 1 leg 1 rug']",leg,other,images/1891.jpg
+445,VizWiz_val_00001892,"What color is this shirt, please?","['blue', 'aqua blue', 'teal', 'aqua']",blue,other,images/1892.jpg
+446,VizWiz_val_00001893,What color is my shirt?,['grey'],grey,other,images/1893.jpg
+447,VizWiz_val_00001894,Does that sign say?,['hot dogs'],hot dogs,other,images/1894.jpg
+448,VizWiz_val_00001896,What kind of coffee is this?,"['french vanilla', 'maxwell house', 'maxwell house french vanilla', 'massimo', 'massimo maxwell house french vanilla']",french vanilla,other,images/1896.jpg
+449,VizWiz_val_00001899,What magazine is this?,"['good housekeeping', 'fvsdv']",good housekeeping,other,images/1899.jpg
+450,VizWiz_val_00001900,What is that?,"['book', 'camel cigarettes', 'domestic blend', 'cigarette box', 'cigarette pack', 'cigars', 'domestic blend cigarette', 'cigarettes']",camel cigarettes,other,images/1900.jpg
+451,VizWiz_val_00001905,What is this object?,"['nature valley oats dark chocolate granola bar', 'crunch bar', 'granola bar', 'nature valley oats n dark chocolate bar', 'oats n dark chocolate crunchy bar', 'dark chocolate granola bar']",granola bar,other,images/1905.jpg
+452,VizWiz_val_00001911,What color is this?,"['light green', 'green', 'teal']",green,other,images/1911.jpg
+453,VizWiz_val_00001914,What is in this box?,"['roast beef', 'food', 'traditional roast beef']",roast beef,other,images/1914.jpg
+454,VizWiz_val_00001917,What is in this cereal box?,"['fruit yogurt brand', 'special k cereal', 'fruit yogurt', 'special k fruit yogurt', 'special k fruit yogurt cereal', 'cereal', 'cereal box', 'special k']",special k fruit yogurt,other,images/1917.jpg
+455,VizWiz_val_00001920,What kind of chips are these?,"['doritos nacho cheese', 'nacho cheese', 'doritos', 'dorito nacho cheese', 'nacho cheese doritos']",doritos nacho cheese,other,images/1920.jpg
+456,VizWiz_val_00001921,What is this?,"['ottoman', 'box', 'foot stool', 'stool', 'footstool']",ottoman,other,images/1921.jpg
+457,VizWiz_val_00001923,What is the computer screen showing?,"['mouse arrow', 'cursor', 'nothing', 'blue', 'blue screen', 'arrow', 'blank', 'blue arrow']",blue screen,other,images/1923.jpg
+458,VizWiz_val_00001925,What kind of wine is this?,"['fetzer riesling', 'fetzer', 'riesling', 'white riesling']",fetzer riesling,other,images/1925.jpg
+459,VizWiz_val_00001928,Which game is this?,['nascar 07'],nascar 07,other,images/1928.jpg
+460,VizWiz_val_00001931,What is this?,"['tortilla wraps', 'tortilla wrap', 'flour tortilla wraps', 'wraps', 'flour tortillas']",tortilla wraps,other,images/1931.jpg
+461,VizWiz_val_00001934,What is this?,"['salt', 'sale', 'morton salt']",salt,other,images/1934.jpg
+462,VizWiz_val_00001944,What is it?,"['corgi', 'dog']",dog,other,images/1944.jpg
+463,VizWiz_val_00001947,What is the title of the book?,"['auf die lange', 'auf die lange kommt es', 'auf die länge kommt es']",auf die lange kommt es,other,images/1947.jpg
+464,VizWiz_val_00001948,"This is a package of something, What is it?","['bag tomato basil rice', 'tomato basil rice', 'tomato n basil rice']",tomato basil rice,other,images/1948.jpg
+465,VizWiz_val_00001954,What kind of fish is this?,['salmon'],salmon,other,images/1954.jpg
+466,VizWiz_val_00001960,What's in the jar?,"['nutmeg', 'ground nutmeg']",nutmeg,other,images/1960.jpg
+467,VizWiz_val_00001962,What is in that bottle?,"['coke', 'soda pop maybe coca cola', 'soda', 'coca cola soda']",soda,other,images/1962.jpg
+468,VizWiz_val_00001963,What is this?,"['clicker', 'tv remote', 'remote control', 'samsung remote control', 'samsung tv remote', 'remote', 'samsung remote']",remote,other,images/1963.jpg
+469,VizWiz_val_00001967,What does this say?,"['springs', 'banjees wrist wallet', 'wrist wallet', 'sprigs wrist wallet for cell phone cash credit cards etc', 'sprigs wrist wallet']",wrist wallet,other,images/1967.jpg
+470,VizWiz_val_00001968,What color is this purse?,"['blue red yellow', 'blue yellow red', 'red blue yellow', 'blue whit red yellow stripes', 'red blue yellow striped', 'red yellow blue', 'red blue', 'red blueyellow']",blue red yellow,other,images/1968.jpg
+471,VizWiz_val_00001972,What is this?,"['peonies', 'roses', 'flowers', 'flower']",flowers,other,images/1972.jpg
+472,VizWiz_val_00001973,What is this?,"['lysol sanitizing wipes', 'lysol wipes', 'disinfecting wipes']",lysol sanitizing wipes,other,images/1973.jpg
+473,VizWiz_val_00001976,What color are the three wires from left to right?,"['red black white', 'red black tan', 'red blue white']",red black white,other,images/1976.jpg
+474,VizWiz_val_00001980,What kind of yogurt is this?,"['light fit', 'blueberry', 'light fit blueberry', 'berry']",blueberry,other,images/1980.jpg
+475,VizWiz_val_00001981,What is this?,"['cream mushroom soup', 'soup', 'cream mushroom', 'can campbells condensed cream mushroom soup']",cream mushroom soup,other,images/1981.jpg
+476,VizWiz_val_00001983,"Which Marie Callander's Dish is this, Chicken or Meat Loaf?","['chicken', 'herb roasted chicken']",chicken,other,images/1983.jpg
+477,VizWiz_val_00001984,What kind of can is this?,"['beer', 'aluminum', 'stone ice', '24 oz keystone ice', 'keystone ice 24 fl oz', 'beer can']",beer,other,images/1984.jpg
+478,VizWiz_val_00001986,What kind of insect is this?,"['roach', 'cockroach', 'beetle', 'lightning bug', 'bettle', 'fdasfsdf']",beetle,other,images/1986.jpg
+479,VizWiz_val_00001987,What is this?,"['ginger ale', 'gingerale', 'can', 'can ginger ale', 'extra d ginger image cut off cannot see top', 'can drink ginger']",ginger ale,other,images/1987.jpg
+480,VizWiz_val_00001990,What color are the stones in this earring?,"['pink', 'magenta', 'red', 'purple']",pink,other,images/1990.jpg
+481,VizWiz_val_00001991,What is this?,"['can cheese balls', 'snack', 'cheeseballs', 'cheese balls', 'utz cheese balls']",cheese balls,other,images/1991.jpg
+482,VizWiz_val_00001993,What color is this?,"['pink', 'burgundy', 'purple', 'fdsaf']",pink,other,images/1993.jpg
+483,VizWiz_val_00001994,Is this bag black and white?,"['yes', 'white black spots', 'yes white black polka dots', 'white black polka dots']",yes,yes/no,images/1994.jpg
+484,VizWiz_val_00001997,what does it say?,"['77 degrees', '77']",77,number,images/1997.jpg
+485,VizWiz_val_00002001,What color is this?,"['peach', 'light pink', 'pink']",pink,other,images/2001.jpg
+486,VizWiz_val_00002024,What does the sky look like?,"['clear', 'light blue white clouds', 'grey', 'blue white', 'blue white fluffy clouds', 'really white', 'clear blue', 'clear few clouds', 'sky looks white']",grey,other,images/2024.jpg
+487,VizWiz_val_00002025,Is the dog lying on his bed?,['no'],no,yes/no,images/2025.jpg
+488,VizWiz_val_00002026,What color is it?,"['white', 'grey']",grey,other,images/2026.jpg
+489,VizWiz_val_00002029,What product is this?,"['dental', 'pet dental', 'pet care item', 'pet dental spray']",pet dental,other,images/2029.jpg
+490,VizWiz_val_00002032,What is it?,"['watch', 'wristwatch']",watch,other,images/2032.jpg
+491,VizWiz_val_00002035,What is this?,"['video game', 'skyrim manual', 'skyrim game', 'skyrim pc game', 'skyrim booklet', 'game manual', 'elder scrolls v skyrim booklet']",video game,other,images/2035.jpg
+492,VizWiz_val_00002040,What is this?,"['1 dollar bill', 'dollar bill', 'dollar', 'money', 'dollars']",1 dollar bill,other,images/2040.jpg
+493,VizWiz_val_00002043,What food is in this can?,"['ravioli', 'corn', 'ravioli food']",ravioli,other,images/2043.jpg
+494,VizWiz_val_00002046,What kind of cigarettes are these?,"['american spirit', 'black packaged american spirits']",american spirit,other,images/2046.jpg
+495,VizWiz_val_00002050,What color is the cabinets?,"['white', 'white brown borders handles']",white,other,images/2050.jpg
+496,VizWiz_val_00002054,Can you describe the photo outside the text?,"['trophies', 'price', 'trophies in gym space', '3 trophies', '3 trophy', '3 trophy in line 1 medal', '3 prizes for winners in respective competition']",3 trophies,other,images/2054.jpg
+497,VizWiz_val_00002060,What color is this t-shirt?,"['grey', 'light blue silver', 'grey blue', 'blue', 'blue grey', 'white']",grey,other,images/2060.jpg
+498,VizWiz_val_00002069,"What is this, and is it like a TV dinner to put into the microwave?","['tv dinner yes', 'turn box 90 degrees to left appears to be frozen pasta dinner for microwave', 'as', 'tv dinner yes cant see what', 'yes tv dinner', 'fettucine alfredo yes', 'yes', 'alfredo tv dinner', 'chicken noodles tv dinner', 'pasta yes']",tv dinner yes,other,images/2069.jpg
+499,VizWiz_val_00002071,What is this?,"['chocolate', 'chocolates', 'chocolateness', 'choclateness']",chocolate,other,images/2071.jpg

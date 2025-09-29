@@ -1,0 +1,11 @@
+datasets
+accelerate
+xlsxwriter
+pillow
+transformers
+pandas
+numpy
+matplotlib
+seaborn
+tqdm
+requests
