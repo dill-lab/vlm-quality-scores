@@ -9,7 +9,6 @@ total_cost.txt
 
 # hidden files
 .env
-.gitmodules
 .gitattributes
 .DS_Store
 

@@ -1,12 +1,17 @@
 ### Setup
 
-1) Create and activate a virtual environment, then install deps:
+1) Init submodules:
+```bash
+git submodule update --init --recursive
+```
+
+2) Create and activate a virtual environment, then install deps:
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-2) Configure environment variables (optional):
+3) Configure environment variables:
 - `OPENAI_API_KEY`: Your OpenAI API key.
 - `VLMQS_DATASETS_DIR`: Path to datasets dir (default: `data/`).
 - `VLMQS_OUTPUTS_DIR`: Path to outputs dir (default: `model_outputs/`).
