@@ -1,6 +1,9 @@
 # data files
 data/
 
+# test files in the model outputs
+model_outputs/**/*_test.csv
+
 # API keys
 OPENAI_key.txt
 
