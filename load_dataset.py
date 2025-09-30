@@ -8,16 +8,61 @@ import os
 import pandas as pd
 import numpy as np
 import argparse
-import ast
-from datasets import load_dataset
+from datasets import (
+    load_dataset,
+    DatasetDict,
+    IterableDatasetDict,
+)
 from PIL import Image
 from collections import Counter
-from lm_loader import LMModel, create_model_instance
+from lm_loader import create_model_instance
 from utils import load_image
 from tqdm import tqdm
+from globals import DATASETS_FOLDER
 
-# Define the base folder path relative to the working directory
-base_folder = "../datasets"
+# Define the base folder path using globals
+base_folder = DATASETS_FOLDER
+
+
+def _get_dataset_split(dataset, split_name: str):
+    """Return the requested split for both dict and split objects."""
+    if isinstance(dataset, (dict, DatasetDict, IterableDatasetDict)):
+        try:
+            return dataset[split_name]
+        except KeyError:
+            return dataset
+    return dataset
+
+
+def _ensure_list(value):
+    """Best-effort conversion of array-like objects to Python lists."""
+    if value is None:
+        return []
+    if isinstance(value, (list, tuple)):
+        return list(value)
+    if isinstance(value, np.ndarray):
+        return value.tolist()
+    if hasattr(value, "tolist"):
+        converted = value.tolist()
+        if isinstance(converted, list):
+            return converted
+    return []
+
+
+def _load_image_from_field(image_field):
+    """Return a PIL Image from a dataset image field when possible."""
+    if image_field is None:
+        return None
+    if isinstance(image_field, Image.Image):
+        return image_field.copy()
+    if isinstance(image_field, dict):
+        image_bytes = image_field.get("bytes")
+        if image_bytes:
+            return Image.open(io.BytesIO(image_bytes))
+        image_path = image_field.get("path")
+        if image_path and os.path.isfile(image_path):
+            return Image.open(image_path)
+    return None
 
 def process_and_save_aokvqa(dataset, folder_path: str, dataset_name: str):
     """
@@ -25,47 +70,64 @@ def process_and_save_aokvqa(dataset, folder_path: str, dataset_name: str):
     download the images, and save a CSV with the question, choices,
     correct_answer, and local image_path.
     """
-    # Select the validation split if available; otherwise, use the train split.
     split = "validation"
-    df = dataset[split].to_pandas().head(500)
+    split_dataset = _get_dataset_split(dataset, split)
+    target_count = 500
 
-    # Create folder to store the CSV and images.
     os.makedirs(folder_path, exist_ok=True)
     images_folder = os.path.join(folder_path, "images")
     os.makedirs(images_folder, exist_ok=True)
 
     processed_samples = []
-    for i, row in tqdm(df.iterrows(), total=df.shape[0], desc="Processing Rows"):
-        # Extract fields using common keys
-        question = row.get("question", "")
-        choices = row.get("choices", "").tolist()
-            
-        correct_answer = choices[row.get("correct_choice_idx")]
-        
-        # Get the image field
-        image_data = row.get("image", {})
-        image_bytes = image_data.get("bytes")
-        
-        if image_bytes:
-            # Create an Image object from the byte data
-            image = Image.open(io.BytesIO(image_bytes))
-            
-            # Save the image to the local folder
-            local_image_path = os.path.join(images_folder, f"{i}.jpg")
-            image.save(local_image_path)
-            
-            # Store the relative path in the CSV
+    seen_rows = 0
+    with tqdm(total=target_count, desc="Processing Rows") as progress_bar:
+        for sample_idx, row in enumerate(split_dataset):
+            seen_rows += 1
+            # Extract fields using common keys
+            question = row.get("question", "")
+            choices = _ensure_list(row.get("choices"))
+
+            correct_choice_idx = row.get("correct_choice_idx")
+            if (
+                not choices
+                or correct_choice_idx is None
+                or not (0 <= correct_choice_idx < len(choices))
+            ):
+                continue
+
+            image = None
+            try:
+                image = _load_image_from_field(row.get("image"))
+                if image is None:
+                    continue
+                image.load()
+                local_image_path = os.path.join(images_folder, f"{sample_idx}.jpg")
+                image.save(local_image_path)
+            except Exception as exc:
+                print(f"Image data not valid for entry {sample_idx}: {exc}")
+                continue
+            finally:
+                if image is not None:
+                    image.close()
+
             relative_image_path = os.path.relpath(local_image_path, start=folder_path)
             processed_samples.append({
-                "index": i,
+                "index": sample_idx,
                 "question": question,
                 "choices": choices,
-                "correct_answer": correct_answer,
+                "correct_answer": choices[correct_choice_idx],
                 "image_path": relative_image_path
             })
-        else:
-            print(f"Image data not found for entry {i}")
 
+            progress_bar.update(1)
+            if len(processed_samples) >= target_count:
+                break
+
+    if not processed_samples:
+        print("No valid entries were collected for AOKVQA.")
+        return
+
+    print(f"Processed {seen_rows} rows to collect {len(processed_samples)} AOKVQA samples.")
     processed_df = pd.DataFrame(processed_samples)
     csv_path = os.path.join(folder_path, f"{dataset_name}.csv")
     processed_df.to_csv(csv_path, index=False)
@@ -78,86 +140,76 @@ def process_and_save_vizwiz(dataset, folder_path: str, dataset_name: str):
     download the images, and save a CSV with the question_id, question,
     correct_answers, category, and local image_path.
     """
-    # Select the val split
     split = "val"
-    df = dataset[split].to_pandas()
-    # print dataset size
-    print(f"Original dataset size: {df.shape[0]}")
-    # Filter out the unanswerable categories
-    df.drop(df[df["category"] == "unanswerable"].index, inplace=True)
-    # drop instances where the question is not a question (end with '?')
-    df = df[df['question'].apply(lambda x: x[-1] == '?')]
-    
-    # filter out if there is presence of 'unanswerable' in the row['answers']
-    df = df[~df['answers'].apply(lambda x: 'unanswerable' in x)]
-    
-    # filter out the majority answer is "yes" or "no" but the category of the question is not "yes/no"
-    # e.g. Index = 19, "Is this picture clear, and where are we now?" => majority answer is "yes" but the category is "other" 
-    df['majority_answer'] = df['answers'].apply(lambda x: Counter(x).most_common(1)[0][0])
-    df = df[~((df['majority_answer'] == 'yes') | (df['majority_answer'] == 'no')) | (df['category'] == 'yes/no')]
-    
-    # print dataset size
-    print(f"Filtered dataset size: {df.shape[0]}")
-    print(f"Keep the first 600 answerable examples...")
-    
-    # Select the first 600 answerable examples (leave room for deleting NSFW questions/answers) (finally, we expect to have 500)
-    df = df.head(600)
+    split_dataset = _get_dataset_split(dataset, split)
+    target_count = 600
 
-    # sort by index
-    df = df.sort_index()
-
-    # Create folder to store the CSV and images.
     os.makedirs(folder_path, exist_ok=True)
     images_folder = os.path.join(folder_path, "images")
     os.makedirs(images_folder, exist_ok=True)
 
     processed_samples = []
-    for i, row in tqdm(df.iterrows(), total=df.shape[0], desc="Processing Rows"):
-        # Extract fields using common keys; adjust if the actual dataset keys differ.
-        question_id = row.get("question_id", "")
-        question = row.get("question", "")
-        answers = row.get("answers", []).tolist()
-        majority_answer = row.get("majority_answer", "")
-        
-        # Drop duplicates in answers
-        answers = list(Counter(answers).keys())
-        
-        # Similar to https://nlp.stanford.edu/helm/vhelm_lite/?group=viz_wiz&subgroup=&runSpecs=%5B%22viz_wiz%3Amodel%3Dopenai_gpt-4o-2024-05-13%22%5D
-        # We consider the answers present in the dataset as the allowed answers.
-                
-        category = row.get("category", "")
-        
-        # Get the image field
-        image_data = row.get("image", {})
-        image_bytes = image_data.get("bytes")
-        max_size = (800, 800)
-        
-        if image_bytes:
-            # Create an Image object from the byte data
-            image = Image.open(io.BytesIO(image_bytes))
-            
-            # Compress the image if it is too large
-            if image.size[0] > max_size[0] or image.size[1] > max_size[1]:
-                image.thumbnail(max_size, resample=Image.Resampling.LANCZOS)
-            
-            # Save the image to the local folder
-            local_image_path = os.path.join(images_folder, f"{i}.jpg")
-            image.save(local_image_path)
-            
-            # Store the relative path in the CSV
+    considered_rows = 0
+    with tqdm(total=target_count, desc="Processing Rows") as progress_bar:
+        for sample_idx, row in enumerate(split_dataset):
+            considered_rows += 1
+            category = row.get("category", "")
+            if category == "unanswerable":
+                continue
+
+            question = row.get("question", "")
+            if not question or not question.endswith("?"):
+                continue
+
+            answers = _ensure_list(row.get("answers"))
+            if not answers or "unanswerable" in answers:
+                continue
+
+            majority_answer = Counter(answers).most_common(1)[0][0]
+            if majority_answer in {"yes", "no"} and category != "yes/no":
+                continue
+
+            max_size = (800, 800)
+            image = None
+            try:
+                image = _load_image_from_field(row.get("image"))
+                if image is None:
+                    continue
+                image.load()
+                if image.size[0] > max_size[0] or image.size[1] > max_size[1]:
+                    image.thumbnail(max_size, resample=Image.Resampling.LANCZOS)
+
+                local_image_path = os.path.join(images_folder, f"{sample_idx}.jpg")
+                image.save(local_image_path)
+            except Exception as exc:
+                print(f"Image data not valid for entry {sample_idx}: {exc}")
+                continue
+            finally:
+                if image is not None:
+                    image.close()
+
             relative_image_path = os.path.relpath(local_image_path, start=folder_path)
+            unique_answers = list(Counter(answers).keys())
+
             processed_samples.append({
-                "index": i,
-                "question_id": question_id,
+                "index": sample_idx,
+                "question_id": row.get("question_id", ""),
                 "question": question,
-                "correct_answers": answers,
+                "correct_answers": unique_answers,
                 "majority_answer": majority_answer,
                 "category": category,
                 "image_path": relative_image_path
             })
-        else:
-            print(f"Image data not found for entry {i}")
 
+            progress_bar.update(1)
+            if len(processed_samples) >= target_count:
+                break
+
+    if not processed_samples:
+        print("No valid entries were collected for VizWiz.")
+        return
+
+    print(f"Processed {considered_rows} rows to collect {len(processed_samples)} VizWiz samples.")
     processed_df = pd.DataFrame(processed_samples)
     csv_path = os.path.join(folder_path, f"{dataset_name}.csv")
     # reset index column
@@ -233,12 +285,20 @@ def main():
     args = parser.parse_args()
     
     if args.dataset in ["AOKVQA", "both"]:
-        # Load AOKVQA dataset from Hugging Face.
-        dataset_aok = load_dataset("HuggingFaceM4/A-OKVQA")
+        # Stream the validation split of AOKVQA so we can stop once enough examples are gathered.
+        dataset_aok = load_dataset(
+            "HuggingFaceM4/A-OKVQA",
+            split="validation",
+            streaming=True,
+        )
         process_and_save_aokvqa(dataset_aok, os.path.join(base_folder, "AOKVQA"), "AOKVQA")
     if args.dataset in ["VizWiz", "both"]:
-        # Load VizWiz dataset from Hugging Face.
-        dataset_viz = load_dataset("lmms-lab/VizWiz-VQA")
+        # Stream the val split of VizWiz and stop downloading once sufficient examples are collected.
+        dataset_viz = load_dataset(
+            "lmms-lab/VizWiz-VQA",
+            split="val",
+            streaming=True,
+        )
         process_and_save_vizwiz(dataset_viz, os.path.join(base_folder, "VizWiz"), "VizWiz")
 
 if __name__ == "__main__":

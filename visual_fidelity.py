@@ -133,8 +133,8 @@ def VF_analysis_all_datasets(rationale_column_name: str, dataset_list: list[pd.D
                 questions = gpt_gen_vf_questions(row, rationale_column_name, model)
                 # store the questions as a string (but appear like a list)
                 vf_questions.append(str(questions))
-            # Assign new columns
-            dataset.loc[:,vf_q_col] = vf_questions
+            # Assign new column values
+            dataset[vf_q_col] = vf_questions
         else:
             print(f"Found {vf_q_col} in dataset's columns (and overwrite flag is set to false), skipping..")
         if vf_a_col not in dataset.columns or overwrite_VF_questions:
@@ -142,8 +142,9 @@ def VF_analysis_all_datasets(rationale_column_name: str, dataset_list: list[pd.D
                 # Answer visual verification questions
                 questions = ast.literal_eval(row[vf_q_col])
                 answers = answer_vf_questions(questions, dataset_type, model, row['image_path'])
-                dataset.loc[index, vf_a_col] = str(answers)
-                dataset.loc[index, vf_score_col] = sum([1 for ans in answers if ans == 'yes']) / len(answers) if len(answers) != 0 else 0
+                dataset.at[index, vf_a_col] = str(answers)
+                vf_score = (sum(1 for ans in answers if ans == 'yes') / len(answers)) if len(answers) != 0 else 0
+                dataset.at[index, vf_score_col] = vf_score
         else:
             print(f"Found {vf_a_col} in dataset's columns (and overwrite flag is set to false), skipping..")
             

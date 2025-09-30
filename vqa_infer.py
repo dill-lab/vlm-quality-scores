@@ -6,7 +6,7 @@ import pandas as pd
 import ast
 import argparse
 import base64
-from globals import two_step_prompt, DATASETS_FOLDER
+from globals import two_step_prompt, DATASETS_FOLDER, MODEL_OUTPUTS_FOLDER
 from lm_loader import LMModel, create_model_instance
 from utils import check_answers, load_image, check_answers_LAVE
 from tqdm import tqdm
@@ -77,7 +77,7 @@ def answer_question(model, input_dataset, dataset_name, rewrite_file=False, test
     if test:
         dataset = dataset.head(20)
     model_name = str(model)
-    output_dir = os.path.join("model_outputs", dataset_name)
+    output_dir = os.path.join(MODEL_OUTPUTS_FOLDER, dataset_name)
     os.makedirs(output_dir, exist_ok=True)
     if test:
         output_filename = os.path.join(output_dir, f"{model_name}_test.csv")

@@ -3,10 +3,11 @@
 from pathlib import Path
 from typing import List, Union, Tuple
 from lm_loader import create_model_instance
-from modules.lave.lave import LaveBase
+from lave.lave import LaveBase
 
-binary_demos_file_path = 'modules/lave/data/lave_demos_binary.json'
-demos_file_path = 'modules/lave/data/lave_demos.json'
+BASE_DIR = Path(__file__).resolve().parent
+binary_demos_file_path = str((BASE_DIR / 'lave' / 'data' / 'lave_demos_binary.json'))
+demos_file_path = str((BASE_DIR / 'lave' / 'data' / 'lave_demos.json'))
 
 class LaveChatGPT(LaveBase):
     def __init__(
@@ -31,7 +32,7 @@ class LaveChatGPT(LaveBase):
         self.input_template = "Question: '{question}' \n Reference answers: {references} \n Candidate answer: '{prediction}'"
         self.output_template = "Output: {output}"
 
-    def build_prompt(self, prediction: str, references: List[str], question: str, caption: str = None) -> str:
+    def build_prompt(self, prediction: str, references: List[str], question: str, caption: str | None = None) -> list[dict]:
         prompt_messages = [{'role': 'system', 'content': self.task_definition}]
         demos = self.select_demos(question, references)
         for demo in demos:
@@ -63,7 +64,7 @@ class LaveChatGPT(LaveBase):
         return prompt_messages        
 
 
-    def compute(self, prediction: str, references: List[str], question: str, caption: str = None) -> Tuple[str, float]:
+    def compute(self, prediction: str, references: List[str], question: str, caption: str | None = None) -> Tuple[str, float]:
         prompt_messages = self.build_prompt(prediction, references, question, caption)
         gpt_model = create_model_instance("gpt-4o-mini")
         gpt_response = gpt_model.chat_completion(

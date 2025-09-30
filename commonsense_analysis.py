@@ -1,3 +1,4 @@
+import importlib
 import torch
 import transformers
 from tqdm import tqdm
@@ -27,8 +28,13 @@ def get_vera_score(statements):
     # Lazy loading of the model
     if cache_key not in _model_cache:
         print("Loading VERA model...")
+        if importlib.util.find_spec("sentencepiece") is None:
+            raise ImportError(
+                "The VERA commonsense model requires the sentencepiece package. "
+                "Install it with `pip install sentencepiece` and re-run the analysis."
+            )
         model_name = 'liujch1998/vera'
-        tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
+        tokenizer = transformers.AutoTokenizer.from_pretrained(model_name, use_fast=False)
         model = transformers.T5EncoderModel.from_pretrained(model_name).to(device)
         model.D = model.shared.embedding_dim
 

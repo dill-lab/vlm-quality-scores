@@ -45,7 +45,6 @@ def informative_analysis(rationale_column_name, df):
             informative_list.append(1)
         else:
             informative_list.append(0)
-        print(f"Row {idx} is informative: {informative_list[-1]}")
     df['informative'] = informative_list
 
 def informativeness_analysis_all_datasets(rationale_column_name, dataset_list):

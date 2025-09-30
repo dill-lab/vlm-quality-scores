@@ -1,13 +1,47 @@
 # globals.py
-# This file contains global variables and configurations used across the project.
+import os
+from pathlib import Path
 
-with open("../OPENAI_key.txt", "r") as file:
-    openai_api_key = file.readlines()[2].strip()
-    
-# Record the cost in this file.
-COST_FILE = "../total_cost.txt"
+# Resolve repository base directory (directory containing this file)
+BASE_DIR = Path(__file__).resolve().parent
 
-DATASETS_FOLDER = "../datasets"
+
+def _load_env_file(base_dir: Path) -> None:
+    """Populate os.environ with key/value pairs from a .env file if present."""
+    env_path = base_dir / ".env"
+    if not env_path.exists():
+        return
+
+    try:
+        with env_path.open("r", encoding="utf-8") as env_file:
+            for raw_line in env_file:
+                line = raw_line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                if line.startswith("export "):
+                    line = line[len("export "):]
+                if "=" not in line:
+                    continue
+                key, value = line.split("=", 1)
+                key = key.strip()
+                # Strip optional surrounding quotes and whitespace
+                value = value.strip().strip('"').strip("'")
+                os.environ.setdefault(key, value)
+    except OSError as exc:
+        print(f"Warning: could not load environment variables from {env_path}: {exc}")
+
+
+_load_env_file(BASE_DIR)
+
+# OpenAI API key: load env var
+openai_api_key = os.getenv("OPENAI_API_KEY", "")
+
+# Record the cost in this file (overridable via env)
+COST_FILE = os.getenv("VLMQS_COST_FILE", str(BASE_DIR / "total_cost.txt"))
+
+# Datasets and outputs folders (overridable via env)
+DATASETS_FOLDER = os.getenv("VLMQS_DATASETS_DIR", str(BASE_DIR / "data"))
+MODEL_OUTPUTS_FOLDER = os.getenv("VLMQS_OUTPUTS_DIR", str(BASE_DIR / "model_outputs"))
 
 # Configuration for each model from LM Studio or OpenAI API
 MODEL_CONFIGS = {

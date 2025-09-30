@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import List, Any, Union
+from typing import List, Any, Union, Tuple, Optional
 from collections import Counter
 
 
@@ -78,7 +78,7 @@ class LaveBase:
         demos = demos[:self.num_shots]
         return demos
 
-    def build_prompt(self, prediction: str, references: List[str], question: str, caption: str = None) -> str:
+    def build_prompt(self, prediction: str, references: List[str], question: str, caption: Optional[str] = None):
         prompt = self.task_definition + "\n\n"
 
         demos = self.select_demos(question, references)
@@ -99,7 +99,7 @@ class LaveBase:
             'prediction': prediction,
             'output': ''
         }
-        if self.use_caption:
+        if self.use_caption and caption is not None:
             kwargs['caption'] = caption.strip()
         prompt += self.example_template.format(**kwargs)
 
@@ -107,7 +107,7 @@ class LaveBase:
 
         return prompt
     
-    def compute(self, *args: Any, **kwargs: Any) -> float:
+    def compute(self, *args: Any, **kwargs: Any) -> Tuple[str, float]:
         raise NotImplementedError
     
     def batch_compute(self, *args: Any, **kwargs: Any) -> List[float]:

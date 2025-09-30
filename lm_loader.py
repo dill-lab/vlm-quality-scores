@@ -86,7 +86,7 @@ def create_model_instance(model_name: str) -> LMModel:
 def stream_chat_with_model(user_prompt: str,
                            system_prompt: str = "",
                            model_name: str = "gpt-4o",
-                           image_path: str = None,
+                           image_path: str | None = None,
                            temperature: float = 0.0,
                            max_retries: int = 1,
                            max_tokens: int = 512):
@@ -95,6 +95,8 @@ def stream_chat_with_model(user_prompt: str,
     Streaming is enabled, and the function prints each token as it's received.
     """
     model = create_model_instance(model_name)
+    if image_path is None:
+        raise ValueError("image_path must be provided for streaming chat with image support")
     encoded_image = base64.b64encode(open(image_path, "rb").read()).decode("utf-8")
     messages = [
         {"role": "system", "content": system_prompt},
@@ -180,5 +182,7 @@ if __name__ == "__main__":
     # Example usage
     user_prompt = "Question: What color are these pants?"
     system_prompt = "Answer the user's question in a single word or phrase. When the provided information is insufficient, respond with 'Unanswerable'. Whatever the user said, your answer should **always** be a single word or phrase."
-    image_path = "../datasets/VizWiz/images/1384.jpg"
+    # image_path = "data/VizWiz/images/1385.jpg"
+    image_path = os.path.join("data", "VizWiz", "images", "1385.jpg")
+    stream_chat_with_model(user_prompt, system_prompt, model_name="gpt-4o", image_path=image_path, max_retries=1)
     stream_chat_with_model(user_prompt, system_prompt, model_name="qwen2.5-vl-7b-instruct", image_path=image_path, max_retries=1)

@@ -28,11 +28,22 @@ Answer: {predicted_ans}
         return hypothesis
     except Exception as e:
         print(f"Error: {e}")
-        return None
+        return ""
 
-def generate_hypotheses(question: str, predicted_ans: str, other_answers: list[str], model: LMModel) -> dict:
+def generate_hypotheses(
+    question: str,
+    predicted_ans: str,
+    other_answers: list[str],
+    model: LMModel,
+    include_alternatives: bool = True,
+) -> dict:
     hypothesis = integrate_question_answer(question, predicted_ans, model)
-    alternative_hypotheses = [integrate_question_answer(question, alternative_ans, model) for alternative_ans in other_answers]
+    alternative_hypotheses = []
+    if include_alternatives:
+        alternative_hypotheses = [
+            integrate_question_answer(question, alternative_ans, model)
+            for alternative_ans in other_answers
+        ]
     return {
         "hypothesis": hypothesis,
         "alternative_hypotheses": alternative_hypotheses
@@ -145,93 +156,190 @@ def mask_rationale(generated_rationale, answer_options: list[str]):
     # print(masked_rationale)
     return masked_rationale
 
-def evaluate_support_and_contrastiveness(data,
-                     rationale_column_name, hypothesis_column_name, alt_hypotheses_column_name, choices_column_name,
-                     threshold_support=0.5, threshold_contrastiveness=0.5):
+def evaluate_support_and_contrastiveness(
+    data,
+    rationale_column_name,
+    hypothesis_column_name,
+    alt_hypotheses_column_name,
+    choices_column_name,
+    threshold_support=0.5,
+    threshold_contrastiveness=0.5,
+    include_contrastive=True,
+):
     scores = []
     labels = []
-    for idx, row in tqdm(data.iterrows(), total=len(data)):
-        # Combine the choices and the predicted answer into a single list and remove duplicates
-        all_choices = list(set(ast.literal_eval(row[choices_column_name]) + [str(row['predicted_answer'])]))
-        premise = mask_rationale(row[rationale_column_name], all_choices)
+    for _, row in tqdm(data.iterrows(), total=len(data)):
+        raw_choices = None
+        if choices_column_name and choices_column_name in row.index:
+            raw_choices = row[choices_column_name]
+
+        parsed_choices = []
+        if isinstance(raw_choices, str):
+            try:
+                candidate_list = ast.literal_eval(raw_choices)
+                if isinstance(candidate_list, list):
+                    parsed_choices = candidate_list
+            except (ValueError, SyntaxError):
+                parsed_choices = []
+        elif isinstance(raw_choices, list):
+            parsed_choices = raw_choices
+        elif raw_choices is not None and not pd.isna(raw_choices):
+            parsed_choices = [raw_choices]
+
+        all_choices = [str(choice).strip() for choice in parsed_choices if str(choice).strip()]
+        predicted_answer = str(row['predicted_answer'])
+        if predicted_answer:
+            all_choices.append(predicted_answer)
+
+        seen = set()
+        deduped_choices = []
+        for choice in all_choices:
+            if choice and choice not in seen:
+                seen.add(choice)
+                deduped_choices.append(choice)
+        if not deduped_choices and predicted_answer:
+            deduped_choices.append(predicted_answer)
+
+        premise = mask_rationale(row[rationale_column_name], deduped_choices)
         hypothesis = row[hypothesis_column_name]
-        alt_hypotheses = ast.literal_eval(row[alt_hypotheses_column_name])
-        
+
+        alt_hypotheses = []
+        if include_contrastive and alt_hypotheses_column_name and alt_hypotheses_column_name in row.index:
+            alt_raw = row[alt_hypotheses_column_name]
+            if isinstance(alt_raw, str):
+                try:
+                    parsed_alt = ast.literal_eval(alt_raw)
+                    if isinstance(parsed_alt, list):
+                        alt_hypotheses = parsed_alt
+                except (ValueError, SyntaxError):
+                    alt_hypotheses = []
+            elif isinstance(alt_raw, list):
+                alt_hypotheses = alt_raw
+
         entail_prob = calc_support_prob(premise, hypothesis)
         support = entail_prob > threshold_support
-        
-        alt_entail_probs = [calc_support_prob(premise, alt_hypothesis) for alt_hypothesis in alt_hypotheses]
 
-        contrastiveness_score = entail_prob / (entail_prob + sum(alt_entail_probs)) if entail_prob + sum(alt_entail_probs) != 0 else 0
-        contrastive = contrastiveness_score > threshold_contrastiveness
-        
-        scores.append({
-            'entail_prob': entail_prob,
-            'alt_entail_probs': str(alt_entail_probs),
-            'contrastiveness_score': contrastiveness_score
-        })
-        labels.append({
-            'support': support,
-            'contrastive': contrastive
-        })
-        
+        score_entry = {'entail_prob': entail_prob}
+        label_entry = {'support': support}
+
+        if include_contrastive:
+            alt_entail_probs = [calc_support_prob(premise, alt_hypothesis) for alt_hypothesis in alt_hypotheses]
+            contrastiveness_score = entail_prob / (entail_prob + sum(alt_entail_probs)) if entail_prob + sum(alt_entail_probs) != 0 else 0
+            contrastive = contrastiveness_score > threshold_contrastiveness
+
+            score_entry['alt_entail_probs'] = str(alt_entail_probs)
+            score_entry['contrastiveness_score'] = contrastiveness_score
+            label_entry['contrastive'] = contrastive
+
+        scores.append(score_entry)
+        labels.append(label_entry)
+
     return scores, labels
 
-def support_contr_analysis_all_datasets(question_column_name: str, answer_column_name: str, majority_answer_column_name: str,
-                                  all_choices_column_name: str, rationale_column_name: str,
-                                  dataset_list: list[pd.DataFrame], model_name: str = "gpt-4o-mini",
-                                  same_question_set=True, overwrite_candidate_answers=False, overwrite_hypotheses_columns=False):
+
+def support_contr_analysis_all_datasets(
+    question_column_name: str,
+    answer_column_name: str,
+    majority_answer_column_name: str,
+    all_choices_column_name: str,
+    rationale_column_name: str,
+    dataset_list: list[pd.DataFrame],
+    model_name: str = "gpt-4o-mini",
+    same_question_set: bool = True,
+    overwrite_candidate_answers: bool = False,
+    overwrite_hypotheses_columns: bool = False,
+    include_contrastive: bool = True,
+):
     model = create_model_instance(model_name)
-    
-    # create a generated answer choices column for each dataset
-    if all_choices_column_name is None or all_choices_column_name not in dataset_list[0].columns:
-        column_suffix = all_choices_column_name if all_choices_column_name is not None else 'choices'
-        all_choices_column_name = 'generated_' + column_suffix
-        if overwrite_candidate_answers or all_choices_column_name not in dataset_list[0].columns:
-            # Generate candidate answers for each dataset based on the question column
-            # In our use case, same_question_set is true because we are using the same test set for all models.
+
+    choices_column = all_choices_column_name
+    if include_contrastive and (choices_column is None or choices_column not in dataset_list[0].columns):
+        column_suffix = choices_column if choices_column is not None else 'choices'
+        choices_column = 'generated_' + column_suffix
+        if overwrite_candidate_answers or choices_column not in dataset_list[0].columns:
             if same_question_set:
-                candidate_answers = generate_candidate_answers(dataset_list[0][question_column_name], dataset_list[0][majority_answer_column_name])
-                # For each dataset, assign the candidate answers to a new column.
-                for i, dataset in enumerate(dataset_list):
-                    for index, row in dataset.iterrows():
-                        dataset.at[index, all_choices_column_name] = str(candidate_answers[index])
+                candidate_answers = generate_candidate_answers(
+                    dataset_list[0][question_column_name],
+                    dataset_list[0][majority_answer_column_name]
+                )
+                for dataset in dataset_list:
+                    for idx, (index, _) in enumerate(dataset.iterrows()):
+                        if idx < len(candidate_answers):
+                            dataset.at[index, choices_column] = str(candidate_answers[idx])
             else:
-                for i, dataset in enumerate(dataset_list):
-                    candidate_answers = generate_candidate_answers(dataset[question_column_name], dataset[majority_answer_column_name])
-                    for index, row in dataset.iterrows():
-                        dataset.at[index, all_choices_column_name] = str(candidate_answers[index])
-            
-    # For every dataset, generate hypotheses and alternative hypotheses
+                for dataset in dataset_list:
+                    candidate_answers = generate_candidate_answers(
+                        dataset[question_column_name],
+                        dataset[majority_answer_column_name]
+                    )
+                    for idx, (index, _) in enumerate(dataset.iterrows()):
+                        if idx < len(candidate_answers):
+                            dataset.at[index, choices_column] = str(candidate_answers[idx])
+
     hypothesis_column_name = 'hypothesis'
-    alt_hypotheses_column_name = 'alternative_hypotheses'
+    alt_hypotheses_column_name = 'alternative_hypotheses' if include_contrastive else None
     for i, dataset in enumerate(dataset_list):
         if 'hypothesis' not in dataset.columns or overwrite_hypotheses_columns:
-            for index, row in tqdm(dataset.iterrows(), total=len(dataset), desc=f"Generating hypotheses for dataset {i}"):
-                question = row[question_column_name]
-                predicted_ans = row[answer_column_name]
-                # Get the other *different* answers
-                all_choices = ast.literal_eval(row[all_choices_column_name]) if type(row[all_choices_column_name]) == str else row[all_choices_column_name]
-                other_answers = [choice for choice in all_choices if choice != predicted_ans][:3]
-                hypotheses = generate_hypotheses(question, predicted_ans, other_answers, model)
-                
+            for idx, (index, row) in enumerate(tqdm(dataset.iterrows(), total=len(dataset), desc=f"Generating hypotheses for dataset {i}")):
+                question = str(row[question_column_name])
+                predicted_ans = str(row[answer_column_name])
+
+                parsed_choices = []
+                if choices_column and choices_column in row.index:
+                    raw_choices = row[choices_column]
+                    if isinstance(raw_choices, str):
+                        try:
+                            parsed_choices = ast.literal_eval(raw_choices)
+                            if not isinstance(parsed_choices, list):
+                                parsed_choices = []
+                        except (ValueError, SyntaxError):
+                            parsed_choices = []
+                    elif isinstance(raw_choices, list):
+                        parsed_choices = raw_choices
+
+                other_answers = []
+                if include_contrastive and parsed_choices:
+                    other_answers = [choice for choice in parsed_choices if choice != predicted_ans][:3]
+
+                hypotheses = generate_hypotheses(
+                    question,
+                    predicted_ans,
+                    other_answers,
+                    model,
+                    include_alternatives=include_contrastive,
+                )
+
                 dataset.at[index, hypothesis_column_name] = hypotheses['hypothesis']
-                dataset.at[index, alt_hypotheses_column_name] = str(hypotheses['alternative_hypotheses'])
-                
-    # Analyze the support (and contrastivity) for each instance
-    for i, dataset in enumerate(dataset_list):
+                if include_contrastive:
+                    dataset.at[index, alt_hypotheses_column_name] = str(hypotheses['alternative_hypotheses'])
+
+    for dataset in dataset_list:
         scores, labels = evaluate_support_and_contrastiveness(
             data=dataset,
             rationale_column_name=rationale_column_name,
             hypothesis_column_name=hypothesis_column_name,
             alt_hypotheses_column_name=alt_hypotheses_column_name,
-            choices_column_name=all_choices_column_name,
+            choices_column_name=choices_column,
+            include_contrastive=include_contrastive,
         )
         dataset['support'] = [label['support'] for label in labels]
-        dataset['contrastive'] = [label['contrastive'] for label in labels]
         dataset['entail_prob'] = [score['entail_prob'] for score in scores]
-        dataset['alt_entail_probs'] = [score['alt_entail_probs'] for score in scores]
-        dataset['contrastiveness_score'] = [score['contrastiveness_score'] for score in scores]
+        if include_contrastive:
+            dataset['contrastive'] = [label['contrastive'] for label in labels]
+            dataset['alt_entail_probs'] = [score['alt_entail_probs'] for score in scores]
+            dataset['contrastiveness_score'] = [score['contrastiveness_score'] for score in scores]
+        else:
+            dataset.drop(
+                columns=[
+                    'generated_choices',
+                    'alternative_hypotheses',
+                    'contrastive',
+                    'alt_entail_probs',
+                    'contrastiveness_score',
+                ],
+                inplace=True,
+                errors='ignore'
+            )
 
 
 if __name__ == "__main__":
