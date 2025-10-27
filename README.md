@@ -1,3 +1,5 @@
+## Code for the paper _**Believing without Seeing: Quality Scores for Contextualizing Vision-Language Model Explanations**_ (https://arxiv.org/abs/2509.25844)
+
 ### Setup
 
 1) Init submodules:
