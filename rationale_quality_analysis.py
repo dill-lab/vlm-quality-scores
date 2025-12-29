@@ -15,8 +15,8 @@ def main():
         "--dataset",
         type=str,
         required=True,
-        choices=["AOKVQA", "VizWiz", "both"],
-        help="Dataset to process: AOKVQA, VizWiz, or both."
+        choices=["AOKVQA", "VizWiz", "MMMU-Pro", "MMMU-Pro-4", "all"],
+        help="Dataset to process: AOKVQA, VizWiz, MMMU-Pro, MMMU-Pro-4, or all."
     )
     parser.add_argument(
         "--quality",
@@ -34,11 +34,16 @@ def main():
     
     datasets_folder = MODEL_OUTPUTS_FOLDER
     model_list = ["llava-v1.5-7b", "qwen2.5-vl-7b-instruct", "gpt-4o-2024-05-13"]
+        
     datasets_types = []
-    if args.dataset in ["AOKVQA", "both"]:
+    if args.dataset in ["AOKVQA", "all"]:
         datasets_types.append("AOKVQA")
-    if args.dataset in ["VizWiz", "both"]:
+    if args.dataset in ["VizWiz", "all"]:
         datasets_types.append("VizWiz")
+    if args.dataset in ["MMMU-Pro", "all"]:
+        datasets_types.append("MMMU-Pro")
+    if args.dataset in ["MMMU-Pro-4", "all"]:
+        datasets_types.append("MMMU-Pro-4")
     
     for dataset_type in datasets_types:
         print(f"\n{'#'*60}")
@@ -50,10 +55,9 @@ def main():
         
         # Only load files that exist
         for model in model_list:
+            file_path = f"{datasets_folder}/{dataset_type}/{model}.csv"
             if args.test:
                 file_path = f"{datasets_folder}/{dataset_type}/{model}_test.csv"
-            else:
-                file_path = f"{datasets_folder}/{dataset_type}/{model}.csv"
             
             if os.path.exists(file_path):
                 dataset_list.append(pd.read_csv(file_path))
@@ -67,16 +71,24 @@ def main():
             continue
         
         print(f"\n Found {len(dataset_list)} model(s) to analyze: {', '.join(available_models)}\n")
-        
+
         # Determine the choices column name based on dataset type
-        # AOKVQA has 'choices', VizWiz needs to generate them
-        choices_column = "choices" if dataset_type == "AOKVQA" else None
+        # AOKVQA, MMMU-Pro, MMMU-Pro-4 have 'choices', VizWiz needs to generate them
+        choices_column = "choices" if dataset_type in ["AOKVQA", "MMMU-Pro", "MMMU-Pro-4"] else None
         include_contrastive = dataset_type != "VizWiz"
         
         if args.quality == "support" or args.quality == "all":
             print(f"\n{'='*60}")
             print(f"Running SUPPORT{' & CONTRASTIVENESS' if include_contrastive else ''} analysis for {dataset_type}")
             print(f"{'='*60}")
+            output_paths = []
+            for i, dataset in enumerate(dataset_list):
+                if args.test:
+                    output_file = f"{datasets_folder}/{dataset_type}/{available_models[i]}_test.csv"
+                else:
+                    output_file = f"{datasets_folder}/{dataset_type}/{available_models[i]}.csv"
+                output_paths.append(output_file)
+
             support_contr_analysis_all_datasets(
                 "question",
                 "predicted_answer",
@@ -86,17 +98,12 @@ def main():
                 dataset_list,
                 overwrite_candidate_answers=False,
                 include_contrastive=include_contrastive,
+                output_paths=output_paths,
             )
-            print("Saving results...")
+            print("Saving results (final pass)...")
             for i, dataset in enumerate(dataset_list):
-                if args.test:
-                    output_file = f"{datasets_folder}/{dataset_type}/{available_models[i]}_test.csv"
-                    dataset.to_csv(output_file, index=False)
-                    print(f"  Saved: {output_file}")
-                else:
-                    output_file = f"{datasets_folder}/{dataset_type}/{available_models[i]}.csv"
-                    dataset.to_csv(output_file, index=False)
-                    print(f"  Saved: {output_file}")
+                dataset.to_csv(output_paths[i], index=False)
+                print(f"  Saved: {output_paths[i]}")
         if args.quality == "informativeness" or args.quality == "all":
             print(f"\n{'='*60}")
             print(f"Running INFORMATIVENESS analysis for {dataset_type}")
@@ -110,8 +117,8 @@ def main():
                     print(f"  Saved: {output_file}")
                 else:
                     output_file = f"{datasets_folder}/{dataset_type}/{available_models[i]}.csv"
-                    dataset.to_csv(output_file, index=False)
-                    print(f"  Saved: {output_file}")
+                dataset.to_csv(output_file, index=False)
+                print(f"  Saved: {output_file}")
         if args.quality == "visual_fidelity" or args.quality == "all":
             print(f"\n{'='*60}")
             print(f"Running VISUAL FIDELITY analysis for {dataset_type}")
@@ -121,12 +128,10 @@ def main():
             for i, dataset in enumerate(dataset_list):
                 if args.test:
                     output_file = f"{datasets_folder}/{dataset_type}/{available_models[i]}_test.csv"
-                    dataset.to_csv(output_file, index=False)
-                    print(f"  Saved: {output_file}")
                 else:
                     output_file = f"{datasets_folder}/{dataset_type}/{available_models[i]}.csv"
-                    dataset.to_csv(output_file, index=False)
-                    print(f"  Saved: {output_file}")
+                dataset.to_csv(output_file, index=False)
+                print(f"  Saved: {output_file}")
         if args.quality == "commonsense" or args.quality == "all":
             print(f"\n{'='*60}")
             print(f"Running COMMONSENSE PLAUSIBILITY analysis for {dataset_type}")
@@ -140,8 +145,8 @@ def main():
                     print(f"  Saved: {output_file}")
                 else:
                     output_file = f"{datasets_folder}/{dataset_type}/{available_models[i]}.csv"
-                    dataset.to_csv(output_file, index=False)
-                    print(f"  Saved: {output_file}")
+                dataset.to_csv(output_file, index=False)
+                print(f"  Saved: {output_file}")
     
 
 if __name__ == '__main__':

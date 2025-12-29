@@ -1,0 +1,501 @@
+question_id,image_path,question,choices,correct_answer,predicted_answer,raw_confidence,is_correct
+0,images/0.jpg,What is in the motorcyclist's mouth?,"['toothpick', 'food', 'popsicle stick', 'cigarette']",cigarette,Cigarette,0.9969733953475952,1
+1,images/1.jpg,Which number birthday is probably being celebrated?,"['one', 'ten', 'nine', 'thirty']",thirty,Thirty,0.5067222714424133,1
+2,images/2.jpg,What best describes the pool of water?,"['frozen', 'fresh', 'dirty', 'boiling']",dirty,Dirty,0.5280871391296387,1
+3,images/3.jpg,What is the white substance on top of the cupcakes?,"['butter', 'mayo', 'ice cream', 'icing']",icing,Icing,0.8642184138298035,1
+4,images/4.jpg,What type of device is sitting next to the laptop?,"['mouse', 'mobile phone', 'pen', 'keyboard']",mobile phone,Mobile phone,0.406382292509079,1
+5,images/5.jpg,The thing on the animal to the left's head is similar to what is on the head of what else?,"['devil', 'zombie', 'vampire', 'witch']",devil,Witch,0.1799785196781158,0
+6,images/6.jpg,What is the appliance the woman is holding used for?,"['cutting hair', 'brushing teeth', 'drying hair', 'painting nails']",drying hair,Drying hair,0.9546144008636476,1
+7,images/7.jpg,What is the descriptive word for this surface?,"['barren', 'crowded', 'minimalist', 'empty']",crowded,Empty,0.3525953888893127,0
+8,images/8.jpg,What is the person on the left doing with their body?,"['crouching', 'leaping', 'flying', 'twirling']",crouching,Crouching,0.5606303215026855,1
+9,images/9.jpg,What type of pants is the man on the right wearing?,"['linen', 'corduroy', 'silk', 'denim']",denim,Denim,0.9370303750038148,1
+10,images/10.jpg,What country do these planes belong to?,"['united states', 'germany', 'canada', 'mexico']",united states,United states,0.6652287840843201,1
+11,images/11.jpg,What interests the child most here?,"['table', 'fork', 'candle', 'floor']",candle,Candle,0.7831489443778992,1
+12,images/12.jpg,What kind of fruit is cut in half and darker than the other?,"['grapes', 'apples', 'lettuce', 'radish']",grapes,Grapes,0.2904233634471893,1
+13,images/13.jpg,What item on the desk could help with a cold?,"['cough drops', 'syringe', 'pills', 'herbal tea']",cough drops,Cough drops,0.9712613821029664,1
+14,images/14.jpg,What flag is represented on the wall?,"['english', 'moravian', 'american', 'french']",american,American,0.991354525089264,1
+15,images/15.jpg,What is located on the shelves?,"['books', 'dvds', 'games', 'food']",books,Books,0.9619012475013732,1
+16,images/16.jpg,What period of the day does this photo reflect?,"['noon', 'morning', 'dawn', 'afternoon']",afternoon,Noon,0.434081882238388,0
+17,images/17.jpg,What activity does the cat appear most likely to do?,"['drink', 'jump', 'eat', 'sleep']",jump,Eat,0.6952409148216248,0
+18,images/18.jpg,What event is this most likely?,"['environmental cleanup', 'concert', 'date', 'firing']",date,Date,0.8469231128692627,1
+19,images/19.jpg,What is the outside of the cake made of?,"['frosting', 'custard', 'fondant', 'whipped cream']",fondant,Frosting,0.8038502335548401,0
+20,images/20.jpg,Why is the person wearing a white jacket?,"['nurse', 'doctor', 'cold', 'chef']",chef,Chef,0.9783387184143066,1
+21,images/21.jpg,What is the dog trying to catch?,"['person', 'frisbee', 'kite', 'ball']",frisbee,Frisbee,0.9003337025642395,1
+22,images/22.jpg,Which animal usually occupies the position the cat is in right now?,"['human', 'dinosaur', 'eagle', 'fish']",human,Human,0.955546259880066,1
+23,images/23.jpg,What kind of resort are these people at?,"['swim resort', 'safari', 'ski resort', 'tropical resort']",ski resort,Ski resort,0.9898770451545716,1
+24,images/24.jpg,What type of transportation is this?,"['air', 'water', 'road', 'road']",air,Air,0.9686242938041688,1
+25,images/25.jpg,The cat is looking in what direction?,"['left', 'right', 'down', 'up']",down,Right,0.3550246655941009,0
+26,images/26.jpg,What are the orange vehicles for?,"['police', 'shuttle', 'passengers', 'air traffic']",air traffic,Police,0.3017100393772125,0
+27,images/27.jpg,The company producing the device in her hand is from what country?,"['usa', 'china', 'japan', 'spain']",japan,Japan,0.7175994515419006,1
+28,images/28.jpg,Which is not an ingredient of this dish?,"['flatbread', 'prosciutto', 'arugula', 'pepperoni']",pepperoni,Pepperoni,0.7069118022918701,1
+29,images/29.jpg,What is closest to the tree trunk?,"['closed doors', 'walking person', 'sitting person', 'open doors']",closed doors,Closed doors,0.3413200676441192,1
+30,images/30.jpg,Where are we at?,"['fair', 'garage sale', 'street festival', 'flea market']",street festival,Flea market,0.5200437307357788,0
+31,images/31.jpg,What is beside the person on the seat?,"['white bag', 'food', 'paper bag', 'pillow']",white bag,Pillow,0.585879921913147,0
+32,images/32.jpg,What does it say on the boys hat?,"['happy birthday', 'huggy buggy', 'herpy derpy', 'huggy harry']",happy birthday,Happy birthday,0.9910629987716676,1
+33,images/33.jpg,What sport are they mimicking?,"['baseball', 'lacrosse', 'cricket', 'basketball']",baseball,Baseball,0.9236769676208496,1
+34,images/34.jpg,The visible bottles most likely contain what kind of items?,"['body wash', 'shampoo conditioner', 'lotions', 'mouthwash']",shampoo conditioner,Shampoo conditioner,0.2878491878509521,1
+35,images/35.jpg,What sport game is the man playing?,"['wii boxing', 'wii baseball', 'wii football', 'wii tennis']",wii boxing,Wii boxing,0.8622629642486572,1
+36,images/36.jpg,What is the batter most likely preparing to do here?,"['bunt', 'sit', 'dodge ball', 'slide']",bunt,Slide,0.8220323324203491,0
+37,images/37.jpg,What kind of venue is it?,"['garage', 'commercial kitchen', 'auto shop', 'domestic kitchen']",domestic kitchen,Domestic kitchen,0.8367869257926941,1
+38,images/38.jpg,What kind of terrain is it?,"['beach', 'desert', 'savanna', 'valley']",savanna,Savanna,0.9489281177520752,1
+39,images/39.jpg,What is the bin on the left made from?,"['plastic', 'ceramic', 'steel', 'glass']",steel,Wood,0.4304678440093994,0
+40,images/40.jpg,What type of animal is on a leash on the sidewalk?,"['dog', 'tiger', 'cat', 'lion']",dog,Dog,0.9061464071273804,1
+41,images/41.jpg,What room of the house is this man in?,"['sitting room', 'dinning room', 'bathroom', 'bedroom']",bathroom,Bathroom,0.9902514219284058,1
+42,images/42.jpg,What is likely in front of the rug?,"['refrigerator', 'pantry', 'washing machine', 'sink']",sink,Refrigerator,0.595237135887146,0
+43,images/43.jpg,Which food item is the knife for?,"['bread', 'fruit', 'vegetables', 'meat']",meat,Meat,0.537684977054596,1
+44,images/44.jpg,What is the orange container on the left near the man in the red shirt used for?,"['training', 'keeping score', 'batting', 'storage']",storage,Batting,0.7551217079162598,0
+45,images/45.jpg,What type of design is the person's shirt?,"['striped', 'plaid', 'uniform', 'tie dyed']",tie dyed,Tie dyed,0.6746018528938293,1
+46,images/46.jpg,What kind of cuisine is this?,"['asian', 'american', 'african', 'european']",asian,Asian,0.9368237257003784,1
+47,images/47.jpg,What is on the side of the yellow plane?,"['phone number', 'call letters', 'company name', 'decoration']",call letters,Phone number,0.4988745152950287,0
+48,images/48.jpg,Why are the men's vests orange?,"['fashion', 'camouflage', 'visibility', 'dress code']",visibility,Visibility,0.9165684580802916,1
+49,images/49.jpg,Why would you sit at this table?,"['to paint', 'medical treatment', 'to work', 'to eat']",to eat,Eat,0.5825515389442444,0
+50,images/50.jpg,What type of sinks are shown?,"['bathroom', 'workstation', 'kitchen', 'laundry']",bathroom,Bathroom,0.8988721966743469,1
+51,images/51.jpg,In what type of environment are they most likely riding skateboards?,"['beach', 'city', 'rural', 'suburban']",city,City,0.9907974004745485,1
+52,images/52.jpg,Is the man on the left platform going to board the train?,"['yes', 'absolutely no', 'probably yes', 'probably no']",absolutely no,Yes,0.5833117365837097,0
+53,images/53.jpg,This part of the house where is the girl is is called?,"['dinning room', 'kitchen', 'sitting room', 'bedroom']",bedroom,Bedroom,0.995947539806366,1
+54,images/54.jpg,They are likely having pizza at what kind of event?,"['family', 'gaming', 'academic', 'social']",academic,Social,0.8498986959457397,0
+55,images/55.jpg,What are the people driving?,"['dirt bikes', 'monster truck', 'train', 'bus']",dirt bikes,Dirt bikes,0.9825072884559632,1
+56,images/56.jpg,The bus is likely driving through which American city?,"['chicago', 'new york', 'philadelphia', 'boston']",new york,New york,0.9279443621635436,1
+57,images/57.jpg,What drink might these be good in?,"['beer', 'milkshake', 'gin', 'coffee']",milkshake,Milkshake,0.4209527373313904,1
+58,images/58.jpg,What type of parking is available?,"['truck', 'airplane', 'bicycle', 'rv']",bicycle,Bicycle,0.9834614992141724,1
+59,images/59.jpg,What direction is the narrow end of the flag pointing?,"['north', 'south', 'east', 'west']",west,South,0.3072809278964996,0
+60,images/60.jpg,In what nation is this scene located?,"['spain', 'china', 'italy', 'france']",france,France,0.962219536304474,1
+61,images/61.jpg,What festive season are these fruits usually ingested?,"['liberty day', 'christmas', 'victory day', 'memorial day']",christmas,Christmas,0.9592985510826112,1
+62,images/62.jpg,What are the boats shaped like?,"['trains', 'tanks', 'cars', 'planes']",cars,Cars,0.7205872535705566,1
+63,images/63.jpg,What is the metal basket near the net used to hold?,"['tennis balls', 'marbles', 'bats', 'towels']",tennis balls,Tennis balls,0.9282307624816896,1
+64,images/64.jpg,What is likely to have happened?,"['dancing', 'eating', 'crashing', 'swimming']",crashing,Crashing,0.9905540347099304,1
+65,images/65.jpg,Which vegetable on the pizza would be risky for someone with a certain allergy?,"['pepperoni', 'mushrooms', 'banana peppers', 'red peppers']",mushrooms,Banana peppers,0.4143182039260864,0
+66,images/66.jpg,Which food has the least carbs?,"['soup', 'water', 'sandwich', 'buns']",soup,Soup,0.5866279006004333,1
+67,images/67.jpg,What vehicle is closest to the security guard?,"['silver car', 'two-wheeler', 'bluecar', 'dark car']",two-wheeler,Silver car,0.4580525159835815,0
+68,images/68.jpg,Why are the men wearing yellow vests?,"['visibility', 'fashion', 'warmth', 'costume']",visibility,Visibility,0.9655372500419616,1
+69,images/69.jpg,What is the skateboard balanced on?,"['post', 'air', 'chain', 'ground']",chain,Post,0.9043017625808716,0
+70,images/70.jpg,What is the object in the middle called?,"['counter', 'island', 'table', 'desk']",island,Island,0.8525918126106262,1
+71,images/71.jpg,What is the gray street made up of?,"['asphalt', 'sand', 'stone', 'wood']",stone,Stone,0.6580479145050049,1
+72,images/72.jpg,The name of the street is the same as the last name of what actress?,"['eva mendes', 'jessica biel', 'eva green', 'jessica alba']",jessica biel,Eva green,0.9076524972915648,0
+73,images/73.jpg,How was the cake decorated?,"['drawn', 'piping tip', 'fork', 'sprinkled']",piping tip,Piping tip,0.4055404663085937,1
+74,images/74.jpg,The green object on the smaller boat is used as what?,"['cabin', 'restroom', 'dining', 'kitchen']",restroom,Restroom,0.9500316977500916,1
+75,images/75.jpg,Who has the same color hair as this woman?,"['phoebe tonkin', 'maria sharapova', 'serena williams', 'nina dobrev']",maria sharapova,Maria sharapova,0.6553951501846313,1
+76,images/76.jpg,Why would you use this bag?,"['shop', 'travel', 'catch', 'preserve']",travel,Travel,0.9128931760787964,1
+77,images/77.jpg,What is being made by the man?,"['bow', 'kite', 'flag', 'anchor']",kite,Kite,0.9749116897583008,1
+78,images/78.jpg,What is the man in the gray suit on the left looking down to check?,"['phone', 'tablet', 'notebook', 'pager']",phone,Phone,0.966588854789734,1
+79,images/79.jpg,Which ingredient is the most flavorful?,"['mushrooms', 'fish', 'plate', 'broccoli']",fish,Mushrooms,0.7487599849700928,0
+80,images/80.jpg,What are these cases for?,"['clothing', 'instruments', 'clothing', 'food']",clothing,Clothing,0.933072865009308,1
+81,images/81.jpg,What pattern are the man's pants?,"['camouflage', 'plaid', 'floral', 'pinstripe']",camouflage,Camouflage,0.9310080409049988,1
+82,images/82.jpg,In which major city is the woman most likely sitting outdoors?,"['paris', 'new york', 'johannesburg', 'london']",paris,Paris,0.9914541244506836,1
+83,images/83.jpg,Where are these animals located?,"['museum', 'zoo', 'vet', 'wild']",wild,Wild,0.9172440767288208,1
+84,images/84.jpg,In what location is the motorcycle parked most likely?,"['store', 'sidewalk', 'home', 'expo']",home,Home,0.4967216849327087,1
+85,images/85.jpg,What is the natural light streaming into the room through?,"['door', 'lightbulb', 'clock', 'candle']",clock,Clock,0.8103724718093872,1
+86,images/86.jpg,What is the white cream used for with the other foods?,"['drinking', 'cooking', 'dipping', 'heating']",dipping,Dipping,0.5910425782203674,1
+87,images/87.jpg,What can be seen through the buildings?,"['clouds', 'birds', 'more buildings', 'sunlight']",sunlight,Sunlight,0.9762583374977112,1
+88,images/88.jpg,What type of audience is the man likely speaking to?,"['protest', 'single person', 'political rally', 'meeting']",meeting,Political rally,0.7622852921485901,0
+89,images/89.jpg,What will be built here one day?,"['building', 'boat', 'car', 'house']",building,Building,0.8688564300537109,1
+90,images/90.jpg,What seems to be contained in the nook underneath the TV?,"['bookshelf', 'lamp', 'fireplace', 'stereo']",fireplace,Fireplace,0.7000720500946045,1
+91,images/91.jpg,What problem will the people on the ferry face?,"['earthquake', 'raining', 'sunburn', 'tsunami']",raining,Sunburn,0.4239100217819214,0
+92,images/92.jpg,Why do the cattle have their heads down to the ground?,"['to eat', 'to drink', 'to play', 'to sleep']",to eat,Eat,0.722393810749054,0
+93,images/93.jpg,What state was the licence plate issues?,"['connecticut', 'rhode island', 'new jersey', 'new york']",new york,New york,0.6983174681663513,1
+94,images/94.jpg,What are the people in the picture doing?,"['skating', 'laughing', 'jogging', 'angry']",skating,Skiing,0.4762350618839264,0
+95,images/95.jpg,What type of city district is this?,"['government', 'warehouse', 'commercial', 'residential']",commercial,Commercial,0.7933396697044373,1
+96,images/96.jpg,What player is shown in the photo?,"['shortstop', 'catcher', 'position', 'first baseman']",position,Catcher,0.7047495245933533,0
+97,images/97.jpg,Where are these cats located?,"['alley', 'home', 'vet', 'office']",home,Home,0.973947048187256,1
+98,images/98.jpg,What is prohibited near the round road sign with a red cross on a blue background?,"['parking', 'turning', 'speeding', 'waving']",parking,Parking,0.4202404618263244,1
+99,images/99.jpg,Where is this dog located?,"['office', 'home', 'zoo', 'vet']",home,Home,0.9463587403297424,1
+100,images/100.jpg,Who is the woman dressed up as?,"['snow white', 'xena', 'maleficent', 'cinderella']",xena,Xena,0.9387618899345398,1
+101,images/101.jpg,What type of event might this be?,"['art show', 'car show', 'museum opening', 'race']",art show,Car show,0.8808814883232117,0
+102,images/102.jpg,What is the activity being performed?,"['show performance', 'training horse', 'riding horse', 'feeding horse']",show performance,Riding horse,0.4841726124286651,0
+103,images/103.jpg,What color are the walls in the room?,"['orange', 'yellow', 'blue', 'green']",green,Blue,0.7643342614173889,0
+104,images/104.jpg,In which way are the adults shown here likely related to the child?,"['grandparents', 'strangers', 'friends', 'sister']",grandparents,Grandparents,0.683113157749176,1
+105,images/105.jpg,What is served at the counter here?,"['fines', 'ice cream', 'alcohol', 'chinese']",alcohol,Alcohol,0.9930190443992616,1
+106,images/106.jpg,What type of tree is in front of the blue building?,"['palm tree', 'bonsai tree', 'maple tree', 'pine tree']",palm tree,Palm tree,0.9236614108085632,1
+107,images/107.jpg,What did the man use to get into the air?,"['kite', 'blimp', 'balloon', 'plane']",kite,Kite,0.9716463685035706,1
+108,images/108.jpg,What type of cuisine would be purchased here?,"['chinese', 'russian', 'italian', 'mexican']",mexican,Mexican,0.9819318056106568,1
+109,images/109.jpg,What type of bus is in traffic?,"['public', 'school', 'work', 'tour']",school,School,0.982851505279541,1
+110,images/110.jpg,In what shape is the quiche cut?,"['triangles', 'stars', 'circles', 'rectangles']",triangles,Triangles,0.8881279230117798,1
+111,images/111.jpg,What kind of coating has been used?,"['polish', 'frosting', 'paint', 'varnish']",frosting,Frosting,0.7474330067634583,1
+112,images/112.jpg,Which century was the item the woman is holding up invented in?,"['twentieth', 'twenty first', 'tenth', 'eighteenth']",twentieth,Twenty first,0.8804834485054016,0
+113,images/113.jpg,What genus of animal is visible here?,"['canine', 'porcine', 'feline', 'rodent']",feline,Feline,0.8459467887878418,1
+114,images/114.jpg,What brand is the red truck?,"['dodge', 'chevy', 'ford', 'toyota']",dodge,Dodge,0.9917170405387878,1
+115,images/115.jpg,This meal was likely prepared using which method?,"['oven', 'crockpot', 'grill', 'stovetop']",grill,Grill,0.963921070098877,1
+116,images/116.jpg,The cat appears to be what type?,"['feral', 'housecat', 'pregnant', 'sheltered']",housecat,Housecat,0.8370569348335266,1
+117,images/117.jpg,What limits forward navigation?,"['traffic warden', 'road accident', 'red light', 'bad weather']",red light,Red light,0.6797441840171814,1
+118,images/118.jpg,What are the zebras doing?,"['grazing', 'sleeping', 'drinking', 'walking']",grazing,Grazing,0.9673181176185608,1
+119,images/119.jpg,Why are the people behind the fence there?,"['coaching', 'spectating', 'relaxing', 'taking photos']",spectating,Spectating,0.8568087220191956,1
+120,images/120.jpg,Which piece of clothing is unique to one person here?,"['collar', 'shirt', 'tie', 'vest']",vest,Vest,0.3158896267414093,1
+121,images/121.jpg,What type of container is the straw sticking out of?,"['pint glass', 'martini glass', 'mason jar', 'vase']",mason jar,Mason jar,0.4447976946830749,1
+122,images/122.jpg,A person following what kind of diet is least likely to eat this meal?,"['atkins', 'weight watchers', 'vegetarian', 'ketogenic']",vegetarian,Vegetarian,0.6858773827552795,1
+123,images/123.jpg,What is placed on the ground that will eventually turn yellow?,"['bananas', 'pears', 'tomatoes', 'apples']",bananas,Bananas,0.5965360403060913,1
+124,images/124.jpg,What is in the bottles?,"['beer', 'liquer', 'water', 'juice']",liquer,Liquor,0.5463628172874451,0
+125,images/125.jpg,Which food on the plate grows in the ground?,"['chicken', 'carrot', 'dried cranberry', 'bread']",carrot,Carrot,0.923402726650238,1
+126,images/126.jpg,What theme park attraction are they most likely visiting?,"['disney world', 'disneyland', 'universal studios', 'six flags']",disneyland,Disneyland,0.9503465294837952,1
+127,images/127.jpg,What is in the photo above the TV?,"['cat', 'boy', 'woman', 'dog']",woman,Woman,0.6529000401496887,1
+128,images/128.jpg,The temperature outside is likely what range?,"['below freezing', 'hot', 'cool', 'very humid']",hot,Cool,0.9045594930648804,0
+129,images/129.jpg,What kind of weather was there?,"['hail', 'rain', 'sun', 'snow']",rain,Rain,0.9932090640068054,1
+130,images/130.jpg,What is the facade that the couple is being interviewed in likely designed to be?,"['radio', 'camera', 'building', 'tv']",tv,Tv,0.5364147424697876,1
+131,images/131.jpg,What level of a house is this room located in?,"['basement', 'ground', 'second', 'third']",basement,Ground,0.5592488050460815,0
+132,images/132.jpg,What type of birds are these?,"['captive', 'desert', 'arctic', 'aquatic']",aquatic,Aquatic,0.9535573720932008,1
+133,images/133.jpg,What country headquarters this plane company?,"['canada', 'japan', 'usa', 'uk']",usa,Usa,0.4176976978778839,1
+134,images/134.jpg,What other sport besides ping pong is played by someone in this household?,"['lacrosse', 'hockey', 'baseball', 'tennis']",tennis,Tennis,0.741529107093811,1
+135,images/135.jpg,Which team is on offense?,"['red', 'neither', 'blue', 'both']",red,Red,0.617707371711731,1
+136,images/136.jpg,What object should never get wet?,"['laptop', 'computer monitor', 'tv', 'jacket']",laptop,Laptop,0.7532901763916016,1
+137,images/137.jpg,What do the larger elephants still have intact?,"['tusks', 'pythons', 'horns', 'antlers']",tusks,Tusks,0.6981382966041565,1
+138,images/138.jpg,What kind of room is on the left of the yellow train?,"['nursery room', 'bathroom', 'changing room', 'waiting room']",waiting room,Waiting room,0.7523611187934875,1
+139,images/139.jpg,Which vehicle is closest to the rectangular blue sign?,"['blue car', 'red bus', 'motorcycle', 'light car']",red bus,Red bus,0.5112168192863464,1
+140,images/140.jpg,What vehicle is shown in the photo?,"['airplane', 'bus', 'train', 'car']",airplane,Car,0.6708889007568359,0
+141,images/141.jpg,What kind of bag is this?,"['suitcase', 'backpack', 'purse', 'briefcase']",suitcase,Suitcase,0.8395242094993591,1
+142,images/142.jpg,Why are the wood platforms strapped to the elephants?,"['to punish', 'to plow', 'to groom', 'to ride']",to ride,Ride,0.755775511264801,0
+143,images/143.jpg,What is the train riding on?,"['street', 'train tracks', 'clay', 'grass']",train tracks,Train tracks,0.9654908180236816,1
+144,images/144.jpg,What is the man taking?,"['walk', 'picture', 'watch', 'pee']",picture,Picture,0.9607966542243958,1
+145,images/145.jpg,What item is on the bottom shelf near the TV?,"['cars', 'pictures', 'swords', 'speakers']",speakers,Cars,0.4059339463710785,0
+146,images/146.jpg,What city is mentioned on the front of the bus?,"['new york', 'los angeles', 'chicago', 'seattle']",seattle,Seattle,0.9958670139312744,1
+147,images/147.jpg,What expression are these children making?,"['confused', 'smiling', 'crying', 'angry']",smiling,Smiling,0.989167094230652,1
+148,images/148.jpg,What video game system is the boy playing on?,"['nintendo wii', 'playstation 3', 'xbox one', 'playstation 4']",nintendo wii,Nintendo wii,0.7358822226524353,1
+149,images/149.jpg,What does Fidelity specialize in?,"['travel', 'insurance', 'investments', 'rentals']",investments,Investments,0.9965903759002686,1
+150,images/150.jpg,Which is the fruit?,"['meat', 'chocolate', 'nuts', 'orange slices']",orange slices,Orange slices,0.9705967903137208,1
+151,images/151.jpg,What is the green box near the red stapler on the desk used to hold?,"['tissues', 'pins', 'pens', 'pencils']",tissues,Pens,0.7912597060203552,0
+152,images/152.jpg,How many bake pans were utilized?,"['one', 'none', 'four', 'three']",four,1,0.7224957346916199,0
+153,images/153.jpg,What are some of the zebras standing in in the middle of the photo?,"['grass', 'water', 'mud', 'rocks']",water,Mud,0.5050732493400574,0
+154,images/154.jpg,How many people have their arms around the woman?,"['four', 'one', 'five', 'three']",one,3,0.4134107530117035,0
+155,images/155.jpg,What city name is shown in the background?,"['los angeles', 'riverton', 'new york', 'omaha']",omaha,Omaha,0.9767189025878906,1
+156,images/156.jpg,What is the dark colored car to the far left in the middle doing?,"['turning left', 'turning right', 'parking', 'reversing']",turning left,Reversing,0.34942427277565,0
+157,images/157.jpg,Are the people boarding this train?,"['absolutely no', 'probably yes', 'probably no', 'yes']",absolutely no,No,0.5556241869926453,0
+158,images/158.jpg,What is purpose of this wooden board?,"['entertaining kids', 'decoration', 'street sign', 'advertisement']",advertisement,Advertisement,0.5250070691108704,1
+159,images/159.jpg,What video game system is the man playing?,"['xbox one', 'playstation 5', 'nintendo wii', 'atari']",nintendo wii,Nintendo wii,0.6044024229049683,1
+160,images/160.jpg,Where are the buses with blue trim probably assembled?,"['stadium', 'lot', 'lane', 'terminal']",terminal,Terminal,0.406082808971405,1
+161,images/161.jpg,What kind of pizza is this?,"['margarita', 'deep dish', 'pepperoni', 'loaded']",margarita,Cheese,0.2770163416862488,0
+162,images/162.jpg,When it comes to the child what is he or she doing?,"['roller blading', 'kicking', 'karate', 'skateboarding']",skateboarding,Skateboarding,0.8444387316703796,1
+163,images/163.jpg,What is the small house behind the cattle made up of?,"['plastic', 'reef', 'stone', 'thatch']",stone,Stone,0.9922090768814088,1
+164,images/164.jpg,What type of transportation is shown?,"['rail', 'road', 'water', 'air']",rail,Rail,0.9428163170814514,1
+165,images/165.jpg,What is the little girl doing?,"['drinking', 'yelling', 'eating', 'singing']",eating,Eating,0.931580364704132,1
+166,images/166.jpg,What type of area is shown?,"['rural', 'medical', 'commercial', 'residential']",commercial,Commercial,0.7987938523292542,1
+167,images/167.jpg,What appliance is unhooked and placed by the sink?,"['dishwasher', 'stove/oven', 'trash compactor', 'icemaker']",stove/oven,Dishwasher,0.4342940151691437,0
+168,images/168.jpg,Which food on the dish is a meat?,"['broccoli', 'turkey', 'rice', 'green beans']",turkey,Turkey,0.9747703075408936,1
+169,images/169.jpg,Which body part of the cow could you look at to find out which identity and/or owner the cow has?,"['ear', 'foot', 'rump', 'knee']",ear,Ear,0.9064225554466248,1
+170,images/170.jpg,Who is the manufacturer of this laptop?,"['apple', 'hp', 'dell', 'compaq']",hp,Dell,0.5109022259712219,0
+171,images/171.jpg,What is the person using to eat the pizza?,"['knife', 'spoon', 'none', 'fork']",fork,Fork,0.9654746055603028,1
+172,images/172.jpg,What are the white rocks for?,"['breaking', 'prevent fire', 'water retainment', 'decoration']",prevent fire,Water retainment,0.5253210663795471,0
+173,images/173.jpg,What animal has similar color to the flower in the picture on the left side of the room?,"['koala', 'rooster', 'zebra', 'panda']",rooster,Rooster,0.3499645888805389,1
+174,images/174.jpg,What other animal is this animal traditionally an enemy of?,"['tigers', 'cats', 'elephants', 'mice']",cats,Cats,0.4315426051616668,1
+175,images/175.jpg,What left the blue marks on the ground near the fire hydrant?,"['paint', 'wind', 'fruit', 'animals']",paint,Paint,0.7470426559448242,1
+176,images/176.jpg,What kind of a person usually eats food like this?,"['obese', 'competitive eater', 'glutton', 'nutritionist']",nutritionist,Nutritionist,0.8360128402709961,1
+177,images/177.jpg,Which person would be the coldest?,"['left', 'middle', 'right', 'none']",middle,Left,0.3965191543102264,0
+178,images/178.jpg,What pattern is on the bottom of the skateboard?,"['zigzag', 'plaid', 'stripes', 'polka dots']",polka dots,Plaid,0.8451671004295349,0
+179,images/179.jpg,How many drinkers are sucking down their beverages?,"['three', 'two', 'none', 'one']",three,2,0.445378839969635,0
+180,images/180.jpg,What does the taller bottle contain?,"['beer', 'juice', 'champagne', 'water']",water,Beer,0.2917097210884094,0
+181,images/181.jpg,How do these people know each other?,"['coworkers', 'spouses', 'siblings', 'classmates']",classmates,Classmates,0.982854962348938,1
+182,images/182.jpg,What might you mix with the alcoholic drink named?,"['milk', 'coke', 'beer', 'gin']",coke,Coke,0.4894739687442779,1
+183,images/183.jpg,What type of vehicle is this?,"['construction', 'cargo', 'watercraft', 'passenger']",passenger,Passenger,0.9875087141990662,1
+184,images/184.jpg,What material are the white cups?,"['wood', 'glass', 'paper', 'plastic']",paper,Plastic,0.7077158093452454,0
+185,images/185.jpg,What color is the floor?,"['brown', 'green', 'blue', 'purple']",brown,Brown,0.8869250416755676,1
+186,images/186.jpg,What is placed inside this meter?,"['paper', 'paint', 'water', 'money']",money,Money,0.868506133556366,1
+187,images/187.jpg,What appliance is shown?,"['dryer', 'microwave', 'washer', 'toaster']",toaster,Toaster,0.9373828172683716,1
+188,images/188.jpg,Why does the couple standing in the boat?,"['fun', 'reduce stress', 'tradition', 'spend time']",spend time,Fun,0.6498942971229553,0
+189,images/189.jpg,What cultural clothing are the women wearing?,"['vietnamese', 'korean', 'chinese', 'japanese']",japanese,Japanese,0.6476792097091675,1
+190,images/190.jpg,How did the animal on the car arrive there?,"['horseback', 'uber', 'greyhound', 'flying']",flying,Flying,0.861556887626648,1
+191,images/191.jpg,What is in the glass?,"['juice', 'milk', 'white wine', 'red wine']",red wine,White wine,0.5728590488433838,0
+192,images/192.jpg,What area of the house is this in?,"['kitchen', 'bathroom', 'basement', 'bedroom']",basement,Bathroom,0.6421166062355042,0
+193,images/193.jpg,The top shelf has many books of the same author of what genre?,"['romance', 'history', 'biography', 'thriller fiction']",thriller fiction,Biography,0.5492699146270752,0
+194,images/194.jpg,How many women are in the picture?,"['three', 'two', 'four', 'eight']",four,4,0.7995230555534363,0
+195,images/195.jpg,The couch is located where?,"['under', 'nowhere', 'right', 'left']",right,Right,0.953635275363922,1
+196,images/196.jpg,What type of travel is this vehicle for?,"['air', 'road', 'water', 'rail']",air,Air,0.9543150663375854,1
+197,images/197.jpg,Where are the people laying?,"['field', 'park', 'beach', 'bed']",beach,Beach,0.9904736876487732,1
+198,images/198.jpg,What are the horses being used for?,"['rodeo', 'transportation', 'racing', 'farming']",farming,Farming,0.4319394528865814,1
+199,images/199.jpg,What kind of door is open so she can sit inside?,"['fridge', 'office', 'freezer', 'house']",fridge,Refrigerator,0.7772582173347473,0
+200,images/200.jpg,What is the woman using the umbrella to protect herself from?,"['rain', 'wind', 'sun', 'snow']",sun,Sun,0.9735032320022584,1
+201,images/201.jpg,What property does the blue and green fence have?,"['soft', 'hard', 'wet', 'hot']",soft,Hard,0.5411375761032104,0
+202,images/202.jpg,What occasion are the bears probably sitting at the table enjoying?,"['birthday', 'tea party', 'holiday dinner', 'wedding']",holiday dinner,Holiday dinner,0.7968663573265076,1
+203,images/203.jpg,Why is the cow tied to the pole?,"['to hit', 'to kill', 'to ride', 'to restrain']",to restrain,Restrain,0.7458663582801819,0
+204,images/204.jpg,What super hero is the cake based off?,"['spiderman', 'batman', 'iron man', 'superman']",spiderman,Spiderman,0.3928241431713104,1
+205,images/205.jpg,What is the man with the black glove about to do?,"['push ups', 'sit ups', 'throw ball', 'dive']",throw ball,Throw ball,0.9721860885620116,1
+206,images/206.jpg,Why is his arm up in the air?,"['signal', 'balance', 'wave', 'reach']",reach,Reach,0.7079082131385803,1
+207,images/207.jpg,What animal is next to the baby animal?,"['rooster', 'chicken', 'cow', 'hen']",cow,Cow,0.9423590302467346,1
+208,images/208.jpg,What do people do with the items purchased at this corner?,"['sell them', 'eat them', 'wear them', 'display them']",eat them,Eat them,0.5672914385795593,1
+209,images/209.jpg,Which snowboarder will have a harder time standing up?,"['both', 'neither', 'red board', 'white board']",white board,Red board,0.4816355109214782,0
+210,images/210.jpg,If this is a grand slam which must it be?,"['wimbledon', 'french open', 'australian open', 'us open']",wimbledon,Us open,0.3873648047447204,0
+211,images/211.jpg,What is hanging on the right wall next the desk?,"['towels', 'diplomas', 'pictures', 'coats']",coats,Coats,0.5574116110801697,1
+212,images/212.jpg,What fruit is the clock shaped as?,"['orange', 'pineapple', 'apple', 'pear']",apple,Apple,0.9566319584846495,1
+213,images/213.jpg,What is the most likely age of the person?,"['eight', '24', '90', '52']",90,90,0.8774132132530212,1
+214,images/214.jpg,What kind of bus is this?,"['tour bus', 'cargo bus', 'public transport', 'school bus']",public transport,Public transport,0.5003790259361267,1
+215,images/215.jpg,Which vegetable in this soup is heart shaped?,"['lima bean', 'carrot', 'onion', 'tomato']",carrot,Carrot,0.9562779664993286,1
+216,images/216.jpg,Where were these pieces of fruit likely purchased?,"['roadside stand', 'online', 'grocery store', 'farm']",grocery store,Grocery store,0.9243038296699524,1
+217,images/217.jpg,These horses are used for what?,"['breeding', 'plowing', 'racing', 'show']",plowing,Plowing,0.9957555532455444,1
+218,images/218.jpg,What type of shelves are these?,"['bakery', 'book', 'grocery', 'shoe']",bakery,Bakery,0.8649831414222717,1
+219,images/219.jpg,What type of venue might this be?,"['town hall', 'airport', 'concert hall', 'train station']",airport,Airport,0.9896289706230164,1
+220,images/220.jpg,Which vehicle is closest to the transport hub?,"['red car', 'truck trailer', 'orange tractor', 'truck cab']",orange tractor,Truck trailer,0.4037708640098572,0
+221,images/221.jpg,What are the people tying?,"['score', 'shoes', 'kite', 'bowtie']",kite,Kite,0.9214468598365784,1
+222,images/222.jpg,What is the man riding?,"['motorcycle', 'skateboard', 'bicycle', 'scooter']",skateboard,Skateboard,0.9933353662490844,1
+223,images/223.jpg,Who might be helping the girl?,"['no one', 'parents', 'other kids', 'priest']",parents,Parents,0.9135259985923768,1
+224,images/224.jpg,What type of container is near the benches?,"['ticket', 'trash', 'food', 'water']",trash,Trash,0.9838714599609376,1
+225,images/225.jpg,What type of sign is visible?,"['directional', 'traffic', 'price', 'brand']",traffic,Traffic,0.8072237372398376,1
+226,images/226.jpg,What other sports might be played on this surface?,"['badminton', 'golf', 'snowboarding', 'tennis']",snowboarding,Snowboarding,0.4498951733112335,1
+227,images/227.jpg,Given the position of the bat and ball the batter most likely?,"['missed', 'fouled', 'popped up', 'grounded out']",missed,Missed,0.3404120206832886,1
+228,images/228.jpg,What industry is this man likely working in?,"['travel', 'construction', 'medical', 'restaurant']",restaurant,Restaurant,0.9972748160362244,1
+229,images/229.jpg,What is needed to control the large object?,"['computer', 'battery', 'string', 'remote']",string,String,0.9605445861816406,1
+230,images/230.jpg,What kind of fruit is used for decorating?,"['mangoes', 'apples', 'bananas', 'oranges']",oranges,Oranges,0.9076516032218932,1
+231,images/231.jpg,Where does this fruit grow?,"['logs', 'sea', 'trees', 'ground']",trees,Trees,0.6725561618804932,1
+232,images/232.jpg,What indicates a baby is present?,"['mother', 'pacifier', 'crib', 'cake']",pacifier,Pacifier,0.9428147077560424,1
+233,images/233.jpg,What social activity might this person engage in at night this day?,"['drinking', 'marriage ceremony', 'political rally', 'business meeting']",drinking,Drinking,0.9572238326072692,1
+234,images/234.jpg,What leavening is used in this item?,"['salt', 'baking powder', 'sourdough starter', 'yeast']",yeast,Yeast,0.9870965480804444,1
+235,images/235.jpg,What meal might be eaten at the time shown on the clock?,"['supper', 'tea', 'breakfast', 'elevenses']",tea,Elevenses,0.4152769148349762,0
+236,images/236.jpg,What is the relationship of the people at the back to the man wearing an orange hat?,"['students', 'family members', 'friends', 'customers']",customers,Family members,0.6526994109153748,0
+237,images/237.jpg,What are these women controlling?,"['game', 'car', 'robot', 'plane']",game,Game,0.7235536575317383,1
+238,images/238.jpg,How many different devices can show a picture?,"['three', 'one', 'four', 'two']",four,2,0.7613391876220703,0
+239,images/239.jpg,What kind of bike is this?,"['unicycle', 'vespa', 'bmx', 'motorcycle']",vespa,Vespa,0.9196920990943908,1
+240,images/240.jpg,What type of dinnerware do the people seem to be using?,"['porcelain', 'wooden', 'steel', 'disposable']",disposable,Porcelain,0.4091149866580963,0
+241,images/241.jpg,Why is the man holding an umbrella?,"['hail', 'rain', 'sun', 'snow']",rain,Rain,0.879950225353241,1
+242,images/242.jpg,This railcar is travelling at what position relative to the street-level?,"['at streer-level', 'elevated', 'underground', 'under water']",underground,Elevated,0.9213932156562804,0
+243,images/243.jpg,The guy on the beach towel is readying the item to do what with it most likely?,"['wear', 'lie', 'fly', 'swim']",fly,Fly,0.9812231063842772,1
+244,images/244.jpg,What might be drunk from this glasses?,"['coke', 'wine', 'juice', 'beer']",wine,Wine,0.970771551132202,1
+245,images/245.jpg,Which territory is this area located?,"['russia', 'britain', 'canada', 'america']",britain,Britain,0.8973901867866516,1
+246,images/246.jpg,What type of region is this likely?,"['farm', 'coastal', 'deserted', 'city']",city,City,0.3958956003189087,1
+247,images/247.jpg,The man is looking in what direction?,"['up', 'behind', 'sideways', 'down']",up,Down,0.3800079226493835,0
+248,images/248.jpg,This person in this picture is likely to be a?,"['woman', 'little boy', 'man', 'little girl']",man,Woman,0.9005851149559021,0
+249,images/249.jpg,Which flavor most closely describes the bright yellow stuff?,"['bland', 'meaty', 'sweet', 'cheesy']",sweet,Cheesy,0.7777483463287354,0
+250,images/250.jpg,What city is this location?,"['taipei', 'osaka', 'gdansk', 'shanghai']",osaka,Osaka,0.9284935593605042,1
+251,images/251.jpg,What is the name of the sport the man is participating in?,"['waterboarding', 'sailboating', 'waterskiing', 'skateboarding']",waterboarding,Waterskiing,0.9068624377250672,0
+252,images/252.jpg,What is the shape on top of the cake?,"['dirt', 'peanut', 'flower', 'mm']",flower,Flower,0.9639001488685608,1
+253,images/253.jpg,How many guests have checked into this room?,"['four', 'none', 'none', 'six']",none,0,0.6362871527671814,0
+254,images/254.jpg,What type of vehicles are sitting outside of the store?,"['car', 'motorcycle', 'bicycle', 'train']",motorcycle,Motorcycle,0.9868396520614624,1
+255,images/255.jpg,What is the number mentioned in the t shirt of the girl who is playing?,"['21', '13', '31 and', '51']",21,13,0.3530133664608001,0
+256,images/256.jpg,Where is the horse currently located?,"['barn', 'farm', 'house', 'field']",barn,Barn,0.869686484336853,1
+257,images/257.jpg,What is the person on this vase doing?,"['fighting', 'chariot racing', 'horse training', 'horse theft']",chariot racing,Chariot racing,0.7923004627227783,1
+258,images/258.jpg,What kind of show is the man on?,"['cooking show', 'reality show', 'talk show', 'movie']",talk show,Talk show,0.972881555557251,1
+259,images/259.jpg,What animals are in the front of the photo?,"['horse', 'cat', 'dog', 'elephant']",horse,Dog,0.5308783650398254,0
+260,images/260.jpg,What treat can be made with this fruit and ice cream?,"['cone', 'banana split', 'macaroon', 'macadamia cookies']",banana split,Banana split,0.9819853901863098,1
+261,images/261.jpg,What are the ski poles used for?,"['fashion', 'pushing off', 'ice picks', 'snow shovelling']",pushing off,Pushing off,0.8555929660797119,1
+262,images/262.jpg,What is the rectangular object in the back left used to do?,"['blend food', 'watch tv', 'store bread', 'cook food']",watch tv,Blend food,0.3598703742027282,0
+263,images/263.jpg,Which car hold the most people?,"['black car', 'white van', 'blue car', 'silver car']",white van,Blue car,0.4560454189777374,0
+264,images/264.jpg,Where do the men work?,"['bank', 'library', 'airport', 'restaurant']",airport,Airport,0.9949171543121338,1
+265,images/265.jpg,Why is the man jumping on the red pipe?,"['to dodge', 'to sit', 'to grind', 'to roll']",to grind,To grind,0.5104301571846008,1
+266,images/266.jpg,Which height he jumps?,"['11 inch', '16 inch', '17inch', '10 inch']",16 inch,17 inch,0.9734749794006348,0
+267,images/267.jpg,How many vehicles have their lights on?,"['three', 'one', 'none', 'two']",two,1,0.4999746084213257,0
+268,images/268.jpg,What comic book hero is sitting on top of the TV?,"['spiderman', 'wonder woman', 'batman', 'superman']",spiderman,Spiderman,0.8503126502037048,1
+269,images/269.jpg,What type of league is the batter in?,"['little league', 'high school', 'minor league', 'intramural']",little league,Little league,0.9465702772140504,1
+270,images/270.jpg,What time in approximately 31 minutes?,"['110', 'midnight', '1000', 'midday']",1000,1000,0.9194698929786682,1
+271,images/271.jpg,What is on the laps of each of the women?,"['paper', 'children', 'phones', 'bag']",bag,Bag,0.3932903707027435,1
+272,images/272.jpg,What do people gain when they eat too many of these?,"['hair', 'kindness', 'weight', 'intelligence']",weight,Weight,0.9510265588760376,1
+273,images/273.jpg,What room is this most likely to be happening in?,"['bathroom', 'living room', 'outside', 'hallway']",living room,Living room,0.9916343688964844,1
+274,images/274.jpg,What is the man on TV doing?,"['playing basketball', 'singing', 'surfing', 'boxing']",singing,Singing,0.9763529896736144,1
+275,images/275.jpg,The yellow truck on the sidewalk is concerned with what activity?,"['packages', 'roads', 'food', 'fire']",food,Food,0.9600827693939208,1
+276,images/276.jpg,What type of buildings are located here?,"['residential', 'high rises', 'tiny homes', 'commercial']",residential,Residential,0.9947040677070618,1
+277,images/277.jpg,What is in front of the monitor?,"['keyboard', 'phone', 'mouse', 'headphones']",keyboard,Keyboard,0.8024891018867493,1
+278,images/278.jpg,What are these types of candles called?,"['beeswax', 'tea lights', 'birthday', 'rush lights']",tea lights,Tea lights,0.6969072222709656,1
+279,images/279.jpg,What color phone does the woman in the blue outfit have?,"['green', 'yellow', 'red', 'blue']",yellow,Yellow,0.6326203346252441,1
+280,images/280.jpg,What is this dish being cooked in?,"['wok', 'stock pot', 'frying pan', 'teapot']",wok,Wok,0.8652806878089905,1
+281,images/281.jpg,How do we know this woman is at work?,"['signage', 'surroundings', 'helping customer', 'wearing uniform']",wearing uniform,Uniform,0.8836764693260193,0
+282,images/282.jpg,What is the closest item providing light?,"['lamp', 'flashlight', 'candle', 'lantern']",candle,Candle,0.8767005205154419,1
+283,images/283.jpg,The people on laptops seem most likely to be part of what group?,"['work', 'friends', 'class', 'competition']",class,Class,0.9345821142196656,1
+284,images/284.jpg,How would you cut the vegetables?,"['fork', 'knife', 'hands', 'peeler']",peeler,Knife,0.8862048983573914,0
+285,images/285.jpg,Is the man going to the mountain in the background?,"['absolutely no', 'yes', 'absolutely yes', 'probably yes']",absolutely no,Yes,0.6429747939109802,0
+286,images/286.jpg,What type of animals are on the grass?,"['zebra', 'lion', 'bear', 'tiger']",zebra,Zebra,0.9970086216926576,1
+287,images/287.jpg,What does the cat have his paw up against?,"['book', 'mouse', 'toilet', 'desk']",desk,Desk,0.5817233920097351,1
+288,images/288.jpg,The glasses contain only this beverage type?,"['juice', 'beer', 'water', 'bourbon']",beer,Beer,0.9775015115737916,1
+289,images/289.jpg,What is keeping the animals all in one place?,"['mountains', 'fear', 'fence', 'guns']",fence,Fence,0.9988007545471193,1
+290,images/290.jpg,What season of the year is shown here?,"['early summer', 'fall-winter', 'summer', 'late spring']",fall-winter,Fall-winter,0.6759001612663269,1
+291,images/291.jpg,Whos is sitting in the chair?,"['man', 'girl man', 'no one', 'girl']",girl man,Man,0.6396267414093018,0
+292,images/292.jpg,What pattern shirt is the man wearing?,"['polka dot', 'argyle', 'solid color', 'stripes']",stripes,Stripes,0.9747619032859802,1
+293,images/293.jpg,How many buses are shown in the streets?,"['two', 'one', 'three', 'four']",three,1,0.5417851805686951,0
+294,images/294.jpg,What brand of soda is the can in the car?,"['sprite', 'coca cola', 'pepsi', 'mountain dew']",pepsi,Coca cola,0.411915510892868,0
+295,images/295.jpg,What type of transportation is this?,"['road', 'rail', 'water', 'air']",road,Road,0.9006715416908264,1
+296,images/296.jpg,What is the stuffed animal touching instead of the tennis player?,"['racquet', 'remote', 'screen', 'tennis ball']",screen,Screen,0.8429585099220276,1
+297,images/297.jpg,What type of shot is the woman about to hit?,"['forehand', 'serve', 'backhand', 'slice']",forehand,Forehand,0.4053622186183929,1
+298,images/298.jpg,What type of road structure is near?,"['toll booth', 'tunnel', 'bridge', 'intersection']",intersection,Intersection,0.9695639610290528,1
+299,images/299.jpg,What material is the squared off building in the background made from?,"['steel', 'glass', 'wood', 'clay']",clay,Wood,0.6378967761993408,0
+300,images/300.jpg,How many people can sit at the table?,"['two', 'eight', 'six', 'four']",four,4,0.5025004744529724,0
+301,images/301.jpg,The bag which the cat is standing is used for what?,"['groceries', 'travel', 'school', 'purse']",travel,Travel,0.9953508377075196,1
+302,images/302.jpg,Why is the person using an umbrella?,"['rain', 'snow', 'sun', 'costume']",sun,Sun,0.9454699158668518,1
+303,images/303.jpg,What does the man have on his head?,"['earmuffs', 'hat', 'shower cap', 'headphones']",headphones,Headphones,0.9104218482971193,1
+304,images/304.jpg,What type of bottles are on the table?,"['beer', 'wine', 'juice', 'soda']",beer,Beer,0.9900012016296388,1
+305,images/305.jpg,How many skateboards are in the picture?,"['four', 'six', 'three', 'five']",three,3,0.4126118123531341,0
+306,images/306.jpg,What does the electric street sign say?,"['proceed', ""don't walk"", 'yield', 'walk']",don't walk,Proceed,0.3687202930450439,0
+307,images/307.jpg,What type items are in the rolled item here?,"['lab specimens', 'clothing', 'animals', 'books']",clothing,Clothing,0.9341829419136048,1
+308,images/308.jpg,In what type of location are they playing with the body board?,"['room', 'beach', 'park', 'store']",room,Room,0.6561588644981384,1
+309,images/309.jpg,What kind of footwear is the walker wearing?,"['none', 'shoes', 'sandals', 'socks']",shoes,Socks,0.3358885943889618,0
+310,images/310.jpg,Which fruit can hurt your eyes if you peel it holding your face too close to it?,"['banana', 'pear', 'orange', 'mango']",orange,Orange,0.3926899433135986,1
+311,images/311.jpg,What are towels generally made of?,"['linen', 'rayon', 'cotton', 'spandex']",cotton,Cotton,0.9602550864219666,1
+312,images/312.jpg,Where are the cats sitting on top of?,"['newspaper', 'keyboard', 'lap', 'board game']",keyboard,Keyboard,0.9126460552215576,1
+313,images/313.jpg,What type of dog is it?,"['domestic pet', 'stray dog', 'service dog', 'police dog']",domestic pet,Stray dog,0.5760371685028076,0
+314,images/314.jpg,They are likely sitting down to enjoy what meal of the day?,"['dinner', 'snack', 'breakfast', 'lunch']",breakfast,Breakfast,0.7749095559120178,1
+315,images/315.jpg,How many people have skateboards?,"['five', 'four', 'two', 'ten']",two,2,0.9641135931015016,0
+316,images/316.jpg,The most abundant cake has a topping with which color?,"['black', 'magenta', 'white', 'blue']",white,Blue,0.7590076327323914,0
+317,images/317.jpg,What animals are in the field?,"['zebra', 'lion', 'cheetah', 'tiger']",zebra,Zebra,0.9942200183868408,1
+318,images/318.jpg,What is this umbrella used for?,"['fashion', 'rain', 'sun', 'lighting']",lighting,Lighting,0.9756199717521667,1
+319,images/319.jpg,What family member in a household would this room most likely belong to?,"['son', 'daughter', 'infant', 'grandparent']",son,Grandparent,0.6237344145774841,0
+320,images/320.jpg,What is the man's left hand holding?,"['head', 'ceiling', 'dog', 'skateboard']",skateboard,Skateboard,0.8070005178451538,1
+321,images/321.jpg,Who would sit here?,"['pianist', 'driver', 'employee', 'teacher']",employee,Employee,0.935812771320343,1
+322,images/322.jpg,What is the cat playing with?,"['spoon', 'remote', 'knife', 'ball']",knife,Knife,0.8998635411262512,1
+323,images/323.jpg,The piece of clothing the woman in the picture is wearing on her hands normally serves what purpose?,"['fashion', 'prevention', 'cure', 'protection']",fashion,Protection,0.8823646306991577,0
+324,images/324.jpg,What is on the umbrella?,"['fish', 'whale', 'dolphin', 'rain']",whale,Dolphin,0.4705686867237091,0
+325,images/325.jpg,What police force does the police car behind the truck belong to probably?,"['detroit', 'new york', 'baltimore', 'washington dc']",new york,New york,0.7555213570594788,1
+326,images/326.jpg,What apparel company is sponsoring the tennis match?,"['polo', 'dkny', 'fendi', 'ferragamo']",polo,Polo,0.7390144467353821,1
+327,images/327.jpg,What is the weather like?,"['hail', 'snow', 'rain', 'sun']",rain,Rain,0.9829896688461304,1
+328,images/328.jpg,What action is the woman probably getting ready to perform with her phone?,"['browse', 'call', 'text', 'selfie']",selfie,Selfie,0.9224702715873718,1
+329,images/329.jpg,What kind of car is it?,"['suv', 'sedan', 'sports car', 'mini van']",sports car,Sedan,0.8305732607841492,0
+330,images/330.jpg,What sort of surface/substance does the conveyance with a problem here move upon?,"['sea', 'sky', 'rail', 'road']",road,Road,0.873063325881958,1
+331,images/331.jpg,What is the purpose of the two tallest structures?,"['for advertisement', 'for weather', 'for reception', 'for visibility']",for reception,Reception,0.2630085349082947,0
+332,images/332.jpg,What is the vehicle in front of the cars?,"['bus', 'motorcycle', 'train', 'bicycle']",bicycle,Bicycle,0.9174363613128662,1
+333,images/333.jpg,The thing on the ceiling performs what function?,"['heating', 'cooking', 'cleaning', 'cooling']",cooling,Cooling,0.9864733219146729,1
+334,images/334.jpg,Why do people have their arms up?,"['to signal', 'to wave', 'to catch', 'to cheer']",to catch,Catch,0.5993110537528992,0
+335,images/335.jpg,How many lights are visible in the room?,"['two', 'three', 'five', 'six']",two,2,0.5474809408187866,0
+336,images/336.jpg,The weather element occurring is also the constituent of what object in the background?,"['river', 'waterfall', 'aqueduct', 'ocean']",ocean,Ocean,0.8346987366676331,1
+337,images/337.jpg,Where is this cat located?,"['vet', 'home', 'office', 'store']",home,Home,0.9448667168617249,1
+338,images/338.jpg,How many colours of floor tiles are there?,"['three', 'two', 'one', 'four']",two,2,0.3067713677883148,0
+339,images/339.jpg,What type of terrain is beyond the table and grill?,"['hilly', 'grassy', 'sandy', 'muddy']",grassy,Grassy,0.6074948906898499,1
+340,images/340.jpg,What is the most likely material of the floor?,"['terra cotta', 'marble', 'porcelain', 'vinyl']",porcelain,Vinyl,0.2598349750041961,0
+341,images/341.jpg,What time of day is it likely right now?,"['evening', 'morning', 'afternoon', 'night']",morning,Morning,0.4258426427841186,1
+342,images/342.jpg,Where is the horse?,"['farm', 'city street', 'ranch', 'parade']",ranch,Ranch,0.7611901164054871,1
+343,images/343.jpg,What kind of shot is the man about to hit?,"['drop shot', 'serve', 'forehand', 'backhand']",serve,Serve,0.4023936092853546,1
+344,images/344.jpg,What is the animal playing?,"['people', 'rope toys', 'other animals', 'balls']",balls,Balls,0.775222897529602,1
+345,images/345.jpg,What color can be seen in the middle of the upper floor?,"['green', 'black', 'teal', 'yellow']",green,Black,0.3324205577373504,0
+346,images/346.jpg,What are they waiting to do when they stand next to the street?,"['cross', 'work', 'sit', 'talk']",cross,Cross,0.4146164655685425,1
+347,images/347.jpg,What is the black object on the counter in the left corner called?,"['teapot', 'mason jar', 'vase', 'microwave']",teapot,Teapot,0.9630928635597228,1
+348,images/348.jpg,Where are the sheep located?,"['farm', 'street', 'mountain', 'park']",street,Street,0.8786593079566956,1
+349,images/349.jpg,What is the gray thing on the nearest motorcycle for?,"['displaying wealth', 'rain protection', 'just aesthetics', 'heating food']",rain protection,Rain protection,0.8941388726234436,1
+350,images/350.jpg,Which color of clothing is unique to just one of the two people here?,"['white', 'yellow', 'grey', 'black']",grey,Black,0.4403356909751892,0
+351,images/351.jpg,What type of structure is being used?,"['cement', 'natural', 'wood', 'plastic']",cement,Cement,0.5646652579307556,1
+352,images/352.jpg,What is sitting on top of the bed?,"['sneakers', 'dog', 'sports equipment', 'cat']",sneakers,Sneakers,0.9786681532859802,1
+353,images/353.jpg,What is this type of photography called?,"['visual style', 'light emission', 'time lapse', 'infrared']",time lapse,Time lapse,0.946999728679657,1
+354,images/354.jpg,What color is the object that the animals have their heads buried in?,"['purple', 'yellow', 'red', 'green']",green,Green,0.8892227411270142,1
+355,images/355.jpg,What is sitting on the bench?,"['toys', 'animals', 'statues', 'furniture']",statues,Statues,0.9929847717285156,1
+356,images/356.jpg,What hour is shown on the clock?,"['eleven', 'nine', 'eight', 'ten']",ten,Ten,0.3298214077949524,1
+357,images/357.jpg,What type of drink are they drinking?,"['soda', 'beer', 'red wine', 'vodka']",red wine,Red wine,0.8107065558433533,1
+358,images/358.jpg,What energy is used to cook the turkey?,"['carbon fire', 'gas', 'electricity', 'wood fire']",gas,Electricity,0.6364948153495789,0
+359,images/359.jpg,What type of boat is in the water?,"['oil tanker', 'sailing', 'cruise', 'fishing']",cruise,Cruise,0.8216747045516968,1
+360,images/360.jpg,What animals are in the field?,"['chicken', 'sheep', 'cow', 'goat']",cow,Cow,0.9354996085166932,1
+361,images/361.jpg,What video game system are the men playing?,"['playstation 4', 'xbox one', 'nintendo wii', 'gamecube']",nintendo wii,Wii,0.5844941139221191,0
+362,images/362.jpg,What part of the keyboard is shown?,"['letters', 'keypad', 'touchpad', 'trackpad']",keypad,Letters,0.5904291272163391,0
+363,images/363.jpg,The playing is using what move?,"['backhand', 'lob', 'forehand', 'serve']",backhand,Forehand,0.67557692527771,0
+364,images/364.jpg,Why is the pipe on the back of the truck?,"['to repair', 'to decorate', 'to transport', 'to paint']",to transport,Transport,0.6686604022979736,0
+365,images/365.jpg,What is the clear container topped with an orange made out of?,"['paper', 'steel', 'plastic', 'glass']",glass,Glass,0.962028980255127,1
+366,images/366.jpg,What brand of electronics is the person using on the desk?,"['microsoft', 'hp', 'apple', 'dell']",apple,Apple,0.9586623311042786,1
+367,images/367.jpg,What countries flag can be seen near the front of the classroom?,"['germany', 'italy', 'united kingdom', 'united states']",united states,United states,0.8828224539756775,1
+368,images/368.jpg,What city is this shopping center in?,"['los angeles', 'stroud uk', 'paris', 'karachi']",stroud uk,Stroud uk,0.8952201008796692,1
+369,images/369.jpg,What is used to pick up the suitcases?,"['rubber band', 'handle', 'tape', 'rope']",handle,Handle,0.8390998840332031,1
+370,images/370.jpg,What is coming out of her mouth?,"['food', 'sweat', 'blood', 'smoke']",smoke,Smoke,0.986583650112152,1
+371,images/371.jpg,What kind of hat is the man wearing?,"['fedora', 'boater', 'baseball cap', 'newsboy']",newsboy,Fedora,0.6696269512176514,0
+372,images/372.jpg,Where are these students?,"['conference room', 'auditorium', 'gym', 'cafeteria']",conference room,Conference room,0.9314056634902954,1
+373,images/373.jpg,What footwear is the person walking on?,"['heels', 'tennis shoes', 'sandals', 'flats']",flats,Flats,0.469181478023529,1
+374,images/374.jpg,What green fruits or vegetables are in a jar inside the refrigerator?,"['limes', 'green beans', 'pickles', 'celery sticks']",pickles,Pickles,0.4198969602584839,1
+375,images/375.jpg,What kind of clock is this?,"['analog', 'digital', 'sundial', 'cuckoo clock']",analog,Analog,0.8585200309753418,1
+376,images/376.jpg,How many rooms/areas in the house are immediately visible in the photo?,"['three', 'four', 'one', 'two']",two,2,0.4152863323688507,0
+377,images/377.jpg,Which skier is going fastest?,"['sitting', 'right', 'left', 'middle']",left,Right,0.4910090565681457,0
+378,images/378.jpg,Why is the person's vest yellow?,"['dress code', 'camouflage', 'visibility', 'fashion']",visibility,Visibility,0.9460917115211488,1
+379,images/379.jpg,What number is closest to the number of people that are pushing the bus?,"['six', 'five', 'nine', 'two']",nine,2,0.2997598052024841,0
+380,images/380.jpg,What brand made the shoes the hatless man on the left has on?,"['nike', 'sketchers', 'fila', 'adidas']",adidas,Nike,0.4926797151565552,0
+381,images/381.jpg,What is the man using?,"['generator', 'oven', 'trampoline', 'refrigerator']",oven,Oven,0.9730960130691528,1
+382,images/382.jpg,What area of the baseball field are the players almost colliding over as one blocks the other most likely?,"[""batter's box"", 'home plate', ""catcher's box"", ""pitcher's mound""]",home plate,Catcher's box,0.6235945820808411,0
+383,images/383.jpg,Which ingredient offers the most protein?,"['lettuce', 'pepper', 'tomato', 'ham']",ham,Ham,0.9621208906173706,1
+384,images/384.jpg,What word is on the pillow?,"['goodbye', 'hello', 'sadness', 'thank you']",hello,Sadness,0.3516108393669128,0
+385,images/385.jpg,What is the white appliance on the counter used to make?,"['bagels', 'smoothies', 'toast', 'coffee']",coffee,Coffee,0.6389058232307434,1
+386,images/386.jpg,The child holding the controller has what design on their shirt?,"['clown', 'cat', 'cow', 'heart']",heart,Heart,0.9136583805084229,1
+387,images/387.jpg,Why is the black net set up behind the batter?,"['safety', 'to film', 'to climb', 'photo opportunities']",safety,Safety,0.6944722533226013,1
+388,images/388.jpg,How many animals are staring at the camera?,"['two', 'ten', 'eight', 'four']",four,8,0.2541479170322418,0
+389,images/389.jpg,How are these balloons floating?,"['fan', 'wind', 'remote', 'helium']",helium,Helium,0.9693408608436584,1
+390,images/390.jpg,What time of day is this?,"['daytime', 'dawn', 'evening', 'night']",daytime,Daytime,0.8851475715637207,1
+391,images/391.jpg,Why is the man in the green shirt holding his arms out?,"['to exercise', 'to balance', 'to wave', 'to signal']",to balance,Balance,0.4802889823913574,0
+392,images/392.jpg,Where is the most likely location for this bar?,"['school', 'house', 'restaurant', 'office']",house,Restaurant,0.8017123341560364,0
+393,images/393.jpg,When does meter enforcement have their days off?,"['pta days', 'holidays', 'weekdays', 'weekend']",weekend,Pta days,0.4250436127185821,0
+394,images/394.jpg,What color is the pedestrian powered vehicle on the lot?,"['green', 'red', 'yellow', 'black']",green,Green,0.5562915205955505,1
+395,images/395.jpg,What type of lens was used to give this particular photo the distorted look?,"['hubble', 'old time', 'fish eye', 'cats eye']",fish eye,Fish eye,0.4527655839920044,1
+396,images/396.jpg,What kind of transportation is shown?,"['road', 'water', 'rail', 'air']",air,Air,0.980639398097992,1
+397,images/397.jpg,What is being used as a bun for the burger?,"['bagel', 'donut', 'toast', 'roll']",donut,Donut,0.925159215927124,1
+398,images/398.jpg,What type cruciferous vegetable is topping this pie?,"['tomato', 'pepperoni', 'feta', 'broccoli']",broccoli,Broccoli,0.9862099289894104,1
+399,images/399.jpg,How many people seem to be sitting down to eat?,"['three', 'two', 'one', 'four']",one,1,0.5567712783813477,0
+400,images/400.jpg,What might the lying dogs likely have to do in a bit?,"['herd sheep', 'catch ball', 'pull sleigh', 'eat steak']",herd sheep,Catch ball,0.4472468793392181,0
+401,images/401.jpg,How are the two feeling here?,"['playful', 'sad', 'hungry', 'angry']",playful,Playful,0.8763917684555054,1
+402,images/402.jpg,The layout of buildings most resembles which period?,"['modern usa', 'historical european', 'japanese housing', 'chinese businesses']",historical european,Historical european,0.8564216494560242,1
+403,images/403.jpg,What does the letter on the racket represent?,"['school', 'family', 'corporation', 'town']",corporation,School,0.4244751930236816,0
+404,images/404.jpg,Which shape outer walls do the persons sit in for the best view of the airport?,"['square', 'triangle', 'rectangular', 'round']",round,Rectangular,0.3269364237785339,0
+405,images/405.jpg,What type of animals are on the grass?,"['elephant', 'zebra', 'giraffe', 'rhino']",giraffe,Giraffe,0.858883798122406,1
+406,images/406.jpg,What is the woman's job called?,"['jumper', 'jockey', 'rider', 'equestrianism']",equestrianism,Jockey,0.8771696090698242,0
+407,images/407.jpg,What type of cusuine is presented?,"['southern', 'jamaican', 'gourmet', 'asian']",asian,Asian,0.964965045452118,1
+408,images/408.jpg,What is the purpose of the masonry on the wall to the left of the kitchen?,"['fireplace', 'structural wall', 'home foundation', 'visual aesthetics']",fireplace,Visual aesthetics,0.4809876382350921,0
+409,images/409.jpg,What type of phones are being used?,"['pay', 'rotary', 'landline', 'cellular']",cellular,Cellular,0.9961526989936828,1
+410,images/410.jpg,What profession might this man work as?,"['politician', 'bartender', 'sherriff', 'librarian']",sherriff,Sheriff,0.7569662928581238,0
+411,images/411.jpg,Which location here fries snacks on site?,"['dunkin coffee', 'pizza shop', 'party store', 'cheese monger']",dunkin coffee,Pizza shop,0.3644760251045227,0
+412,images/412.jpg,What is hanging from the woman's back pocket?,"['phone charger', 'necklace', 'keys', 'handkerchief']",keys,Phone charger,0.35081747174263,0
+413,images/413.jpg,What is the item with all of the visible black seeds called?,"['kiwi', 'honeydew', 'watermelon', 'apple']",kiwi,Kiwi,0.5355281233787537,1
+414,images/414.jpg,Why is the man standing in the dirt?,"['target practice', 'playing baseball', 'farming', 'making fort']",playing baseball,Playing baseball,0.9615992307662964,1
+415,images/415.jpg,What is device on the small black box below the laptop on the left?,"['istarter', 'ipod', 'ipad', 'iphone']",ipod,Ipod,0.7077410221099854,1
+416,images/416.jpg,What is this room for?,"['sleep', 'exercising', 'washing', 'cooking']",sleep,Sleep,0.997771143913269,1
+417,images/417.jpg,What level or league of baseball are the players most likely playing in?,"['minor', 'major', 'college', 'junior']",college,Minor,0.4779045581817627,0
+418,images/418.jpg,Which of these emotions is the person least likely to be experiencing?,"['contentedness', 'sadness', 'joy', 'happiness']",sadness,Sadness,0.8569424748420715,1
+419,images/419.jpg,From which item can you get the most protein?,"['salami', 'wine', 'cheese', 'bread']",salami,Salami,0.8238609433174133,1
+420,images/420.jpg,What country is this in?,"['united states', 'england', 'canada', 'mexico']",canada,Canada,0.9876279830932616,1
+421,images/421.jpg,What food type likely fills the freezer?,"['vegetables', 'pasta', 'ice cream', 'meat']",ice cream,Ice cream,0.5182575583457947,1
+422,images/422.jpg,The white object in the right window is used most often during what season?,"['fall', 'spring', 'winter', 'summer']",summer,Summer,0.555135190486908,1
+423,images/423.jpg,This fork has how many prongs?,"['six', 'seven', 'five', 'three']",three,5,0.4988033771514892,0
+424,images/424.jpg,What is the healthiest ingredient on the pizza?,"['crust', 'sauce', 'cheese', 'mushroom']",mushroom,Mushroom,0.8593081831932068,1
+425,images/425.jpg,What is the woman wearing?,"['onesie', 'pants', 'suit', 'dress']",dress,Dress,0.9144864678382874,1
+426,images/426.jpg,What will the boy do if he hits?,"['leave', 'run', 'apologize', 'stop']",run,Run,0.9654892683029176,1
+427,images/427.jpg,What is the second shelf in the fridge used for?,"['condiments', 'drinks', 'produce', 'eggs']",drinks,Eggs,0.3086092472076416,0
+428,images/428.jpg,Where are the trucks headed to?,"['port', 'interstate', 'market', 'junkyard']",market,Market,0.9120758771896362,1
+429,images/429.jpg,What are the zebras swinging?,"['butt', 'tail', 'head', 'feet']",tail,Tail,0.4719843566417694,1
+430,images/430.jpg,Where is this bathroom probably located?,"['home', 'dorm', 'hotel', 'theater']",hotel,Hotel,0.9517041444778442,1
+431,images/431.jpg,What color is in the center of the red flower?,"['brown', 'black', 'yellow', 'white']",white,White,0.5303745269775391,1
+432,images/432.jpg,What region of the world is this?,"['africa', 'north america', 'europe', 'asia']",africa,Africa,0.6186069250106812,1
+433,images/433.jpg,What sports equipment is on the ground?,"['hockey', 'football', 'baseball', 'basketball']",baseball,Baseball,0.9657717943191528,1
+434,images/434.jpg,The dishes appear to be sitting on what?,"['table', 'ground', 'couch', 'stove']",ground,Ground,0.8330241441726685,1
+435,images/435.jpg,Why is the man holding the fork?,"['showing off', 'organizing', 'cutting food', 'weapon']",cutting food,Cutting food,0.9552775025367736,1
+436,images/436.jpg,What kind of flavor would the fruit on the pizza add?,"['sweet', 'spicy', 'umami', 'sour']",sweet,Sweet,0.8981056809425354,1
+437,images/437.jpg,Why do these boats are painted in different color?,"['trend', 'security', 'custom', 'visibility']",visibility,Visibility,0.3751678764820099,1
+438,images/438.jpg,What are the zebra's stripes for?,"['sight', 'fashion', 'camouflage', 'thermoregulation']",camouflage,Camouflage,0.5667641758918762,1
+439,images/439.jpg,Where are the people standing?,"['city street', 'park', 'theatre', 'beach']",beach,Beach,0.9882314801216124,1
+440,images/440.jpg,What color is the background of the large clock?,"['green', 'black', 'white', 'red']",white,Green,0.8054620027542114,0
+441,images/441.jpg,Where is this dog located?,"['park', 'office', 'home', 'vet']",home,Home,0.8097109794616699,1
+442,images/442.jpg,How are the skiers getting up the hill?,"['gondola', 'skiing', 'conveyer belt', 'chairlift']",chairlift,Chairlift,0.8498598337173462,1
+443,images/443.jpg,What is the gray colored residue seen on the outer part of the middle of the board?,"['wax', 'dust', 'paint', 'mud']",wax,Wax,0.8729097843170166,1
+444,images/444.jpg,At what time of day are the skateboarders probably skating on the beach?,"['dawn', 'night', 'sunrise', 'sunset']",sunset,Sunset,0.9957179427146912,1
+445,images/445.jpg,Why might people sit here?,"['to testify', 'to rest', 'to shop', 'get tattoo']",to rest,Rest,0.8878282308578491,0
+446,images/446.jpg,What is the same color as the most abundant color here?,"['peapod', 'orange', 'carrot', 'corn']",peapod,Orange,0.4234364330768585,0
+447,images/447.jpg,What is the light green liquid in the glass and metal dispenser on the table far in the back left?,"['lime juice', 'olive oil', 'mountain dew', 'green tea']",olive oil,Olive oil,0.7770997285842896,1
+448,images/448.jpg,What are the people doing in the water?,"['surfing', 'fishing', 'kayaking', 'swimming']",kayaking,Kayaking,0.7961804866790771,1
+449,images/449.jpg,What are these people ready to do?,"['swim', 'run', 'eat', 'drink']",drink,Drink,0.9762930870056152,1
+450,images/450.jpg,Which of these objects is used to write on and is present on the desk?,"['post-its', 'graph paper', 'chalk board', 'clip board']",post-its,Chalk board,0.3966280519962311,0
+451,images/451.jpg,What is the person being viewed through?,"['window', 'flat screen', 'web cam', 'mirror']",window,Mirror,0.5778193473815918,0
+452,images/452.jpg,What is the first word on the trailer?,"['clean', 'dry', 'emergency', 'services']",clean,Clean,0.7867146134376526,1
+453,images/453.jpg,What kind of bike is being ridden?,"['bicycle', 'vespa', 'motorcycle', 'unicycle']",motorcycle,Bicycle,0.425931304693222,0
+454,images/454.jpg,Why would someone sit here?,"['paint', 'work', 'drive', 'eat']",eat,Eat,0.9899166226387024,1
+455,images/455.jpg,What vehicle might the thing on the wall have come from?,"['motorbike', 'tractor', 'car', 'cart']",cart,Tractor,0.7223193645477295,0
+456,images/456.jpg,What can be done with this utensil?,"['brush', 'stir', 'flip', 'cut']",stir,Stir,0.9402676224708556,1
+457,images/457.jpg,What would this fence help to contain?,"['balls', 'animals', 'rocks', 'weeds']",balls,Balls,0.9636973738670348,1
+458,images/458.jpg,What are the people doing on the grass?,"['gaming', 'wrestling', 'eating', 'sports']",eating,Eating,0.9854736328125,1
+459,images/459.jpg,What alcohol brand has a word that refers to the pattern of this animal?,"['red stripe', 'michelob ultra', 'blue hawaiian', 'red ale']",red stripe,Red stripe,0.5192791819572449,1
+460,images/460.jpg,How many people are visible in the water?,"['five', 'six', 'two', 'seven']",two,2,0.4147236049175262,0
+461,images/461.jpg,What word can be spelled by rearranging the brand letters on the bottom of the laptop screen?,"['paper', 'race', 'great', 'goal']",race,Goal,0.2869626581668854,0
+462,images/462.jpg,Why is the kid wearing a helmet?,"['balance', 'speed', 'protection', 'agility']",protection,Protection,0.983121693134308,1
+463,images/463.jpg,What is required to be on the ground to do this sport?,"['water', 'ice', 'salt', 'snow']",snow,Snow,0.9410799741744996,1
+464,images/464.jpg,What is one tournament that is associated with this sport?,"['fa cup', 'wimbledon', 'world cup', 'ryder cup']",wimbledon,Wimbledon,0.9671379923820496,1
+465,images/465.jpg,Which country uses this kind of mail service?,"['united states', 'kazakhstan', 'england', 'china']",england,England,0.8783461451530457,1
+466,images/466.jpg,What is the red bag around the womans waist called?,"['purse', 'wallet', 'pocketbook', 'makeup bag']",purse,Pocketbook,0.3845514357089996,0
+467,images/467.jpg,What is the girl doing in the bathroom?,"['brushing teeth', 'washing hands', 'taking selfie', 'painting walls']",taking selfie,Taking selfie,0.900991141796112,1
+468,images/468.jpg,What is the first visible red word?,"['fast', 'go', 'was', 'one']",was,One,0.4506402611732483,0
+469,images/469.jpg,Why are the children wearing hats?,"['warmth', 'protection', 'fashion', 'uniform']",warmth,Warmth,0.519278347492218,1
+470,images/470.jpg,Why are the skiers wearing bibs with numbers on them?,"['as joke', 'to race', 'as punishment', 'for cosplay']",to race,To race,0.5970230102539062,1
+471,images/471.jpg,What type of dog is it?,"['farm dog', 'service dog', 'domestic pet', 'stray dog']",domestic pet,Domestic pet,0.6383892893791199,1
+472,images/472.jpg,The costumed character is likely seated in what locale?,"['theme park', 'carnival', 'sidewalk', 'campus']",sidewalk,Sidewalk,0.9879448413848876,1
+473,images/473.jpg,What is the last letter on the license plate?,"['l', 'z', 'j', 'c']",j,J,0.3308623731136322,1
+474,images/474.jpg,What number is on the player that's fully visible?,"['11', 'five', '21', '22']",21,21,0.9432819485664368,1
+475,images/475.jpg,What is the round glass object?,"['window', 'microscope', 'camera lens', 'magnifying glass']",camera lens,Camera lens,0.8995757102966309,1
+476,images/476.jpg,This dish is suitable for which group of people?,"['pregnant women', 'kids', 'meat eaters', 'vegetarians']",vegetarians,Vegetarians,0.9521567821502686,1
+477,images/477.jpg,What kind of animal is is the truck?,"['horse', 'elephant', 'zebra', 'giraffe']",elephant,Elephant,0.9922717809677124,1
+478,images/478.jpg,What type of company has an ad at the court?,"['clothing', 'travel', 'health', 'food']",travel,Travel,0.907762050628662,1
+479,images/479.jpg,Where are all of the people in front of the yellow cab going?,"['talking', 'crossing street', 'running', 'shopping']",crossing street,Crossing street,0.5478904247283936,1
+480,images/480.jpg,What part of the pizza is the person holding?,"['middle', 'toppings', 'crust', 'top']",crust,Crust,0.3006764054298401,1
+481,images/481.jpg,What is used to keep their balance?,"['snow', 'swords', 'ski poles', 'knives']",ski poles,Ski poles,0.9568042159080504,1
+482,images/482.jpg,What type of outer clothing does the person who last sat here like to wear?,"['hats', 'bras', 'belts', 'cowboy boots']",hats,Hats,0.8227472901344299,1
+483,images/483.jpg,The paper cups probably contain what beverage?,"['alcoholic', 'soda', 'coffee', 'tea']",soda,Soda,0.8264191150665283,1
+484,images/484.jpg,How is the device the boy is holding powered?,"['solar', 'battery', 'gas', 'electricity']",battery,Battery,0.5078817009925842,1
+485,images/485.jpg,What type of shot is the woman about to hit?,"['forehand', 'slice', 'backhand', 'serve']",serve,Forehand,0.4065014719963074,0
+486,images/486.jpg,What brand of lemon lime beverage is most likely sold here?,"['fanta', 'big red', 'rc', 'sprite']",sprite,Big red,0.5543234348297119,0
+487,images/487.jpg,What are the kids on the boards learning to do?,"['wrestle', 'fish', 'scuba dive', 'body surf']",body surf,Body surf,0.7645010948181152,1
+488,images/488.jpg,What are the people on the sidewalk likely to be?,"['police officers', 'tourists', 'royal people', 'horse riders']",tourists,Tourists,0.9070814847946168,1
+489,images/489.jpg,Why is the woman sitting in the back of the man's bike on the right?,"['to terrorize', 'to scare', 'to sleep', 'to travel']",to travel,Travel,0.7343118786811829,0
+490,images/490.jpg,What institution often performs the function represented by the word on the main level of the ship nearest the camera?,"['private enterprise', 'government', 'educational', 'commercial']",educational,Government,0.8683857321739197,0
+491,images/491.jpg,What are the riders about to do now?,"['accelerate', 'compete', 'win', 'flip']",flip,Flip,0.7318019866943359,1
+492,images/492.jpg,Where is this person located?,"['restaurant', 'home', 'library', 'office']",home,Home,0.995566427707672,1
+493,images/493.jpg,What type of cake are the donuts?,"['chocolate', 'red velvet', 'vanilla', 'carrot']",carrot,Carrot,0.9919597506523132,1
+494,images/494.jpg,What are the men doing?,"['hugging', 'laughing', 'kissing', 'crying']",laughing,Laughing,0.9719603657722472,1
+495,images/495.jpg,What is the person riding the horse dressed as?,"['knight', 'football player', 'secretary', 'jockey']",knight,Knight,0.9061635732650756,1
+496,images/496.jpg,This man is likely taking a photo in what type of location?,"['vestibule', 'bedroom', 'bathroom', 'office']",bathroom,Vestibule,0.781802773475647,0
+497,images/497.jpg,Why would one sit here?,"['work', 'relax', 'paint', 'eat']",relax,Relax,0.9921385645866394,1
+498,images/498.jpg,Why is there a bow on the car?,"['sale', 'style', 'gift', 'looks']",gift,Sale,0.2712064981460571,0
+499,images/499.jpg,What does the large wheel on the left do?,"['purify water', 'generate electricity', 'sightseeing rides', 'mill grain']",sightseeing rides,Sightseeing rides,0.7668560743331909,1

@@ -124,7 +124,43 @@ two_step_prompt = {
                 "system_prompt": "Please explain the reasoning behind your answer.",
                 "user_prompt": "Question: {question}. The answer is {answer}."
             }
+        },
+    "MMMU-Pro":
+        {
+            "step1": {
+                "system_prompt": "You must respond ONLY with the exact text of one choice from the provided options. Do not add any explanation, reasoning, or additional text. Just output the exact choice text.",
+                "user_prompt": "Question: {question}. Choices: {choices}."
+            },
+            "step2": {
+                "system_prompt": "Please explain the reasoning behind your answer.",
+                "user_prompt": "Question: {question}. Choices: {choices}. The answer is {answer}."
+            }
+        },
+    "MMMU-Pro-4":
+        {
+            "step1": {
+                "system_prompt": "You must respond ONLY with the exact text of one choice from the provided options. Do not add any explanation, reasoning, or additional text. Just output the exact choice text.",
+                "user_prompt": "Question: {question}. Choices: {choices}."
+            },
+            "step2": {
+                "system_prompt": "Please explain the reasoning behind your answer.",
+                "user_prompt": "Question: {question}. Choices: {choices}. The answer is {answer}."
+            }
         }
+}
+
+single_step_prompt = {
+    "MMMU-Pro": {
+        "user_prompt": "Answer the following multiple-choice question. The last line of your response should be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of the options. Think step by step before answering. Question: {question}\nChoices: {choices_with_letters}\n"
+    },
+    "MMMU-Pro-4": {
+        "user_prompt": "Answer the following multiple-choice question. The last line of your response should be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of the options. Think step by step before answering. Question: {question}\nChoices: {choices_with_letters}\n"
+    }
+}
+
+answer_extraction_prompt = {
+    "system_prompt": "You are an expert in extracting the final answer from a detailed reasoning. The user will provide a question, choices, and a model's response. Your goal is to identify which choice the model selected. Output ONLY the exact option of the selected choice (e.g. 'A'). If the model did not select a valid choice, output 'U' for 'Unanswerable'. Output **only one** Letter.",
+    "user_prompt": "Question: {question}\nChoices: {choices_with_letters}\nModel Response: {model_response}"
 }
 
 INFORMATIVENESS_PROMPT = """Please break the following rationale into distinct pieces, and keep only the ones that are not semantically equivalent to the hypothesis. Output the final answer in a Python list format.

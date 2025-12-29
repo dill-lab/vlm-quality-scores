@@ -9,6 +9,7 @@ import time
 import os
 from globals import MODEL_CONFIGS, COST_FILE
 import base64
+import threading
 
 class LMModel:
     def __init__(self, model_config: dict):
@@ -137,19 +138,25 @@ def stream_chat_with_model(user_prompt: str,
         print("Error during streaming:", e)
 
 
+cost_lock = threading.Lock()
+
 def read_total_cost():
     if os.path.exists(COST_FILE):
         with open(COST_FILE, "r") as file:
             content = file.read().strip()
-            return float(content) if content != "" else 0.0
+            try:
+                return float(content) if content != "" else 0.0
+            except ValueError:
+                return 0.0
     else:
         return 0.0
 
 def write_total_cost(cost):
-    prev_cost = read_total_cost()
-    new_total_cost = prev_cost + cost
-    with open(COST_FILE, "w") as file:
-        file.write(f"{new_total_cost}")
+    with cost_lock:
+        prev_cost = read_total_cost()
+        new_total_cost = prev_cost + cost
+        with open(COST_FILE, "w") as file:
+            file.write(f"{new_total_cost}")
 
 def calculate_cost(usage, model, verbose=0):
     """

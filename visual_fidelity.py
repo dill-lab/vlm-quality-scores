@@ -109,6 +109,8 @@ def answer_vf_questions(questions, dataset_name, model, image_path):
     return answer_list
 
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
 def VF_analysis_all_datasets(rationale_column_name: str, dataset_list: list[pd.DataFrame], dataset_type: str, 
                              model_name: str = "gpt-4o-2024-08-06", overwrite_VF_questions: bool = False):    
     print(f"Running VF analysis using verifier model {model_name}.")
@@ -123,28 +125,49 @@ def VF_analysis_all_datasets(rationale_column_name: str, dataset_list: list[pd.D
         vf_a_col     = f"vf_answers_{suffix}"
         vf_score_col = f"visual_fidelity_{suffix}"
     
+    def process_gen_vf_questions(index, row):
+        questions = gpt_gen_vf_questions(row, rationale_column_name, model)
+        return index, str(questions)
+
+    def process_answer_vf_questions(index, row):
+        questions = ast.literal_eval(row[vf_q_col])
+        answers = answer_vf_questions(questions, dataset_type, model, row['image_path'])
+        vf_score = (sum(1 for ans in answers if ans == 'yes') / len(answers)) if len(answers) != 0 else 0
+        return index, str(answers), vf_score
+
     for i, dataset in enumerate(dataset_list):
         print(f"Working on dataset #{i+1}...")
         
         if vf_q_col not in dataset.columns or overwrite_VF_questions:
-            vf_questions = []
-            for index, row in tqdm(dataset.iterrows(), total=dataset.shape[0], desc="Processing Rows"):
-                # Generate visual verification questions
-                questions = gpt_gen_vf_questions(row, rationale_column_name, model)
-                # store the questions as a string (but appear like a list)
-                vf_questions.append(str(questions))
-            # Assign new column values
-            dataset[vf_q_col] = vf_questions
+            # Parallel Question Generation
+            with ThreadPoolExecutor(max_workers=20) as executor:
+                futures = [executor.submit(process_gen_vf_questions, idx, row) for idx, row in dataset.iterrows()]
+                
+                results = {}
+                for future in tqdm(as_completed(futures), total=len(futures), desc="Generating VF Questions"):
+                    try:
+                        idx, questions_str = future.result()
+                        results[idx] = questions_str
+                    except Exception as e:
+                        print(f"Error generating questions for row: {e}")
+                
+                # Assign results back to dataframe ensuring order
+                dataset[vf_q_col] = [results.get(idx, "[]") for idx in dataset.index]
         else:
             print(f"Found {vf_q_col} in dataset's columns (and overwrite flag is set to false), skipping..")
+
         if vf_a_col not in dataset.columns or overwrite_VF_questions:
-            for index, row in tqdm(dataset.iterrows(), total=dataset.shape[0], desc="Answering Questions"):
-                # Answer visual verification questions
-                questions = ast.literal_eval(row[vf_q_col])
-                answers = answer_vf_questions(questions, dataset_type, model, row['image_path'])
-                dataset.at[index, vf_a_col] = str(answers)
-                vf_score = (sum(1 for ans in answers if ans == 'yes') / len(answers)) if len(answers) != 0 else 0
-                dataset.at[index, vf_score_col] = vf_score
+            # Parallel Question Answering
+            with ThreadPoolExecutor(max_workers=20) as executor:
+                futures = [executor.submit(process_answer_vf_questions, idx, row) for idx, row in dataset.iterrows()]
+                
+                for future in tqdm(as_completed(futures), total=len(futures), desc="Answering VF Questions"):
+                    try:
+                        idx, answers_str, vf_score = future.result()
+                        dataset.at[idx, vf_a_col] = answers_str
+                        dataset.at[idx, vf_score_col] = vf_score
+                    except Exception as e:
+                        print(f"Error answering questions for row: {e}")
         else:
             print(f"Found {vf_a_col} in dataset's columns (and overwrite flag is set to false), skipping..")
             
