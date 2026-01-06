@@ -133,9 +133,6 @@ def plot_calibration_curve(y_true, y_prob, ax, title, vmax, cmap_name='crest'):
     
     # Set ticks at bin edges
     ax.set_xticks(bin_edges)
-    # Rotate labels to avoid overlap if needed, or keep straight if space allows
-    # Reference shows 0.0, 0.1 ... 1.0. 
-    # For cleaner look, maybe show every other? But reference shows all.
     ax.set_xticklabels([f"{x:.1f}" for x in bin_edges], rotation=45, fontsize=8)
     ax.tick_params(axis='y', labelsize=8)
     
@@ -165,7 +162,11 @@ def analyze_dataset(dataset_name, models, output_dir):
             continue
             
         df = df.dropna(subset=['is_correct'])
-        y_true = df['is_correct'].astype(int).values
+
+        # Use Soft Labels (Raw values) for ECE
+        y_true_soft = df["is_correct"].values
+        # Use Binary Labels for Discriminability
+        y_true_binary = (df["is_correct"] >= 0.5).astype(int).values
         
         metrics_map = {
             'Simulatability': 'entail_prob',
@@ -201,12 +202,13 @@ def analyze_dataset(dataset_name, models, output_dir):
             if col_name and col_name in df.columns:
                 valid_mask = df[col_name].notna()
                 y_prob = df.loc[valid_mask, col_name].astype(float).values
-                y_true_curr = y_true[valid_mask]
+                y_true_s = y_true_soft[valid_mask]
+                y_true_b = y_true_binary[valid_mask]
                 
                 if len(y_prob) > 0:
                     # counts = get_bin_counts(y_true_curr, y_prob)
                     # global_max_count = max(global_max_count, max(counts))
-                    valid_metrics_data[metric_name] = (y_true_curr, y_prob)
+                    valid_metrics_data[metric_name] = (y_true_s, y_true_b, y_prob)
 
         # Second pass: Plot
         fig, axes = plt.subplots(2, 3, figsize=(12, 7), dpi=150) # Shortened height for square aspect
@@ -215,9 +217,11 @@ def analyze_dataset(dataset_name, models, output_dir):
         for i, metric_name in enumerate(plot_metrics):
             ax = axes[i]
             if metric_name in valid_metrics_data:
-                y_true_curr, y_prob = valid_metrics_data[metric_name]
-                ece = plot_calibration_curve(y_true_curr, y_prob, ax, metric_name, vmax=global_max_count)
-                disc, p_val = compute_discriminability(y_true_curr, y_prob)
+                y_true_s, y_true_b, y_prob = valid_metrics_data[metric_name]
+                # ECE uses Soft Labels
+                ece = plot_calibration_curve(y_true_s, y_prob, ax, metric_name, vmax=global_max_count)
+                # Discriminability uses Binary Labels
+                disc, p_val = compute_discriminability(y_true_b, y_prob)
                 
                 results.append({
                     'Dataset': dataset_name,
@@ -252,7 +256,7 @@ def analyze_dataset(dataset_name, models, output_dir):
             if col_name and col_name in df.columns:
                  valid_mask = df[col_name].notna()
                  y_prob = df.loc[valid_mask, col_name].astype(float).values
-                 y_true_curr = y_true[valid_mask]
+                 y_true_curr = y_true_b[valid_mask]
                  if len(y_prob) > 0:
                     ece = compute_ece(y_true_curr, y_prob)
                     disc, p_val = compute_discriminability(y_true_curr, y_prob)
@@ -282,23 +286,13 @@ def format_significance(score, p_val):
     return f"{score:.3f}{star}"
 
 def generate_summary_table(all_results, output_dir):
-    # Pivot table to match the format: 
-    # Rows: Metrics
-    # Cols: Dataset -> Model -> (Disc, ECE)
-    
-    # We want a format like:
-    # Metric | A-OKVQA (LLaVA Disc, LLaVA ECE, Qwen Disc, ...) | ...
-    
-    # Let's just save the raw results first
     all_results.to_csv(os.path.join(output_dir, 'ece_discriminability_raw.csv'), index=False)
     
-    # Add formatted column for Discriminability with stars
     all_results['Discriminability_Formatted'] = all_results.apply(
         lambda row: format_significance(row['Discriminability'], row['P-Value']), axis=1
     )
     
     # Create a formatted table string or CSV
-    # We can create two separate pivot tables for Disc and ECE
     
     pivot_disc = all_results.pivot_table(
         index='Metric', 
@@ -308,22 +302,10 @@ def generate_summary_table(all_results, output_dir):
     )
     
     pivot_ece = all_results.pivot_table(index='Metric', columns=['Dataset', 'Model'], values='ECE')
-    
-    # Reorder columns to match reference: LLaVA, Qwen, GPT-4o
-    # Note: Adjust model names to match what is in the CSVs
     model_order = ['llava-v1.5-7b', 'qwen2.5-vl-7b-instruct', 'gpt-4o-2024-05-13']
     
-    # Get current columns (MultiIndex)
-    # We want to sort the second level of the columns according to model_order
-    # But we also want to keep datasets grouped or ordered.
-    # Let's just sort by dataset then model using a custom sorter if possible, 
-    # or just reindex if we know the datasets.
-    
-    # datasets = sorted(list(set(all_results['Dataset'])))
-    # Enforce specific order: AOKVQA, VizWiz, MMMU-Pro
     desired_dataset_order = ['AOKVQA', 'VizWiz', 'MMMU-Pro']
     datasets = [ds for ds in desired_dataset_order if ds in set(all_results['Dataset'])]
-    # Add any others that might be missing from the desired list
     remaining = sorted(list(set(all_results['Dataset']) - set(datasets)))
     datasets.extend(remaining)
     # Calculate averages per dataset (across models)
@@ -342,6 +324,14 @@ def generate_summary_table(all_results, output_dir):
             # Add to pivot_ece (numeric)
             pivot_ece[(ds, 'Avg')] = avg_ece[ds]
 
+    # Calculate Overall Average across all datasets
+    overall_avg_disc = avg_disc.mean(axis=1)
+    overall_avg_ece = avg_ece.mean(axis=1)
+
+    # Add Overall Avg column
+    pivot_disc[('Overall', 'Avg')] = overall_avg_disc.apply(lambda x: f"{x:.3f}" if pd.notna(x) else "NaN")
+    pivot_ece[('Overall', 'Avg')] = overall_avg_ece
+
     new_columns = []
     for ds in datasets:
         for model in model_order:
@@ -350,9 +340,17 @@ def generate_summary_table(all_results, output_dir):
         # Add Avg column after models
         if (ds, 'Avg') in pivot_disc.columns:
             new_columns.append((ds, 'Avg'))
+            
+    # Add Overall Avg at the very end
+    if ('Overall', 'Avg') in pivot_disc.columns:
+        new_columns.append(('Overall', 'Avg'))
                 
     pivot_disc = pivot_disc.reindex(columns=new_columns)
     pivot_ece = pivot_ece.reindex(columns=new_columns)
+    
+    # Apply final formatting to ECE table (including Avg columns)
+    # 3 decimal places as requested
+    pivot_ece = pivot_ece.applymap(lambda x: f"{x:.3f}" if isinstance(x, (int, float)) else x)
     
     # Reorder rows to match reference
     metric_order = [

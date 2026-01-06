@@ -62,32 +62,21 @@ def generate_candidate_answers(questions, correct_answers, image_paths=None, ans
     model = create_model_instance(ans_generator_model_name)
     candidate_answers_list = []
     
-    # We iterate over (question, correct_answer) but correct_answer might be a string-list or just a string. 
-    # The caller passes `dataset[majority_answer_column_name]` which is usually a single string.
-    # But ideally we want the FULL list of correct answers to avoid generating valid synonyms.
-    # Let's inspect if `correct_answers` passed here is the list or the single label.
-    # In support_contr_analysis_all_datasets, it passes dataset[majority_answer_column_name].
-    # We should probably pass the 'correct_answers' column if it exists for better exclusion.
-    
-    for idx, (question, correct_answer) in enumerate(zip(questions, correct_answers)):
+    def process_one_candidate(idx, question, correct_answer, image_p=None):
         # if the question is a yes/no question, then the candidate answers are fixed.
         if correct_answer.lower().strip() in ['yes', 'no']:
-            candidate_answers_list.append(["yes", "not sure", "no", "unanswerable"])
-            continue
+            return idx, ["yes", "not sure", "no", "unanswerable"]
 
         # Prepare Image if available
         encoded_image = None
-        if image_paths and idx < len(image_paths):
-            img_p = image_paths[idx]
-            if os.path.exists(img_p):
-                try:
-                    encoded_image = load_image(img_p)
-                except Exception as e:
-                    print(f"Warning: Failed to load image {img_p}: {e}")
+        if image_p and os.path.exists(image_p):
+            try:
+                encoded_image = load_image(image_p)
+            except Exception as e:
+                print(f"Warning: Failed to load image {image_p}: {e}")
 
         # Parse correct_answers list if available to avoid synonyms
         valid_answers_str = f"'{correct_answer}'"
-        # If correct_answers is a string representation of a list
         if isinstance(correct_answer, str) and correct_answer.startswith("[") and correct_answer.endswith("]"):
              valid_answers_str = correct_answer
 
@@ -130,8 +119,7 @@ Constraints:
         
         if not response:
             print(f"Error: No response from model for candidate generation: {question}")
-            candidate_answers_list.append([])
-            continue
+            return idx, []
 
         try:
             answer_text = response['choices'][0]['message']['content'].strip(" \n`[]")
@@ -139,18 +127,29 @@ Constraints:
 
             # We asked for 3, but robustness check
             if len(candidate_answers) > 3:
-                print(f"Warning: Expected 3 answers, but got {len(candidate_answers)} for question '{question}'.")
+                # print(f"Warning: Expected 3 answers, but got {len(candidate_answers)} for question '{question}'.")
                 candidate_answers = candidate_answers[:3] # Take top 3
-                candidate_answers_list.append(candidate_answers)
-            else:
-                if len(candidate_answers) < 3:
-                    print(f"Warning: Expected 3 answers, but got {len(candidate_answers)} for question '{question}'.")
-                candidate_answers_list.append(candidate_answers)  # Add anyway for debugging
+            elif len(candidate_answers) < 3:
+                # print(f"Warning: Expected 3 answers, but got {len(candidate_answers)} for question '{question}'.")
+                pass
+            return idx, candidate_answers
         except Exception as e:
-            print(f"Error: {e}")
-            candidate_answers_list.append([])  # Return empty list on failure
+            print(f"Error parse: {e}")
+            return idx, []
 
-    return candidate_answers_list
+    # Run in parallel
+    results = [None] * len(questions)
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        futures = []
+        for idx, (question, correct_answer) in enumerate(zip(questions, correct_answers)):
+            img_p = image_paths[idx] if image_paths and idx < len(image_paths) else None
+            futures.append(executor.submit(process_one_candidate, idx, question, correct_answer, img_p))
+        
+        for future in tqdm(as_completed(futures), total=len(futures), desc="Generating Hard Negatives"):
+            idx, res = future.result()
+            results[idx] = res
+
+    return results
 
 _model_cache = {}
 
@@ -218,6 +217,7 @@ def evaluate_support_and_contrastiveness(
     threshold_support=0.5,
     threshold_contrastiveness=0.5,
     include_contrastive=True,
+    mask_distractors=True,
 ):
     scores = []
     labels = []
@@ -255,7 +255,14 @@ def evaluate_support_and_contrastiveness(
         if not deduped_choices and predicted_answer:
             deduped_choices.append(predicted_answer)
 
-        premise = mask_rationale(row[rationale_column_name], deduped_choices)
+        # Determine what to mask
+        choices_to_mask = []
+        if mask_distractors:
+            choices_to_mask = deduped_choices
+        else:
+            choices_to_mask = [predicted_answer]
+
+        premise = mask_rationale(row[rationale_column_name], choices_to_mask)
         hypothesis = row[hypothesis_column_name]
 
         alt_hypotheses = []
@@ -305,6 +312,7 @@ def support_contr_analysis_all_datasets(
     overwrite_hypotheses_columns: bool = False,
     include_contrastive: bool = True,
     output_paths: list[str] = None,
+    mask_distractors: bool = True,
 ):
     model = create_model_instance(model_name)
 
@@ -386,7 +394,7 @@ def support_contr_analysis_all_datasets(
                    
         if need_gen:
             # Use ThreadPoolExecutor for parallel processing
-            with ThreadPoolExecutor(max_workers=20) as executor:
+            with ThreadPoolExecutor(max_workers=6) as executor:
                 futures = []
                 for index, row in dataset.iterrows():
                     futures.append(executor.submit(process_row_hypotheses, index, row, choices_column))
@@ -419,6 +427,7 @@ def support_contr_analysis_all_datasets(
             alt_hypotheses_column_name=alt_hypotheses_column_name,
             choices_column_name=choices_column,
             include_contrastive=include_contrastive,
+            mask_distractors=mask_distractors,
         )
         dataset['support'] = [label['support'] for label in labels]
         dataset['entail_prob'] = [score['entail_prob'] for score in scores]
@@ -452,7 +461,7 @@ if __name__ == "__main__":
     dataset_list = [pd.read_csv("model_outputs/VizWiz/qwen2.5-vl-7b-instruct_test.csv")] 
     # Note: Ensure this CSV has 'image_path' column
     support_contr_analysis_all_datasets("question", "predicted_answer", "majority_answer", "choices", "rationale", 
-                                  dataset_list, model_name="gpt-4o", overwrite_candidate_answers=True, overwrite_hypotheses_columns=False)
+                                  dataset_list, model_name="gpt-4o", overwrite_candidate_answers=True, overwrite_hypotheses_columns=False, mask_distractors=False)
     # write the updated datasets back to the same files
     dataset_list[0].to_csv("model_outputs/VizWiz/qwen2.5-vl-7b-instruct_test.csv", index=False)
-    
+

@@ -99,6 +99,7 @@ def main():
                 overwrite_candidate_answers=False,
                 include_contrastive=include_contrastive,
                 output_paths=output_paths,
+                mask_distractors=(dataset_type != "VizWiz"), # In VizWiz, the model was not shown the distractors, so we should not mask them.
             )
             print("Saving results (final pass)...")
             for i, dataset in enumerate(dataset_list):
