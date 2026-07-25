@@ -22,12 +22,14 @@ class LMModel:
     def __str__(self):
         return self.model
     
-    def chat_completion(self, 
+    def chat_completion(self,
                         messages,
                         temperature=0.1,
                         max_tokens=1024,
                         max_retries=3,
-                        stream=False):
+                        stream=False,
+                        logprobs=False,
+                        top_logprobs=None):
         """
         Sends a chat request to the model's API endpoint.
         Mimics the openai.ChatCompletion.create interface.
@@ -39,6 +41,10 @@ class LMModel:
             "max_tokens": max_tokens,
             "stream": stream
         }
+        if logprobs:
+            payload["logprobs"] = True
+            if top_logprobs is not None:
+                payload["top_logprobs"] = top_logprobs
         # Merge in sampling parameters if available
         if "sampling" in self.model_config:
             sampling = self.model_config["sampling"]

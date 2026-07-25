@@ -9,7 +9,7 @@ from tqdm import tqdm
 import warnings
 
 # Set style
-sns.set_theme(style="whitegrid")
+# sns.set_theme(style="whitegrid")
 mpl.rcParams['pdf.fonttype'] = 42
 mpl.rcParams['ps.fonttype'] = 42
 
@@ -83,22 +83,22 @@ def get_bin_counts(y_true, y_prob, n_bins=10):
 def plot_calibration_curve(y_true, y_prob, ax, title, vmax, cmap_name='crest'):
     n_bins = 10
     bin_edges = np.linspace(0, 1, n_bins + 1)
-    
+
     bin_num_positives = []
     bin_mean_probs = []
     bin_num_instances = []
-    
+    bin_centers = []
+
     y_prob = np.clip(y_prob, 0, 1)
 
     for i in range(n_bins):
         lower = bin_edges[i]
-        upper = bin_edges[i+1]
+        upper = bin_edges[i + 1]
         # For the last bin, include the right edge
         if i == n_bins - 1:
             idx = np.where((y_prob >= lower) & (y_prob <= upper))[0]
         else:
             idx = np.where((y_prob >= lower) & (y_prob < upper))[0]
-            
         if len(idx) > 0:
             bin_num_positives.append(np.mean(y_true[idx]))
             bin_mean_probs.append(np.mean(y_prob[idx]))
@@ -107,42 +107,45 @@ def plot_calibration_curve(y_true, y_prob, ax, title, vmax, cmap_name='crest'):
             bin_num_positives.append(0)
             bin_mean_probs.append(0)
             bin_num_instances.append(0)
+        bin_centers.append((i + 0.5) / n_bins)
 
     total_instances = np.sum(bin_num_instances)
     ece = sum(count * abs(pos - prob)
               for pos, prob, count in zip(bin_num_positives, bin_mean_probs, bin_num_instances))
     ece = ece / total_instances if total_instances > 0 else None
 
-    # Prepare colors
-    norm = mpl.colors.Normalize(vmin=0, vmax=vmax)
-    cmap = sns.color_palette(cmap_name, as_cmap=True)
-    bar_colors = [cmap(norm(c)) for c in bin_num_instances]
+    # Use sns.barplot (seaborn's palette + saturation) to match reference styling
+    df = pd.DataFrame({
+        'bin_num_positives': bin_num_positives,
+        'bin_centers': bin_centers,
+        'bin_num_instances': bin_num_instances,
+    })
+    sns.barplot(
+        x='bin_centers', y='bin_num_positives', data=df, ax=ax,
+        hue='bin_num_instances', palette=cmap_name,
+        edgecolor='black', linewidth=0.8, width=1,
+        hue_norm=(0, vmax), legend=False,
+    )
 
-    # Plot bars using matplotlib directly for better control over x-axis
-    # align='edge' puts the left edge of the bar at x
-    ax.bar(bin_edges[:-1], bin_num_positives, width=1/n_bins, align='edge',
-           color=bar_colors, edgecolor='black', linewidth=1.0)
-    
-    # Plot diagonal
-    ax.plot([0, 1], [0, 1], 'k--', linewidth=1, alpha=0.8)
-    
-    ax.set_xlim(0, 1)
+    # Diagonal (category positions run 0..n_bins-1)
+    ax.plot([-0.5, n_bins - 0.5], [0, 1], 'k--', linewidth=1, alpha=0.8)
+
+    ax.set_xlim(-0.5, n_bins - 0.5)
     ax.set_ylim(0, 1)
-    ax.set_xlabel('Quality Score', fontsize=10)
-    ax.set_ylabel('Prediction Accuracy', fontsize=10)
-    
-    # Set ticks at bin edges
-    ax.set_xticks(bin_edges)
-    ax.set_xticklabels([f"{x:.1f}" for x in bin_edges], rotation=45, fontsize=8)
-    ax.tick_params(axis='y', labelsize=8)
-    
-    # Grid
+    ax.set_xlabel('Quality Score', fontsize=17)
+    ax.set_ylabel('')  # set externally only on leftmost subplot of each row
+
+    # Ticks at bin edges (mapped to category-axis positions)
+    ax.set_xticks(np.arange(-0.5, n_bins + 0.5, 1))
+    ax.set_xticklabels([f"{i/n_bins:.1f}" for i in range(n_bins + 1)], fontsize=9.5)
+    ax.tick_params(axis='y', labelsize=11)
+
     ax.grid(True, axis='y', linestyle='-', alpha=0.3)
-    ax.set_axisbelow(True) # Put grid behind bars
-    
+    ax.set_axisbelow(True)
+
     title_str = f"{title}\nECE = {ece:.3f}" if ece is not None else title
-    ax.set_title(title_str, fontsize=11)
-        
+    ax.set_title(title_str, fontsize=17.5)
+
     return ece
 
 def analyze_dataset(dataset_name, models, output_dir):
@@ -211,7 +214,7 @@ def analyze_dataset(dataset_name, models, output_dir):
                     valid_metrics_data[metric_name] = (y_true_s, y_true_b, y_prob)
 
         # Second pass: Plot
-        fig, axes = plt.subplots(2, 3, figsize=(12, 7), dpi=150) # Shortened height for square aspect
+        fig, axes = plt.subplots(2, 3, figsize=(11, 7))
         axes = axes.flatten()
         
         for i, metric_name in enumerate(plot_metrics):
@@ -233,21 +236,27 @@ def analyze_dataset(dataset_name, models, output_dir):
                 })
             else:
                 ax.text(0.5, 0.5, 'No Data', ha='center', va='center')
-                
+
+        # Shared y-axis label on leftmost subplot of each row
+        for leftmost_idx in (0, 3):
+            axes[leftmost_idx].set_ylabel('Prediction Accuracy', fontsize=17)
+
         # Add shared colorbar
         norm = mpl.colors.Normalize(vmin=0, vmax=global_max_count)
         sm = plt.cm.ScalarMappable(cmap='crest', norm=norm)
         sm.set_array([])
         
         # Add colorbar to the right of the figure
-        cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7]) # [left, bottom, width, height]
-        fig.colorbar(sm, cax=cbar_ax)
+        cbar_ax = fig.add_axes([0.92, 0.1, 0.02, 0.8]) # [left, bottom, width, height]
+        cbar = fig.colorbar(sm, cax=cbar_ax)
+        cbar.ax.tick_params(labelsize=12)
+        
         
         # Adjust layout
-        plt.subplots_adjust(right=0.88, hspace=0.5, wspace=0.3)
+        plt.subplots_adjust(right=0.88, hspace=0.6, wspace=0.25)
         
         os.makedirs(output_dir, exist_ok=True)
-        fig.savefig(os.path.join(output_dir, f'{dataset_name}_{model}_calibration.png'), bbox_inches='tight')
+        fig.savefig(os.path.join(output_dir, f'{dataset_name}_{model}_calibration.pdf'), bbox_inches='tight')
         plt.close(fig)
         
         # Calculate for non-plotted metrics
@@ -268,6 +277,45 @@ def analyze_dataset(dataset_name, models, output_dir):
                         'Discriminability': disc,
                         'P-Value': p_val
                     })
+
+        # Load uncertainty baselines if available
+        baseline_map = {
+            'llava-v1.5-7b': 'llava-v1.5-7b.csv',
+            'qwen2.5-vl-7b-instruct': 'qwen2.5-vl-7b.csv',
+            'gpt-4o-2024-05-13': 'gpt-4o.csv',
+        }
+        baseline_filename = baseline_map.get(model)
+        if baseline_filename:
+            baseline_path = os.path.join('model_outputs', dataset_name, 'baselines', baseline_filename)
+            if os.path.exists(baseline_path):
+                df_bl = pd.read_csv(baseline_path)
+                baseline_metrics = {
+                    'Raw Logits': 'raw_confidence',
+                    'P(True)': 'p_true',
+                }
+                # Use baseline is_correct if row counts match, else fall back to main df
+                bl_y_true = df_bl['is_correct'].values if 'is_correct' in df_bl.columns else None
+                for bl_name, bl_col in baseline_metrics.items():
+                    if bl_col in df_bl.columns:
+                        bl_valid = df_bl[bl_col].notna()
+                        bl_scores = df_bl.loc[bl_valid, bl_col].astype(float).values
+                        if len(bl_scores) == 0:
+                            continue
+                        if bl_y_true is not None:
+                            bl_yt = bl_y_true[bl_valid]
+                        else:
+                            bl_yt = y_true_soft[:len(bl_scores)]
+                        bl_yt_binary = (bl_yt >= 0.5).astype(int)
+                        ece = compute_ece(bl_yt, bl_scores)
+                        disc, p_val = compute_discriminability(bl_yt_binary, bl_scores)
+                        results.append({
+                            'Dataset': dataset_name,
+                            'Model': model,
+                            'Metric': bl_name,
+                            'ECE': ece,
+                            'Discriminability': disc,
+                            'P-Value': p_val
+                        })
 
     return pd.DataFrame(results)
 
@@ -354,9 +402,10 @@ def generate_summary_table(all_results, output_dir):
     
     # Reorder rows to match reference
     metric_order = [
-        'Simulatability', 'Informativeness', 'Plausibility', 
-        'Visual Fidelity', 'Contrastiveness', 
-        'Avg(VF, Contr.)', 'Prod(VF, Contr.)', 'Min(VF, Contr.)'
+        'Simulatability', 'Informativeness', 'Plausibility',
+        'Visual Fidelity', 'Contrastiveness',
+        'Avg(VF, Contr.)', 'Prod(VF, Contr.)', 'Min(VF, Contr.)',
+        'Raw Logits', 'P(True)',
     ]
     
     pivot_disc = pivot_disc.reindex(metric_order)
